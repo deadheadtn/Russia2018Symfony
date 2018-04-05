@@ -1,3 +1,0 @@
-russiapi_homepage:
-    path:     /admin
-    defaults: { _controller: RUSSIAPIBundle:Default:index }

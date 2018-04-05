@@ -1,3 +1,0 @@
-russia2_pi_homepage:
-    path:     /client
-    defaults: { _controller: RUSSIA2PIBundle:Default:index }
