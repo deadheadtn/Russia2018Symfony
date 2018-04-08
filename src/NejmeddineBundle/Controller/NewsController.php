@@ -3,29 +3,122 @@
 namespace NejmeddineBundle\Controller;
 
 use NejmeddineBundle\Entity\News;
-use NejmeddineBundle\Form\NewsType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 
-
+/**
+ * News controller.
+ *
+ */
 class NewsController extends Controller
 {
-    public function AffichageNewsAction()
+    /**
+     * Lists all news entities.
+     *
+     */
+    public function indexAction()
     {
         $em = $this->getDoctrine()->getManager();
-        $news= $em->getRepository('NejmeddineBundle:News')->findAll();
-        return $this->render('NejmeddineBundle:ViewsNews:News.html.twig',array('liste'=>$news));
+
+        $news = $em->getRepository('NejmeddineBundle:News')->findAll();
+
+        return $this->render('NejmeddineBundle:ViewsNews:index.html.twig', array(
+            'news' => $news,
+        ));
     }
-    public function modifierNewsAction($id,Request $request)
+
+    /**
+     * Creates a new news entity.
+     *
+     */
+    public function newAction(Request $request)
     {
-        $em = $this->getDoctrine()->getManager();
-        var_dump($id);
-       $news=$em->getRepository('NejmeddineBundle:News')->find($id);
-        $form= $this->createForm(NewsType::class,$news);
-        if($form->handleRequest($request)->isValid()){
+        $news = new News();
+        $form = $this->createForm('NejmeddineBundle\Form\NewsType', $news);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $em = $this->getDoctrine()->getManager();
             $em->persist($news);
             $em->flush();
+
+            return $this->redirectToRoute('admin_manage_news_show', array('idNews' => $news->getIdnews()));
         }
-        return $this->render('NejmeddineBundle:ViewsNews:ModifierNews.html.twig',array('f'=>$form->createView()));
+
+        return $this->render('NejmeddineBundle:ViewsNews:new.html.twig', array(
+            'news' => $news,
+            'form' => $form->createView(),
+        ));
+    }
+
+    /**
+     * Finds and displays a news entity.
+     *
+     */
+    public function showAction(News $news)
+    {
+        $deleteForm = $this->createDeleteForm($news);
+
+        return $this->render('NejmeddineBundle:ViewsNews:show.html.twig', array(
+            'news' => $news,
+            'delete_form' => $deleteForm->createView(),
+        ));
+    }
+
+    /**
+     * Displays a form to edit an existing news entity.
+     *
+     */
+    public function editAction(Request $request, News $news)
+    {
+        $deleteForm = $this->createDeleteForm($news);
+        $editForm = $this->createForm('NejmeddineBundle\Form\NewsType', $news);
+        $editForm->handleRequest($request);
+
+        if ($editForm->isSubmitted() && $editForm->isValid()) {
+            $this->getDoctrine()->getManager()->flush();
+
+            return $this->redirectToRoute('admin_manage_news_edit', array('idNews' => $news->getIdnews()));
+        }
+
+        return $this->render('NejmeddineBundle:ViewsNews:edit.html.twig', array(
+            'news' => $news,
+            'edit_form' => $editForm->createView(),
+            'delete_form' => $deleteForm->createView(),
+        ));
+    }
+
+    /**
+     * Deletes a news entity.
+     *
+     */
+    public function deleteAction(Request $request, News $news)
+    {
+        $form = $this->createDeleteForm($news);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $em = $this->getDoctrine()->getManager();
+            $em->remove($news);
+            $em->flush();
+        }
+
+        return $this->redirectToRoute('admin_manage_news_index');
+    }
+
+    /**
+     * Creates a form to delete a news entity.
+     *
+     * @param News $news The news entity
+     *
+     * @return \Symfony\Component\Form\Form The form
+     */
+    private function createDeleteForm(News $news)
+    {
+        return $this->createFormBuilder()
+            ->setAction($this->generateUrl('admin_manage_news_delete', array('idNews' => $news->getIdnews())))
+            ->setMethod('DELETE')
+            ->getForm()
+        ;
     }
 }

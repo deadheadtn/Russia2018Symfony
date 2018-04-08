@@ -1,6 +1,3 @@
-News:
-    path:     /news
-    defaults: { _controller: NejmeddineBundle:News:AffichageNews }
-modifierNews:
-    path:     /modifiernews/{id}
-    defaults: { _controller: NejmeddineBundle:News:modifierNews }
+nejmeddine_admin_manage_news:
+    resource: "@NejmeddineBundle/Resources/config/routing/news.yml"
+    prefix:   /admin/manage/news
