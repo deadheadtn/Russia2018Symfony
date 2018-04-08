@@ -1,3 +1,7 @@
+ticket:
+    resource: "@TicketBundle/Resources/config/routing.yml"
+    prefix:   /
+
 russia2_pi:
     resource: "@RUSSIA2PIBundle/Resources/config/routing.yml"
     prefix:   /

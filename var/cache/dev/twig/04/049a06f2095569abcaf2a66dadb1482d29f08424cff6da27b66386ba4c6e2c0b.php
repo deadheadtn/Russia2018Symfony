@@ -62,6 +62,6 @@ class __TwigTemplate_bf38f1b259379476604a9ece21d8f7ac734f39ecbfcd93ee047f52ff55e
     {
         return new Twig_Source("{% extends \"RUSSIAPIBundle::layout.html.twig\" %}
 
-", "RUSSIAPIBundle:Default:index.html.twig", "C:\\wamp64\\www\\PIDEV\\src\\RUSSIA\\PIBundle/Resources/views/Default/index.html.twig");
+", "RUSSIAPIBundle:Default:index.html.twig", "C:\\wamp64\\www\\Russia2018Symfony\\src\\RUSSIA\\PIBundle/Resources/views/Default/index.html.twig");
     }
 }
