@@ -1,0 +1,3 @@
+nejmeddine_homepage:
+    path:     /
+    defaults: { _controller: NejmeddineBundle:Default:index }

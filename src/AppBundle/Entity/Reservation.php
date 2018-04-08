@@ -78,9 +78,9 @@ class Reservation
     private $etatReservation = 'NON_CONFIRME';
 
     /**
-     * @var \User
+     * @var \UserBundle\Entity\User
      *
-     * @ORM\ManyToOne(targetEntity="User")
+     * @ORM\ManyToOne(targetEntity="\UserBundle\Entity\User")
      * @ORM\JoinColumns({
      *   @ORM\JoinColumn(name="ID_UTILISATEUR", referencedColumnName="id")
      * })
