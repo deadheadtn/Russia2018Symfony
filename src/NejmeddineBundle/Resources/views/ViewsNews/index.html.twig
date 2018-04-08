@@ -1,0 +1,49 @@
+{% extends 'NejmeddineBundle:ViewsNews:News.html.twig' %}
+
+{% block body %}
+    <h1>News list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Idnews</th>
+                <th>Idcooperation</th>
+                <th>Titren</th>
+                <th>Typen</th>
+                <th>Motcles</th>
+                <th>Texten</th>
+                <th>Imagen</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for news in news %}
+            <tr>
+                <td><a href="{{ path('admin_manage_news_show', { 'idNews': news.idNews }) }}">{{ news.idNews }}</a></td>
+                <td>{{ news.idCooperation }}</td>
+                <td>{{ news.titreN }}</td>
+                <td>{{ news.typeN }}</td>
+                <td>{{ news.motCles }}</td>
+                <td>{{ news.texteN }}</td>
+                <td>{{ news.imageN }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('admin_manage_news_show', { 'idNews': news.idNews }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('admin_manage_news_edit', { 'idNews': news.idNews }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('admin_manage_news_new') }}">Create a new news</a>
+        </li>
+    </ul>
+{% endblock %}
