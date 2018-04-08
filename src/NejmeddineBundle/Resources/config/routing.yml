@@ -1,3 +1,6 @@
-nejmeddine_homepage:
-    path:     /
-    defaults: { _controller: NejmeddineBundle:Default:index }
+News:
+    path:     /news
+    defaults: { _controller: NejmeddineBundle:News:AffichageNews }
+modifierNews:
+    path:     /modifiernews/{id}
+    defaults: { _controller: NejmeddineBundle:News:modifierNews }
