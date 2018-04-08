@@ -3,311 +3,200 @@
 namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use FOS\UserBundle\Model\User as BaseUser;
+
 
 /**
  * User
  *
- * @ORM\Table(name="user", uniqueConstraints={@ORM\UniqueConstraint(name="UNIQ_8D93D64992FC23A8", columns={"username_canonical"}), @ORM\UniqueConstraint(name="UNIQ_8D93D649A0D96FBF", columns={"email_canonical"})})
- * @ORM\Entity
+ * @ORM\Table(name="user")
+ * @ORM\Entity(repositoryClass="UserBundle\Repository\UserRepository")
  */
-class User
+class User extends BaseUser
 {
     /**
-     * @var integer
-     *
-     * @ORM\Column(name="id", type="integer", nullable=false)
      * @ORM\Id
-     * @ORM\GeneratedValue(strategy="IDENTITY")
+     * @ORM\Column(type="integer")
+     * @ORM\GeneratedValue(strategy="AUTO")
      */
-    private $id;
+    protected $id;
+
+
 
     /**
      * @var string
      *
-     * @ORM\Column(name="username", type="string", length=255, nullable=false)
-     */
-    private $username;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="username_canonical", type="string", length=255, nullable=false)
-     */
-    private $usernameCanonical;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="email", type="string", length=255, nullable=false)
-     */
-    private $email;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="email_canonical", type="string", length=255, nullable=false)
-     */
-    private $emailCanonical;
-
-    /**
-     * @var boolean
-     *
-     * @ORM\Column(name="enabled", type="boolean", nullable=false)
-     */
-    private $enabled;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="salt", type="string", length=255, nullable=false)
-     */
-    private $salt;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="password", type="string", length=255, nullable=false)
-     */
-    private $password;
-
-    /**
-     * @var \DateTime
-     *
-     * @ORM\Column(name="last_login", type="datetime", nullable=true)
-     */
-    private $lastLogin;
-
-    /**
-     * @var boolean
-     *
-     * @ORM\Column(name="locked", type="boolean", nullable=false)
-     */
-    private $locked;
-
-    /**
-     * @var boolean
-     *
-     * @ORM\Column(name="expired", type="boolean", nullable=false)
-     */
-    private $expired;
-
-    /**
-     * @var \DateTime
-     *
-     * @ORM\Column(name="expires_at", type="datetime", nullable=true)
-     */
-    private $expiresAt;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="confirmation_token", type="string", length=255, nullable=true)
-     */
-    private $confirmationToken;
-
-    /**
-     * @var \DateTime
-     *
-     * @ORM\Column(name="password_requested_at", type="datetime", nullable=true)
-     */
-    private $passwordRequestedAt;
-
-    /**
-     * @var array
-     *
-     * @ORM\Column(name="roles", type="array", nullable=false)
-     */
-    private $roles;
-
-    /**
-     * @var boolean
-     *
-     * @ORM\Column(name="credentials_expired", type="boolean", nullable=false)
-     */
-    private $credentialsExpired;
-
-    /**
-     * @var \DateTime
-     *
-     * @ORM\Column(name="credentials_expire_at", type="datetime", nullable=true)
-     */
-    private $credentialsExpireAt;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="nom", type="string", length=40, nullable=true)
+     * @ORM\Column(name="nom", type="string", length=255)
      */
     private $nom;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="prenom", type="string", length=40, nullable=true)
+     * @ORM\Column(name="prenom", type="string", length=255)
      */
     private $prenom;
 
     /**
-     * @var \DateTime
+     * @var int
      *
-     * @ORM\Column(name="dateNaissance", type="date", nullable=true)
+     * @ORM\Column(name="age", type="integer")
      */
-    private $datenaissance;
+    private $age;
+
+
+
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="num_tel", type="integer")
+     */
+    private $numTel;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="situationProf", type="string", length=255, nullable=true)
+     * @ORM\Column(name="adresse", type="string", length=255)
      */
-    private $situationprof;
+    private $adresse;
+
+
+    public function __construct()
+    {
+        parent::__construct();
+        // your own logic
+    }
 
     /**
-     * @var string
+     * Get id
      *
-     * @ORM\Column(name="secteur", type="string", length=255, nullable=true)
+     * @return int
      */
-    private $secteur;
+    public function getId()
+    {
+        return $this->id;
+    }
 
     /**
-     * @var integer
+     * Set nom
      *
-     * @ORM\Column(name="experienceTot", type="integer", nullable=true)
+     * @param string $nom
+     *
+     * @return User
      */
-    private $experiencetot;
+    public function setNom($nom)
+    {
+        $this->nom = $nom;
+
+        return $this;
+    }
 
     /**
-     * @var integer
+     * Get nom
      *
-     * @ORM\Column(name="solde", type="integer", nullable=true)
+     * @return string
      */
-    private $solde;
+    public function getNom()
+    {
+        return $this->nom;
+    }
 
     /**
-     * @var string
+     * Set prenom
      *
-     * @ORM\Column(name="paysNatal", type="string", length=40, nullable=true)
+     * @param string $prenom
+     *
+     * @return User
      */
-    private $paysnatal;
+    public function setPrenom($prenom)
+    {
+        $this->prenom = $prenom;
+
+        return $this;
+    }
 
     /**
-     * @var string
+     * Get prenom
      *
-     * @ORM\Column(name="path", type="string", length=255, nullable=true)
+     * @return string
      */
-    private $path;
+    public function getPrenom()
+    {
+        return $this->prenom;
+    }
 
     /**
-     * @var string
+     * Set age
      *
-     * @ORM\Column(name="role", type="string", length=255, nullable=true)
+     * @param integer $age
+     *
+     * @return User
      */
-    private $role;
+    public function setAge($age)
+    {
+        $this->age = $age;
+
+        return $this;
+    }
 
     /**
-     * @var string
+     * Get age
      *
-     * @ORM\Column(name="etat", type="string", length=255, nullable=true)
+     * @return int
      */
-    private $etat;
+    public function getAge()
+    {
+        return $this->age;
+    }
+
+
 
     /**
-     * @var string
+     * Set numTel
      *
-     * @ORM\Column(name="sexe", type="string", length=255, nullable=true)
+     * @param integer $numTel
+     *
+     * @return User
      */
-    private $sexe;
+    public function setNumTel($numTel)
+    {
+        $this->numTel = $numTel;
+
+        return $this;
+    }
 
     /**
-     * @var integer
+     * Get numTel
      *
-     * @ORM\Column(name="nbrfinancement", type="integer", nullable=false)
+     * @return int
      */
-    private $nbrfinancement;
+    public function getNumTel()
+    {
+        return $this->numTel;
+    }
 
     /**
-     * @var integer
+     * Set adresse
      *
-     * @ORM\Column(name="nbrVote", type="integer", nullable=false)
+     * @param string $adresse
+     *
+     * @return User
      */
-    private $nbrvote;
+    public function setAdresse($adresse)
+    {
+        $this->adresse = $adresse;
+
+        return $this;
+    }
 
     /**
-     * @var integer
+     * Get adresse
      *
-     * @ORM\Column(name="nbrcommentaire", type="integer", nullable=false)
+     * @return string
      */
-    private $nbrcommentaire;
-
-    /**
-     * @var integer
-     *
-     * @ORM\Column(name="nbrprojetssuivis", type="integer", nullable=false)
-     */
-    private $nbrprojetssuivis;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="name", type="string", length=255, nullable=true)
-     */
-    private $name;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="facebook_id", type="string", length=255, nullable=true)
-     */
-    private $facebookId;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="facebook_access_token", type="string", length=255, nullable=true)
-     */
-    private $facebookAccessToken;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="google_id", type="string", length=255, nullable=true)
-     */
-    private $googleId;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="google_access_token", type="string", length=255, nullable=true)
-     */
-    private $googleAccessToken;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="linkedin_id", type="string", length=255, nullable=true)
-     */
-    private $linkedinId;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="linkedin_access_token", type="string", length=255, nullable=true)
-     */
-    private $linkedinAccessToken;
-
-    /**
-     * @var integer
-     *
-     * @ORM\Column(name="nbrCommentaireProbleme", type="integer", nullable=true)
-     */
-    private $nbrcommentaireprobleme;
-
-    /**
-     * @var integer
-     *
-     * @ORM\Column(name="nbrProbleme", type="integer", nullable=true)
-     */
-    private $nbrprobleme;
-
-
+    public function getAdresse()
+    {
+        return $this->adresse;
+    }
 }
 
