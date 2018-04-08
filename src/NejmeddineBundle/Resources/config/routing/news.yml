@@ -1,0 +1,24 @@
+admin_manage_news_index:
+    path:     /
+    defaults: { _controller: "NejmeddineBundle:News:index" }
+    methods:  GET
+
+admin_manage_news_show:
+    path:     /{idNews}/show
+    defaults: { _controller: "NejmeddineBundle:News:show" }
+    methods:  GET
+
+admin_manage_news_new:
+    path:     /new
+    defaults: { _controller: "NejmeddineBundle:News:new" }
+    methods:  [GET, POST]
+
+admin_manage_news_edit:
+    path:     /{idNews}/edit
+    defaults: { _controller: "NejmeddineBundle:News:edit" }
+    methods:  [GET, POST]
+
+admin_manage_news_delete:
+    path:     /{idNews}/delete
+    defaults: { _controller: "NejmeddineBundle:News:delete" }
+    methods:  DELETE

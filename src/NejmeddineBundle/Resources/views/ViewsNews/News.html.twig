@@ -9,16 +9,21 @@
     <meta name="author" content="">
     <title>SB Admin - Start Bootstrap Template</title>
     <!-- Bootstrap core CSS-->
-    <style>table td {
-            background:#e8edff;
-            border-bottom:1px solid #fff;
-            border-left:1px solid #fff;
-            color:#336699;
-            border-top:1px solid transparent;
-            padding:8px;
-            text-overflow:ellipsis;
-            overflow:hidden;
-            white-space:nowrap;
+    <style>
+        table {
+            border: 2px #2b2b2b solid;
+            width: 100%;
+            max-width: 150px;
+            min-width: 10px;
+        }
+        .<classname>:before {
+            padding: 2px 5px;
+            content: "Swipe left to read more";
+            color: #fff;
+            background: #333;
+        }
+        td, th {
+            border: 2px #2b2b2b solid;
         }
     </style>
     <link href="{{ asset('bundles/russiapi/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
@@ -78,7 +83,7 @@
                 </a>
             </li>
             <li class="nav-item" data-toggle="tooltip" data-placement="right" title="News">
-                <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="/news" data-parent="#exampleAccordion">
+                <a class="nav-link" href="{{ 'admin_manage_news_index' }}" data-parent="#exampleAccordion">
                     <i class="fa fa-fw fa-file"></i>
                     <span class="nav-link-text">News</span>
                 </a>
@@ -233,30 +238,8 @@
 </nav>
 <div class="content-wrapper">
     <div class="container">
+{% block body  %}
 
-
-    <table class="table">
-        <tr>
-            <td>id</td>
-            <td>Titre</td>
-            <td>Contenu</td>
-            <td>image</td>
-            <td>mot cle</td>
-            <td>Modifier</td>
-            <td>Supprimer</td>
-        </tr>
-{% block ContentNews  %}
-    {% for i in liste %}
-        <tr>
-            <td>{{ i.idNews }}</td>
-            <td>{{ i.titreN }}</td>
-            <td>{{ i.texteN }}</td>
-            <td>{{ i.imageN }}</td>
-            <td>{{ i.motCles }}</td>
-            <td><a href="{{ path ('modifierNews',{'id': i.idNews}) }}">Modifier</a></td>
-            <td><form method="post" action="SupprimerNews"> <input hidden type="text" name="id" value="{{ i.idNews }}"><input type="submit" value="Supprimer"></td>
-        </tr>
-    {% endfor %}
 {% endblock %}
     </div>
 </div>
@@ -264,3 +247,5 @@
 </body>
 
 </html>
+
+

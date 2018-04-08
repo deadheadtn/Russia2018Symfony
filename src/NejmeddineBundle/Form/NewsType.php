@@ -3,7 +3,6 @@
 namespace NejmeddineBundle\Form;
 
 use Symfony\Component\Form\AbstractType;
-use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -14,7 +13,7 @@ class NewsType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('titreN')->add('typeN')->add('motCles')->add('texteN')->add('imageN')->add('modifier',SubmitType::class);
+        $builder->add('idCooperation')->add('titreN')->add('typeN')->add('motCles')->add('texteN')->add('imageN');
     }/**
      * {@inheritdoc}
      */
