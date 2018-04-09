@@ -83,6 +83,6 @@ class __TwigTemplate_58e4818bbba9a8bab2b34d4e0741ef70b1d1e46c49ec5b7ecdc60ef1861
         <input type=\"submit\" value=\"{{ 'registration.submit'|trans }}\" />
     </div>
 {{ form_end(form) }}
-", "@FOSUser/Registration/register_content.html.twig", "C:\\xampp\\htdocs\\PIDEV\\src\\UserBundle\\Resources\\views\\Registration\\register_content.html.twig");
+", "@FOSUser/Registration/register_content.html.twig", "C:\\wamp64\\www\\Russia2018Symfony2\\src\\UserBundle\\Resources\\views\\Registration\\register_content.html.twig");
     }
 }

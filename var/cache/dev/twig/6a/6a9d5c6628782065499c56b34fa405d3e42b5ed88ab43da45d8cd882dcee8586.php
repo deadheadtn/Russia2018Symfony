@@ -85,6 +85,6 @@ class __TwigTemplate_f04292831c07d641bc61782b6040a9f7465c69210b00d9a4751f5a856a0
 {% block fos_user_content %}
 {% include \"@FOSUser/Registration/register_content.html.twig\" %}
 {% endblock fos_user_content %}
-", "@FOSUser/Registration/register.html.twig", "C:\\xampp\\htdocs\\PIDEV\\src\\UserBundle\\Resources\\views\\Registration\\register.html.twig");
+", "@FOSUser/Registration/register.html.twig", "C:\\wamp64\\www\\Russia2018Symfony2\\src\\UserBundle\\Resources\\views\\Registration\\register.html.twig");
     }
 }

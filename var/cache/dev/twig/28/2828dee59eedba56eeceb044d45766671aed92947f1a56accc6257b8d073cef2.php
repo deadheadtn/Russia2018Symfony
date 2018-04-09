@@ -131,6 +131,6 @@ class __TwigTemplate_c9da68bcf03169703da48ecd60511a9d4fc63cd8bb1af745275ad037a0e
 
     <input type=\"submit\" id=\"_submit\" name=\"_submit\" value=\"{{ 'security.login.submit'|trans }}\" />
 </form>
-", "@FOSUser/Security/login_content.html.twig", "C:\\xampp\\htdocs\\PIDEV\\src\\UserBundle\\Resources\\views\\Security\\login_content.html.twig");
+", "@FOSUser/Security/login_content.html.twig", "C:\\wamp64\\www\\Russia2018Symfony2\\src\\UserBundle\\Resources\\views\\Security\\login_content.html.twig");
     }
 }

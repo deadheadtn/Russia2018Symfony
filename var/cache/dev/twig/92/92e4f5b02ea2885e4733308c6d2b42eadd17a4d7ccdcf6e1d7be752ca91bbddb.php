@@ -88,6 +88,6 @@ class __TwigTemplate_db282d00e809a2497a839958a8068f55c806d4d299e49ce6b9ca097165d
 {% block fos_user_content %}
     {{ include('@FOSUser/Security/login_content.html.twig') }}
 {% endblock fos_user_content %}
-", "@FOSUser/Security/login.html.twig", "C:\\xampp\\htdocs\\PIDEV\\src\\UserBundle\\Resources\\views\\Security\\login.html.twig");
+", "@FOSUser/Security/login.html.twig", "C:\\wamp64\\www\\Russia2018Symfony2\\src\\UserBundle\\Resources\\views\\Security\\login.html.twig");
     }
 }

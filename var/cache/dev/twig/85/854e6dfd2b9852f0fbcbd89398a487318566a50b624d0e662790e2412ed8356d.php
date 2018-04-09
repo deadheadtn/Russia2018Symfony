@@ -103,6 +103,6 @@ class __TwigTemplate_3e8ec77e94fa5e74f8fa248dce16c407bf3c4ce1e21d163de4ebb0972a5
     <p><a href=\"{{ targetUrl }}\">{{ 'registration.back'|trans }}</a></p>
     {% endif %}
 {% endblock fos_user_content %}
-", "@FOSUser/Registration/confirmed.html.twig", "C:\\xampp\\htdocs\\PIDEV\\src\\UserBundle\\Resources\\views\\Registration\\confirmed.html.twig");
+", "@FOSUser/Registration/confirmed.html.twig", "C:\\wamp64\\www\\Russia2018Symfony2\\src\\UserBundle\\Resources\\views\\Registration\\confirmed.html.twig");
     }
 }

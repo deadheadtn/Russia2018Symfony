@@ -191,6 +191,6 @@ class __TwigTemplate_9b961f00ae6eea671f0f30dae0b43996ff89c9427e150e284cbfb5c3893
         </div>
     </body>
 </html>
-", "@FOSUser/layout.html.twig", "C:\\xampp\\htdocs\\PIDEV\\src\\UserBundle\\Resources\\views\\layout.html.twig");
+", "@FOSUser/layout.html.twig", "C:\\wamp64\\www\\Russia2018Symfony2\\src\\UserBundle\\Resources\\views\\layout.html.twig");
     }
 }
