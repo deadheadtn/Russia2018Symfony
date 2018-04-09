@@ -1,3 +1,7 @@
+ticket:
+    resource: "@TicketBundle/Resources/config/routing.yml"
+    prefix:   /
+
 russia2_pi:
     resource: "@RUSSIA2PIBundle/Resources/config/routing.yml"
     prefix:   /
@@ -17,3 +21,5 @@ app:
 fos_user:
     resource: "@FOSUserBundle/Resources/config/routing/all.xml"
 
+Nejmeddine:
+    resource: "@NejmeddineBundle/Resources/config/routing.yml"

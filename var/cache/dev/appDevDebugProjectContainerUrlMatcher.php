@@ -103,6 +103,11 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
 
         }
 
+        // ticket_homepage
+        if ('/tickets' === $pathinfo) {
+            return array (  '_controller' => 'TicketBundle\\Controller\\DefaultController::ticketAction',  '_route' => 'ticket_homepage',);
+        }
+
         // russia2_pi_homepage
         if ('/client' === $pathinfo) {
             return array (  '_controller' => 'RUSSIA2\\PIBundle\\Controller\\DefaultController::indexAction',  '_route' => 'russia2_pi_homepage',);

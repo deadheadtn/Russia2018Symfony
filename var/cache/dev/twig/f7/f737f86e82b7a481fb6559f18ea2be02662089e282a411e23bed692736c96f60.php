@@ -53,6 +53,6 @@ class __TwigTemplate_524bbc1fdf6d38739c88c09a95aae7c0f1151073e92bc016b9bda82e80c
     public function getSourceContext()
     {
         return new Twig_Source("Hello World!
-", "UserBundle:Default:index.html.twig", "C:\\xampp\\htdocs\\PIDEV\\src\\UserBundle/Resources/views/Default/index.html.twig");
+", "UserBundle:Default:index.html.twig", "C:\\wamp64\\www\\Russia2018Symfony\\src\\UserBundle/Resources/views/Default/index.html.twig");
     }
 }

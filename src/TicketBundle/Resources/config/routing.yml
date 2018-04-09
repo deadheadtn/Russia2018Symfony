@@ -1,0 +1,3 @@
+ticket_homepage:
+    path:     /tickets
+    defaults: { _controller: TicketBundle:Default:ticket }

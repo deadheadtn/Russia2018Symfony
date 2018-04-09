@@ -2765,6 +2765,6 @@ class __TwigTemplate_1a5ad7a6383932e650671714c2a6d66411353a004eade9f61774412fa4b
 
 </body>
 </html>
-", "RUSSIA2PIBundle::layout.html.twig", "C:\\wamp64\\www\\PIDEV\\src\\RUSSIA2\\PIBundle/Resources/views/layout.html.twig");
+", "RUSSIA2PIBundle::layout.html.twig", "C:\\wamp64\\www\\Russia2018Symfony\\src\\RUSSIA2\\PIBundle/Resources/views/layout.html.twig");
     }
 }
