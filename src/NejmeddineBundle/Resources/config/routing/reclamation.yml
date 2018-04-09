@@ -1,0 +1,24 @@
+admin_manage_reclamation_index:
+    path:     /
+    defaults: { _controller: "NejmeddineBundle:Reclamation:index" }
+    methods:  GET
+
+admin_manage_reclamation_show:
+    path:     /{idReclamation}/show
+    defaults: { _controller: "NejmeddineBundle:Reclamation:show" }
+    methods:  GET
+
+admin_manage_reclamation_new:
+    path:     /new
+    defaults: { _controller: "NejmeddineBundle:Reclamation:new" }
+    methods:  [GET, POST]
+
+admin_manage_reclamation_edit:
+    path:     /{idReclamation}/edit
+    defaults: { _controller: "NejmeddineBundle:Reclamation:edit" }
+    methods:  [GET, POST]
+
+admin_manage_reclamation_delete:
+    path:     /{idReclamation}/delete
+    defaults: { _controller: "NejmeddineBundle:Reclamation:delete" }
+    methods:  DELETE

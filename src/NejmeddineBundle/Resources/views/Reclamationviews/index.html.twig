@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Reclamations list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Idreclamation</th>
+                <th>Sujetrec</th>
+                <th>Descriptionrec</th>
+                <th>Daterec</th>
+                <th>Etatrec</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for reclamation in reclamations %}
+            <tr>
+                <td><a href="{{ path('admin_manage_reclamation_show', { 'idReclamation': reclamation.idReclamation }) }}">{{ reclamation.idReclamation }}</a></td>
+                <td>{{ reclamation.sujetRec }}</td>
+                <td>{{ reclamation.descriptionRec }}</td>
+                <td>{{ reclamation.dateRec }}</td>
+                <td>{{ reclamation.etatRec }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('admin_manage_reclamation_show', { 'idReclamation': reclamation.idReclamation }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('admin_manage_reclamation_edit', { 'idReclamation': reclamation.idReclamation }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('admin_manage_reclamation_new') }}">Create a new reclamation</a>
+        </li>
+    </ul>
+{% endblock %}
