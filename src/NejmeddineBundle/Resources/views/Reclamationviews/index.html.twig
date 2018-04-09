@@ -1,4 +1,4 @@
-{% extends 'base.html.twig' %}
+{% extends 'NejmeddineBundle:Default:layout.html.twig' %}
 
 {% block body %}
     <h1>Reclamations list</h1>
@@ -25,10 +25,10 @@
                 <td>
                     <ul>
                         <li>
-                            <a href="{{ path('admin_manage_reclamation_show', { 'idReclamation': reclamation.idReclamation }) }}">show</a>
+                            <a href="{{ path('admin_manage_reclamation_show', { 'idReclamation': reclamation.idReclamation }) }}">Afficher</a>
                         </li>
                         <li>
-                            <a href="{{ path('admin_manage_reclamation_edit', { 'idReclamation': reclamation.idReclamation }) }}">edit</a>
+                            <a href="{{ path('admin_manage_reclamation_edit', { 'idReclamation': reclamation.idReclamation }) }}">Répondre</a>
                         </li>
                     </ul>
                 </td>
