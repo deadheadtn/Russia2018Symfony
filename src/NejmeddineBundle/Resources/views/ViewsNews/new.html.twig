@@ -1,6 +1,9 @@
 {% extends 'NejmeddineBundle:ViewsNews:News.html.twig' %}
 
 {% block body %}
+<div class="card-header">
+</div>
+    <did class="card-body">
     <h1>News creation</h1>
 
     {{ form_start(form) }}
@@ -9,6 +12,7 @@
     {{ form_end(form) }}
 
     <ul>
+    </did>
         <li>
             <a href="{{ path('admin_manage_news_index') }}">Back to the list</a>
         </li>
