@@ -20,7 +20,7 @@ class AppKernel extends Kernel
             new FOS\UserBundle\FOSUserBundle(),
             new RUSSIA\PIBundle\RUSSIAPIBundle(),
             new RUSSIA2\PIBundle\RUSSIA2PIBundle(),
-            new Fedi\FediBundle\FediFediBundle(),
+            new TicketBundle\TicketBundle()
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {
