@@ -1,40 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="df1f016b-b203-480e-af43-c0f0cfef78fa" name="Default" comment="hgy">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/commandlinetools/Symfony_06_04_18_02_49_s.xml" afterPath="$PROJECT_DIR$/.idea/commandlinetools/Symfony_09_04_18_01_32_s.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/commandlinetools/Composer_30_03_18_14_01_c.xml" afterPath="$PROJECT_DIR$/.idea/commandlinetools/Composer_30_03_18_14_01_c.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/AppKernel.php" afterPath="$PROJECT_DIR$/app/AppKernel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/config.yml" afterPath="$PROJECT_DIR$/app/config/config.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/annotations.map" afterPath="$PROJECT_DIR$/var/cache/dev/annotations.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.php" afterPath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.php.meta" afterPath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.php.meta" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.xml" afterPath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.xml.meta" afterPath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.xml.meta" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainerCompiler.log" afterPath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainerCompiler.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/classes.map" afterPath="$PROJECT_DIR$/var/cache/dev/classes.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/profiler/index.csv" afterPath="$PROJECT_DIR$/var/cache/dev/profiler/index.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/twig/0c/0cb21ca80705578858b19cac55d0c25e896db5dc1882e7f8e6529cd46bd787da.php" afterPath="$PROJECT_DIR$/var/cache/dev/twig/0c/0cb21ca80705578858b19cac55d0c25e896db5dc1882e7f8e6529cd46bd787da.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/twig/13/13e12f4578deb3d7b97ee8a36c7fda8a6d211b9b20a6210fa9387f3793cb2500.php" afterPath="$PROJECT_DIR$/var/cache/dev/twig/13/13e12f4578deb3d7b97ee8a36c7fda8a6d211b9b20a6210fa9387f3793cb2500.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/twig/28/2828dee59eedba56eeceb044d45766671aed92947f1a56accc6257b8d073cef2.php" afterPath="$PROJECT_DIR$/var/cache/dev/twig/28/2828dee59eedba56eeceb044d45766671aed92947f1a56accc6257b8d073cef2.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/twig/6a/6a9d5c6628782065499c56b34fa405d3e42b5ed88ab43da45d8cd882dcee8586.php" afterPath="$PROJECT_DIR$/var/cache/dev/twig/6a/6a9d5c6628782065499c56b34fa405d3e42b5ed88ab43da45d8cd882dcee8586.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/twig/85/854e6dfd2b9852f0fbcbd89398a487318566a50b624d0e662790e2412ed8356d.php" afterPath="$PROJECT_DIR$/var/cache/dev/twig/85/854e6dfd2b9852f0fbcbd89398a487318566a50b624d0e662790e2412ed8356d.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/twig/90/90be1ad748e12930663ee0c33ddf8111901d4963ac509b1effdbc368a909af00.php" afterPath="$PROJECT_DIR$/var/cache/dev/twig/90/90be1ad748e12930663ee0c33ddf8111901d4963ac509b1effdbc368a909af00.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/twig/92/92e4f5b02ea2885e4733308c6d2b42eadd17a4d7ccdcf6e1d7be752ca91bbddb.php" afterPath="$PROJECT_DIR$/var/cache/dev/twig/92/92e4f5b02ea2885e4733308c6d2b42eadd17a4d7ccdcf6e1d7be752ca91bbddb.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/twig/c2/c234efce5929a1a4cc50fa4dbe6d0f819ede08f10f5b8542281c3ca12730d6dc.php" afterPath="$PROJECT_DIR$/var/cache/dev/twig/c2/c234efce5929a1a4cc50fa4dbe6d0f819ede08f10f5b8542281c3ca12730d6dc.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/twig/de/de9d2d74975d2aab421fc4aad32a2fa89a043090c547a5dad9a2f6a82fdf40cd.php" afterPath="$PROJECT_DIR$/var/cache/dev/twig/de/de9d2d74975d2aab421fc4aad32a2fa89a043090c547a5dad9a2f6a82fdf40cd.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/logs/dev.log" afterPath="$PROJECT_DIR$/var/logs/dev.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/autoload.php" afterPath="$PROJECT_DIR$/vendor/autoload.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/ClassLoader.php" afterPath="$PROJECT_DIR$/vendor/composer/ClassLoader.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/LICENSE" afterPath="$PROJECT_DIR$/vendor/composer/LICENSE" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_files.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_files.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_namespaces.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_namespaces.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_real.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_real.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" />
-    </list>
+    <list default="true" id="df1f016b-b203-480e-af43-c0f0cfef78fa" name="Default" comment="" />
     <list id="24b3d146-bf2d-46e2-8cf6-4a9a02d6a77e" name="New changelist" comment="New changelist" />
     <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -58,21 +25,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="register_content.html.twig" pinned="false" current-in-tab="false">
+      <file leaf-file-name="register_content.html.twig" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/UserBundle/Resources/views/Registration/register_content.html.twig">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="autoload_static.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/vendor/composer/autoload_static.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="127">
-              <caret line="8" column="27" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -83,7 +40,10 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
+              <folding>
+                <element signature="e#305#329#0#Twig" expanded="false" />
+                <element signature="e#484#507#0#Twig" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -869,7 +829,7 @@
       <workItem from="1523211862063" duration="5821000" />
       <workItem from="1523231528078" duration="1079000" />
       <workItem from="1523232919169" duration="137000" />
-      <workItem from="1523233377921" duration="5783000" />
+      <workItem from="1523233377921" duration="5839000" />
     </task>
     <task id="LOCAL-00001" summary="aaaaaaaaaaaaaaaa">
       <created>1522924904846</created>
@@ -892,11 +852,18 @@
       <option name="project" value="LOCAL" />
       <updated>1523231922512</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="hgy">
+      <created>1523240106226</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1523240106226</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49208000" />
+    <option name="totallyTimeSpent" value="49264000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -909,11 +876,11 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27609682" sideWeight="0.80243903" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.48940998" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3289689" sideWeight="0.49092284" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3289689" sideWeight="0.49092284" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3289689" sideWeight="0.50907713" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3715221" sideWeight="0.7980333" order="7" side_tool="false" content_ui="tabs" />
@@ -1149,7 +1116,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1523239980149" expanded="true" signature="76896:76959" ph="..." />
+            <marker date="1523240052137" expanded="true" signature="77017:77080" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1280,7 +1247,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#305#329#0#Twig" expanded="false" />
+            <element signature="e#484#507#0#Twig" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1352,18 +1322,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/UserBundle/Resources/views/Registration/register_content.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/composer/autoload_static.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="127">
           <caret line="8" column="27" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UserBundle/Resources/views/Registration/register_content.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
