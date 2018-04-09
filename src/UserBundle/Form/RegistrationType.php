@@ -22,6 +22,7 @@ class RegistrationType extends AbstractType
             ->add('age')
             ->add('num_tel')
             ->add('adresse');
+
     }
 
     public function getParent()

@@ -21,6 +21,7 @@
       <parameter key="FOSUserBundle">FOS\UserBundle\FOSUserBundle</parameter>
       <parameter key="RUSSIAPIBundle">RUSSIA\PIBundle\RUSSIAPIBundle</parameter>
       <parameter key="RUSSIA2PIBundle">RUSSIA2\PIBundle\RUSSIA2PIBundle</parameter>
+      <parameter key="FediFediBundle">Fedi\FediBundle\FediFediBundle</parameter>
     </parameter>
     <parameter key="kernel.bundles_metadata" type="collection">
       <parameter key="FrameworkBundle" type="collection">
@@ -83,14 +84,19 @@
         <parameter key="path">C:\wamp64\www\Russia2018Symfony\src\RUSSIA2\PIBundle</parameter>
         <parameter key="namespace">RUSSIA2\PIBundle</parameter>
       </parameter>
+      <parameter key="FediFediBundle" type="collection">
+        <parameter key="parent">null</parameter>
+        <parameter key="path">C:\wamp64\www\Russia2018Symfony\src\Fedi\FediBundle</parameter>
+        <parameter key="namespace">Fedi\FediBundle</parameter>
+      </parameter>
     </parameter>
     <parameter key="kernel.charset">UTF-8</parameter>
     <parameter key="kernel.container_class">appProdDebugProjectContainer</parameter>
     <parameter key="database_host">127.0.0.1</parameter>
     <parameter key="database_port">null</parameter>
-    <parameter key="database_name">symfony</parameter>
+    <parameter key="database_name">pi</parameter>
     <parameter key="database_user">root</parameter>
-    <parameter key="database_password">null</parameter>
+    <parameter key="database_password">123</parameter>
     <parameter key="mailer_transport">smtp</parameter>
     <parameter key="mailer_host">127.0.0.1</parameter>
     <parameter key="mailer_user">null</parameter>
@@ -548,7 +554,7 @@
       <tag name="cache.pool" clearer="cache.default_clearer" unlazy="1"/>
       <argument>NnK8G+rGG9</argument>
       <argument>0</argument>
-      <argument>xaxmQ3mT8uOyRgLgFvlq8Q</argument>
+      <argument>u1s5MjjmHWWHEZn1eYamBd</argument>
       <argument>C:\wamp64\www\Russia2018Symfony\var\cache\prod/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -558,7 +564,7 @@
       <tag name="cache.pool" clearer="cache.default_clearer"/>
       <argument>m2NBGHBPAP</argument>
       <argument>0</argument>
-      <argument>xaxmQ3mT8uOyRgLgFvlq8Q</argument>
+      <argument>u1s5MjjmHWWHEZn1eYamBd</argument>
       <argument>C:\wamp64\www\Russia2018Symfony\var\cache\prod/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -568,7 +574,7 @@
       <tag name="cache.pool" clearer="cache.default_clearer"/>
       <argument>XmeYlOu2Zh</argument>
       <argument>0</argument>
-      <argument>xaxmQ3mT8uOyRgLgFvlq8Q</argument>
+      <argument>u1s5MjjmHWWHEZn1eYamBd</argument>
       <argument>C:\wamp64\www\Russia2018Symfony\var\cache\prod/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -578,7 +584,7 @@
       <tag name="cache.pool" clearer="cache.default_clearer"/>
       <argument>2lZCpqe+mH</argument>
       <argument>0</argument>
-      <argument>xaxmQ3mT8uOyRgLgFvlq8Q</argument>
+      <argument>u1s5MjjmHWWHEZn1eYamBd</argument>
       <argument>C:\wamp64\www\Russia2018Symfony\var\cache\prod/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -588,7 +594,7 @@
       <tag name="monolog.logger" channel="cache"/>
       <argument></argument>
       <argument>0</argument>
-      <argument>xaxmQ3mT8uOyRgLgFvlq8Q</argument>
+      <argument>u1s5MjjmHWWHEZn1eYamBd</argument>
       <argument>C:\wamp64\www\Russia2018Symfony\var\cache\prod/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -598,7 +604,7 @@
       <tag name="monolog.logger" channel="cache"/>
       <argument></argument>
       <argument>0</argument>
-      <argument>xaxmQ3mT8uOyRgLgFvlq8Q</argument>
+      <argument>u1s5MjjmHWWHEZn1eYamBd</argument>
       <call method="setLogger">
         <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       </call>
@@ -2187,12 +2193,12 @@
     </service>
     <service id="security.authentication.listener.anonymous.main" class="Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener" public="false">
       <argument type="service" id="security.token_storage"/>
-      <argument>5ac60de1b36ef5.38940468</argument>
+      <argument>5aca59bb1f08b9.85153302</argument>
       <argument type="service" id="monolog.logger.security" on-invalid="null"/>
       <argument type="service" id="security.authentication.manager"/>
     </service>
     <service id="security.authentication.provider.anonymous.main" class="Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider" public="false">
-      <argument>5ac60de1b36ef5.38940468</argument>
+      <argument>5aca59bb1f08b9.85153302</argument>
     </service>
     <service id="security.exception_listener.main" class="Symfony\Component\Security\Http\Firewall\ExceptionListener" public="false">
       <argument type="service" id="security.token_storage"/>
@@ -2403,6 +2409,10 @@
         <argument>RUSSIA2PI</argument>
       </call>
       <call method="addPath">
+        <argument>C:\wamp64\www\Russia2018Symfony\src\Fedi\FediBundle/Resources/views</argument>
+        <argument>FediFedi</argument>
+      </call>
+      <call method="addPath">
         <argument>C:\wamp64\www\Russia2018Symfony\app/Resources/views</argument>
       </call>
       <call method="addPath">
@@ -2556,6 +2566,10 @@
       <call method="addPath">
         <argument>C:\wamp64\www\Russia2018Symfony\src\RUSSIA2\PIBundle/Resources/views</argument>
         <argument>RUSSIA2PI</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\wamp64\www\Russia2018Symfony\src\Fedi\FediBundle/Resources/views</argument>
+        <argument>FediFedi</argument>
       </call>
       <call method="addPath">
         <argument>C:\wamp64\www\Russia2018Symfony\app/Resources/views</argument>
@@ -2851,9 +2865,9 @@
         <argument key="driver">pdo_mysql</argument>
         <argument key="host">127.0.0.1</argument>
         <argument key="port">null</argument>
-        <argument key="dbname">symfony</argument>
+        <argument key="dbname">pi</argument>
         <argument key="user">root</argument>
-        <argument key="password">null</argument>
+        <argument key="password">123</argument>
         <argument key="charset">UTF8</argument>
         <argument key="driverOptions" type="collection"/>
         <argument key="defaultTableOptions" type="collection"/>
@@ -2953,7 +2967,9 @@
     <service id="doctrine.orm.default_configuration" class="Doctrine\ORM\Configuration" public="false">
       <call method="setEntityNamespaces">
         <argument type="collection">
+          <argument key="AppBundle">AppBundle\Entity</argument>
           <argument key="UserBundle">UserBundle\Entity</argument>
+          <argument key="FediFediBundle">Fedi\FediBundle\Entity</argument>
         </argument>
       </call>
       <call method="setMetadataCacheImpl">
@@ -2999,13 +3015,23 @@
     <service id="doctrine.orm.default_annotation_metadata_driver" class="Doctrine\ORM\Mapping\Driver\AnnotationDriver" public="false">
       <argument type="service" id="annotations.cached_reader"/>
       <argument type="collection">
+        <argument>C:\wamp64\www\Russia2018Symfony\src\AppBundle\Entity</argument>
         <argument>C:\wamp64\www\Russia2018Symfony\src\UserBundle\Entity</argument>
+        <argument>C:\wamp64\www\Russia2018Symfony\src\Fedi\FediBundle\Entity</argument>
       </argument>
     </service>
     <service id="doctrine.orm.default_metadata_driver" class="Doctrine\Common\Persistence\Mapping\Driver\MappingDriverChain" public="false">
       <call method="addDriver">
         <argument type="service" id="doctrine.orm.default_annotation_metadata_driver"/>
+        <argument>AppBundle\Entity</argument>
+      </call>
+      <call method="addDriver">
+        <argument type="service" id="doctrine.orm.default_annotation_metadata_driver"/>
         <argument>UserBundle\Entity</argument>
+      </call>
+      <call method="addDriver">
+        <argument type="service" id="doctrine.orm.default_annotation_metadata_driver"/>
+        <argument>Fedi\FediBundle\Entity</argument>
       </call>
       <call method="addDriver">
         <argument type="service">

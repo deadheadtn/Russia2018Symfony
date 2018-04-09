@@ -103,19 +103,77 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
 
         }
 
-        // ticket_homepage
-        if ('/tickets' === $pathinfo) {
-            return array (  '_controller' => 'TicketBundle\\Controller\\DefaultController::ticketAction',  '_route' => 'ticket_homepage',);
+        // fedi_fedi_default_index
+        if ('' === $trimmedPathinfo) {
+            if (substr($pathinfo, -1) !== '/') {
+                return $this->redirect($rawPathinfo.'/', 'fedi_fedi_default_index');
+            }
+
+            return array (  '_controller' => 'Fedi\\FediBundle\\Controller\\DefaultController::indexAction',  '_route' => 'fedi_fedi_default_index',);
+        }
+
+        // hotel
+        if ('/hotel' === $pathinfo) {
+            return array (  '_controller' => 'Fedi\\FediBundle\\Controller\\hotelController::hotelAction',  '_route' => 'hotel',);
+        }
+
+        // Pageaffichage
+        if ('/affichage' === $pathinfo) {
+            return array (  '_controller' => 'Fedi\\FediBundle\\Controller\\hotelController::affichehotelAction',  '_route' => 'Pageaffichage',);
+        }
+
+        // Page
+        if ('/admin' === $pathinfo) {
+            return array (  '_controller' => 'RUSSIA\\PIBundle\\Controller\\DefaultController::indexAction',  '_route' => 'Page',);
+        }
+
+        if (0 === strpos($pathinfo, '/Ajout')) {
+            // ajout
+            if ('/Ajout' === $pathinfo) {
+                return array (  '_controller' => 'Fedi\\FediBundle\\Controller\\hotelController::Ajout2Action',  '_route' => 'ajout',);
+            }
+
+            // ajouttransport
+            if ('/AjoutT' === $pathinfo) {
+                return array (  '_controller' => 'Fedi\\FediBundle\\Controller\\transportController::Ajout2Action',  '_route' => 'ajouttransport',);
+            }
+
+        }
+
+        elseif (0 === strpos($pathinfo, '/Delete')) {
+            // supp
+            if (preg_match('#^/Delete/(?P<s>[^/]++)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'supp')), array (  '_controller' => 'Fedi\\FediBundle\\Controller\\hotelController::DeleteAction',));
+            }
+
+            // supptransport
+            if (0 === strpos($pathinfo, '/DeleteT') && preg_match('#^/DeleteT/(?P<s>[^/]++)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'supptransport')), array (  '_controller' => 'Fedi\\FediBundle\\Controller\\transportController::DeleteAction',));
+            }
+
+        }
+
+        elseif (0 === strpos($pathinfo, '/Modifier')) {
+            // modif
+            if (preg_match('#^/Modifier/(?P<s>[^/]++)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'modif')), array (  '_controller' => 'Fedi\\FediBundle\\Controller\\hotelController::ModifierAction',));
+            }
+
+            // modiftransport
+            if (0 === strpos($pathinfo, '/ModifierT') && preg_match('#^/ModifierT/(?P<s>[^/]++)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'modiftransport')), array (  '_controller' => 'Fedi\\FediBundle\\Controller\\transportController::ModifierAction',));
+            }
+
+        }
+
+        // transport
+        if ('/transport' === $pathinfo) {
+            return array (  '_controller' => 'Fedi\\FediBundle\\Controller\\transportController::transportAction',  '_route' => 'transport',);
         }
 
         // russia2_pi_homepage
         if ('/client' === $pathinfo) {
             return array (  '_controller' => 'RUSSIA2\\PIBundle\\Controller\\DefaultController::indexAction',  '_route' => 'russia2_pi_homepage',);
-        }
-
-        // russiapi_homepage
-        if ('/admin' === $pathinfo) {
-            return array (  '_controller' => 'RUSSIA\\PIBundle\\Controller\\DefaultController::indexAction',  '_route' => 'russiapi_homepage',);
         }
 
         // user_homepage

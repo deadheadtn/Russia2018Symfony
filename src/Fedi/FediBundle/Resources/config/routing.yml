@@ -1,0 +1,27 @@
+hotel:
+    path:     /hotel
+    defaults: { _controller: FediFediBundle:hotel:hotel }
+Pageaffichage:
+    path:     /affichage
+    defaults: { _controller: FediFediBundle:hotel:affichehotel }
+ajout:
+    path:     /Ajout
+    defaults: { _controller: FediFediBundle:hotel:Ajout2 }
+supp:
+    path:     /Delete/{s}
+    defaults: { _controller: FediFediBundle:hotel:Delete }
+modif:
+    path:     /Modifier/{s}
+    defaults: { _controller: FediFediBundle:hotel:Modifier }
+transport:
+    path:     /transport
+    defaults: { _controller: FediFediBundle:transport:transport }
+ajouttransport:
+    path:     /AjoutT
+    defaults: { _controller: FediFediBundle:transport:Ajout2 }
+supptransport:
+    path:     /DeleteT/{s}
+    defaults: { _controller: FediFediBundle:transport:Delete }
+modiftransport:
+    path:     /ModifierT/{s}
+    defaults: { _controller: FediFediBundle:transport:Modifier }
