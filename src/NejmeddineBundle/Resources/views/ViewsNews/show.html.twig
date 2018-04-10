@@ -1,37 +1,35 @@
-{% extends 'NejmeddineBundle:ViewsNews:News.html.twig' %}
+{% extends 'NejmeddineBundle:Default:layout.html.twig' %}
 
 {% block body %}
+    <div class="card-header">
+        <i class="fa fa-table"></i> Data Table Example</div>
     <h1>News</h1>
 
-    <table>
+    <table class="table">
         <tbody>
             <tr>
-                <th>Idnews</th>
+                <th>Id news</th>
                 <td>{{ news.idNews }}</td>
             </tr>
             <tr>
-                <th>Idcooperation</th>
-                <td>{{ news.idCooperation }}</td>
-            </tr>
-            <tr>
-                <th>Titren</th>
+                <th>Titre</th>
                 <td>{{ news.titreN }}</td>
             </tr>
             <tr>
-                <th>Typen</th>
+                <th>Type</th>
                 <td>{{ news.typeN }}</td>
             </tr>
             <tr>
-                <th>Motcles</th>
+                <th>Mot cles</th>
                 <td>{{ news.motCles }}</td>
             </tr>
             <tr>
-                <th>Texten</th>
+                <th>Texte</th>
                 <td>{{ news.texteN }}</td>
             </tr>
             <tr>
-                <th>Imagen</th>
-                <td>{{ news.imageN }}</td>
+                <th>Image</th>
+                <td><img width="50px" src="{{ news.imageN }}"></td>
             </tr>
         </tbody>
     </table>
@@ -49,4 +47,5 @@
             {{ form_end(delete_form) }}
         </li>
     </ul>
+    </div>
 {% endblock %}

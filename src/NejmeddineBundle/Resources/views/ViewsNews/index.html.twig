@@ -1,18 +1,19 @@
-{% extends 'NejmeddineBundle:ViewsNews:News.html.twig' %}
-
+{% extends 'NejmeddineBundle:Default:layout.html.twig' %}
 {% block body %}
-    <h1>News list</h1>
-
-    <table>
+    <div class="card-header">
+        <i class="fa fa-table"></i> Data Table Example</div>
+    <div class="card-body>
+    <h1>Liste des News</h1>
+    <div class="table-responsive">
+        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
         <thead>
             <tr>
-                <th>Idnews</th>
-                <th>Idcooperation</th>
-                <th>Titren</th>
-                <th>Typen</th>
-                <th>Motcles</th>
-                <th>Texten</th>
-                <th>Imagen</th>
+                <th >Id</th>
+                <th>Titre</th>
+                <th>Type</th>
+                <th>Mot cles</th>
+                <th>Texte</th>
+                <th>Image</th>
                 <th>Actions</th>
             </tr>
         </thead>
@@ -20,19 +21,18 @@
         {% for news in news %}
             <tr>
                 <td><a href="{{ path('admin_manage_news_show', { 'idNews': news.idNews }) }}">{{ news.idNews }}</a></td>
-                <td>{{ news.idCooperation }}</td>
                 <td>{{ news.titreN }}</td>
                 <td>{{ news.typeN }}</td>
                 <td>{{ news.motCles }}</td>
-                <td>{{ news.texteN }}</td>
-                <td>{{ news.imageN }}</td>
+                <td style="width: 88px;">{{ news.texteN }}</td>
+                <td><img width="50px" src="{{ news.imageN }}"></td>
                 <td>
                     <ul>
                         <li>
-                            <a href="{{ path('admin_manage_news_show', { 'idNews': news.idNews }) }}">show</a>
+                            <a href="{{ path('admin_manage_news_show', { 'idNews': news.idNews }) }}">Afficher</a>
                         </li>
                         <li>
-                            <a href="{{ path('admin_manage_news_edit', { 'idNews': news.idNews }) }}">edit</a>
+                            <a href="{{ path('admin_manage_news_edit', { 'idNews': news.idNews }) }}">Modifier</a>
                         </li>
                     </ul>
                 </td>
@@ -40,10 +40,11 @@
         {% endfor %}
         </tbody>
     </table>
-
+</div>
     <ul>
         <li>
-            <a href="{{ path('admin_manage_news_new') }}">Create a new news</a>
+            <a href="{{ path('admin_manage_news_new') }}">Creer une News</a>
         </li>
     </ul>
+
 {% endblock %}

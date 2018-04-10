@@ -1,9 +1,7 @@
 {% extends 'NejmeddineBundle:Default:layout.html.twig' %}
 
 {% block body %}
-    <div class="card-header">
-        <i class="fa fa-table"></i> Data Table Example</div>
-    <h1>News edit</h1>
+    <h1>Reclamation edit</h1>
 
     {{ form_start(edit_form) }}
         {{ form_widget(edit_form) }}
@@ -12,7 +10,7 @@
 
     <ul>
         <li>
-            <a href="{{ path('admin_manage_news_index') }}">Back to the list</a>
+            <a href="{{ path('admin_manage_reclamation_index') }}">Back to the list</a>
         </li>
         <li>
             {{ form_start(delete_form) }}

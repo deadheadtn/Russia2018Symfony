@@ -6,21 +6,21 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-class NewsType extends AbstractType
+class ReclamationType extends AbstractType
 {
     /**
      * {@inheritdoc}
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('idCooperation')->add('titreN')->add('typeN')->add('motCles')->add('texteN')->add('imageN');
+        $builder->add('sujetRec')->add('descriptionRec')->add('dateRec')->add('etatRec')->add('idUtilisateur');
     }/**
      * {@inheritdoc}
      */
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'NejmeddineBundle\Entity\News'
+            'data_class' => 'NejmeddineBundle\Entity\Reclamation'
         ));
     }
 
@@ -29,7 +29,7 @@ class NewsType extends AbstractType
      */
     public function getBlockPrefix()
     {
-        return 'nejmeddinebundle_news';
+        return 'nejmeddinebundle_reclamation';
     }
 
 
