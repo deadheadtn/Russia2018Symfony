@@ -92,4 +92,16 @@ class hotelController extends Controller
         return$this->render('FediFediBundle:hotel:ajout.html.twig',array('f'=>$form->createView()
         ));
     }
+    public function hotelclientAction()
+    {
+        $em=$this->getDoctrine()->getManager();
+        $ev=$em->getRepository("FediFediBundle:Hotel")->findAll();
+        return$this->render('FediFediBundle:hotel:hotelclient.html.twig',array('hotels'=>$ev));
+    }
+    public function hotelclient2Action()
+    {
+        $em=$this->getDoctrine()->getManager();
+        $ev=$em->getRepository("FediFediBundle:Hotel")->findAll();
+        return$this->render('FediFediBundle:hotel:hotelinfo.html.twig',array('hotels'=>$ev));
+    }
 }

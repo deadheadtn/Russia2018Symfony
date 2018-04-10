@@ -25,3 +25,12 @@ supptransport:
 modiftransport:
     path:     /ModifierT/{s}
     defaults: { _controller: FediFediBundle:transport:Modifier }
+hotelclient:
+    path:     /hotelclient
+    defaults: { _controller: FediFediBundle:hotel:hotelclient }
+pagehotelclient:
+    path:     /pagehotelclient
+    defaults: { _controller: FediFediBundle:hotel:hotelclient2 }
+reserverhotel:
+    path:     /reserverhotel
+    defaults: { _controller: FediFediBundle:reservationH:AjoutR }
