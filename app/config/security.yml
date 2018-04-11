@@ -3,12 +3,8 @@ security:
         FOS\UserBundle\Model\UserInterface: bcrypt
 
     role_hierarchy:
-<<<<<<< Updated upstream
 
-        ROLE_ADMIN:       ROLE_USER
-=======
         ROLE_ADMIN:  ROLE_ADMIN
->>>>>>> Stashed changes
         ROLE_SUPER_ADMIN: ROLE_ADMIN
 
 
