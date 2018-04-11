@@ -1,0 +1,42 @@
+Equipe:
+    type: entity
+    table: equipe
+    id:
+        idEquipe:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: ID_EQUIPE
+            generator:
+                strategy: IDENTITY
+    fields:
+        nomEquipe:
+            type: string
+            nullable: true
+            length: 20
+            options:
+                fixed: false
+            column: NOM_EQUIPE
+        groupe:
+            type: string
+            nullable: true
+            length: 20
+            options:
+                fixed: false
+            column: GROUPE
+        pays:
+            type: string
+            nullable: true
+            length: 20
+            options:
+                fixed: false
+            column: PAYS
+        classement:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: CLASSEMENT
+    lifecycleCallbacks: {  }

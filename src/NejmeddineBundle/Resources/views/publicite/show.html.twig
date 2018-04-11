@@ -1,0 +1,48 @@
+{% extends 'NejmeddineBundle:Default:layout.html.twig' %}
+
+{% block body %}
+    <h1>Publicite</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ publicite.id }}</td>
+            </tr>
+            <tr>
+                <th>Title</th>
+                <td>{{ publicite.title }}</td>
+            </tr>
+            <tr>
+                <th>Url</th>
+                <td>{{ publicite.url }}</td>
+            </tr>
+            <tr>
+                <th>Startdatetime</th>
+                <td>{% if publicite.startdatetime %}{{ publicite.startdatetime|date('Y-m-d') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Enddatetime</th>
+                <td>{{ publicite.enddatetime }}</td>
+            </tr>
+            <tr>
+                <th>Prix</th>
+                <td>{{ publicite.prix }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('admin_manage_publicite_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('admin_manage_publicite_edit', { 'id': publicite.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

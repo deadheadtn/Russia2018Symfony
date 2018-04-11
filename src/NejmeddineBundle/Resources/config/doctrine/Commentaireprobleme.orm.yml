@@ -1,0 +1,66 @@
+NejmeddineBundle\Entity\Commentaireprobleme:
+    type: entity
+    table: commentaireprobleme
+    indexes:
+        IDX_7D32A43A36108C11:
+            columns:
+                - idProbleme_cp
+        IDX_7D32A43A57E28490:
+            columns:
+                - idUser_cp
+        idProbleme:
+            columns:
+                - idProbleme_cp
+                - idUser_cp
+    id:
+        idcommentaire:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: idCommentaire
+            generator:
+                strategy: IDENTITY
+    fields:
+        datecommentaire:
+            type: datetime
+            nullable: false
+            column: dateCommentaire
+        contenu:
+            type: text
+            nullable: false
+            length: null
+            options:
+                fixed: false
+        nbrvote:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            column: nbrVote
+        valide:
+            type: boolean
+            nullable: false
+        notif:
+            type: boolean
+            nullable: false
+        idproblemeCp:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: idProbleme_cp
+        iduserCp:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: idUser_cp
+        notificationadmin:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+                default: '1'
+    lifecycleCallbacks: {  }

@@ -1,0 +1,54 @@
+NejmeddineBundle\Entity\Staff:
+    type: entity
+    table: staff
+    indexes:
+        NOM_EQUIPE:
+            columns:
+                - NOM_EQUIPE
+    id:
+        idStaff:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: ID_STAFF
+            generator:
+                strategy: IDENTITY
+    fields:
+        nomS:
+            type: string
+            nullable: true
+            length: 20
+            options:
+                fixed: false
+            column: NOM_S
+        prenomS:
+            type: string
+            nullable: true
+            length: 20
+            options:
+                fixed: false
+            column: PRENOM_S
+        nomEquipe:
+            type: string
+            nullable: true
+            length: 20
+            options:
+                fixed: false
+            column: NOM_EQUIPE
+        fonctionS:
+            type: string
+            nullable: true
+            length: 20
+            options:
+                fixed: false
+            column: FONCTION_S
+        presenceS:
+            type: string
+            nullable: true
+            length: 20
+            options:
+                fixed: false
+            column: PRESENCE_S
+    lifecycleCallbacks: {  }

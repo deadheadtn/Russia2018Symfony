@@ -1,0 +1,88 @@
+NejmeddineBundle\Entity\Reservationt:
+    type: entity
+    table: reservationt
+    indexes:
+        ID_UTILISATEUR:
+            columns:
+                - ID_UTILISATEUR
+        ID_TRANSPORT:
+            columns:
+                - ID_TRANSPORT
+    id:
+        idReservation:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: ID_RESERVATION
+            generator:
+                strategy: IDENTITY
+    fields:
+        idTransport:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: ID_TRANSPORT
+        type:
+            type: string
+            nullable: false
+            length: 20
+            options:
+                fixed: false
+            column: TYPE
+        depart:
+            type: string
+            nullable: false
+            length: 20
+            options:
+                fixed: false
+            column: DEPART
+        destination:
+            type: string
+            nullable: false
+            length: 20
+            options:
+                fixed: false
+            column: DESTINATION
+        dateDepart:
+            type: string
+            nullable: false
+            length: 20
+            options:
+                fixed: false
+            column: DATE_DEPART
+        dateArrivee:
+            type: string
+            nullable: false
+            length: 20
+            options:
+                fixed: false
+            column: DATE_ARRIVEE
+        nbrVoyageurs:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            column: NBR_VOYAGEURS
+        etat:
+            type: string
+            nullable: false
+            length: 20
+            options:
+                fixed: false
+                default: NON_CONFIRMER
+            column: ETAT
+    manyToOne:
+        idUtilisateur:
+            targetEntity: User
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                ID_UTILISATEUR:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

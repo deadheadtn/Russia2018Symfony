@@ -1,0 +1,56 @@
+Hotel:
+    type: entity
+    table: hotel
+    id:
+        idHotel:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: ID_HOTEL
+            generator:
+                strategy: IDENTITY
+    fields:
+        nomHotel:
+            type: string
+            nullable: true
+            length: 20
+            options:
+                fixed: false
+            column: NOM_HOTEL
+        nbrEtoile:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            column: NBR_ETOILE
+        ville:
+            type: string
+            nullable: false
+            length: 20
+            options:
+                fixed: false
+            column: VILLE
+        description:
+            type: string
+            nullable: false
+            length: 100
+            options:
+                fixed: false
+            column: DESCRIPTION
+        service:
+            type: string
+            nullable: false
+            length: 100
+            options:
+                fixed: false
+            column: SERVICE
+        adresse:
+            type: string
+            nullable: false
+            length: 100
+            options:
+                fixed: false
+            column: ADRESSE
+    lifecycleCallbacks: {  }

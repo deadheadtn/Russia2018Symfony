@@ -1,0 +1,30 @@
+Pronostics:
+    type: entity
+    table: pronostics
+    indexes:
+        NOM_EQUIPE:
+            columns:
+                - ID_EQUIPE
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        idEquipe:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            column: ID_EQUIPE
+        vote:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            column: VOTE
+    lifecycleCallbacks: {  }

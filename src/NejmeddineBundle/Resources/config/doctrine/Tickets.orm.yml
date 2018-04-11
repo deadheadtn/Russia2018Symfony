@@ -1,0 +1,77 @@
+NejmeddineBundle\Entity\Tickets:
+    type: entity
+    table: tickets
+    indexes:
+        ID_MATCH:
+            columns:
+                - ID_MATCH
+        id_user:
+            columns:
+                - id_user
+    id:
+        idTicket:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: ID_TICKET
+            generator:
+                strategy: IDENTITY
+    fields:
+        type:
+            type: string
+            nullable: true
+            length: 20
+            options:
+                fixed: false
+            column: TYPE
+        prix:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+            column: PRIX
+        email:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+            column: Email
+        etatTicket:
+            type: string
+            nullable: false
+            length: 20
+            options:
+                fixed: false
+                default: 'Non Vendu'
+            column: Etat_Ticket
+        dateAjout:
+            type: datetime
+            nullable: true
+            options:
+                default: CURRENT_TIMESTAMP
+            column: Date_Ajout
+    manyToOne:
+        idMatch:
+            targetEntity: Match
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                ID_MATCH:
+                    referencedColumnName: id_match
+            orphanRemoval: false
+        idUser:
+            targetEntity: User
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                id_user:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

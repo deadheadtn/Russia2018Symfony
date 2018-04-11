@@ -1,0 +1,47 @@
+{% extends 'NejmeddineBundle:Default:layout.html.twig' %}
+
+{% block body %}
+    <h1>Publicites list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Url</th>
+                <th>Startdatetime</th>
+                <th>Enddatetime</th>
+                <th>Prix</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for publicite in publicites %}
+            <tr>
+                <td><a href="{{ path('admin_manage_publicite_show', { 'id': publicite.id }) }}">{{ publicite.id }}</a></td>
+                <td>{{ publicite.title }}</td>
+                <td>{{ publicite.url }}</td>
+                <td>{% if publicite.startdatetime %}{{ publicite.startdatetime|date('Y-m-d') }}{% endif %}</td>
+                <td>{{ publicite.enddatetime }}</td>
+                <td>{{ publicite.prix }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('admin_manage_publicite_show', { 'id': publicite.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('admin_manage_publicite_edit', { 'id': publicite.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('admin_manage_publicite_new') }}">Create a new publicite</a>
+        </li>
+    </ul>
+{% endblock %}

@@ -1,0 +1,20 @@
+Administrateur:
+    type: entity
+    table: administrateur
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        idAdmin:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            column: ID_ADMIN
+    lifecycleCallbacks: {  }
