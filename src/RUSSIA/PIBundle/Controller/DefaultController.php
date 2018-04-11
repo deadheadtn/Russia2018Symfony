@@ -14,8 +14,7 @@ class DefaultController extends Controller
     {
         return $this->render('RUSSIAPIBundle:Default:index.html.twig');
     }
-<<<<<<< Updated upstream
-=======
+
     /**
      * @return \Symfony\Component\HttpFoundation\Response
      * @Route("/admin",name="russiapi_homepage")
@@ -27,7 +26,6 @@ class DefaultController extends Controller
         return $this->render('RUSSIAPIBundle:Default:index.html.twig');
     }
 
->>>>>>> Stashed changes
 
 }
 

@@ -63,6 +63,118 @@ class News
      */
     private $imageN;
 
+    /**
+     * @return int
+     */
+    public function getIdNews()
+    {
+        return $this->idNews;
+    }
+
+    /**
+     * @param int $idNews
+     */
+    public function setIdNews($idNews)
+    {
+        $this->idNews = $idNews;
+    }
+
+    /**
+     * @return int
+     */
+    public function getIdCooperation()
+    {
+        return $this->idCooperation;
+    }
+
+    /**
+     * @param int $idCooperation
+     */
+    public function setIdCooperation($idCooperation)
+    {
+        $this->idCooperation = $idCooperation;
+    }
+
+    /**
+     * @return string
+     */
+    public function getTitreN()
+    {
+        return $this->titreN;
+    }
+
+    /**
+     * @param string $titreN
+     */
+    public function setTitreN($titreN)
+    {
+        $this->titreN = $titreN;
+    }
+
+    /**
+     * @return string
+     */
+    public function getTypeN()
+    {
+        return $this->typeN;
+    }
+
+    /**
+     * @param string $typeN
+     */
+    public function setTypeN($typeN)
+    {
+        $this->typeN = $typeN;
+    }
+
+    /**
+     * @return string
+     */
+    public function getMotCles()
+    {
+        return $this->motCles;
+    }
+
+    /**
+     * @param string $motCles
+     */
+    public function setMotCles($motCles)
+    {
+        $this->motCles = $motCles;
+    }
+
+    /**
+     * @return string
+     */
+    public function getTexteN()
+    {
+        return $this->texteN;
+    }
+
+    /**
+     * @param string $texteN
+     */
+    public function setTexteN($texteN)
+    {
+        $this->texteN = $texteN;
+    }
+
+    /**
+     * @return string
+     */
+    public function getImageN()
+    {
+        return $this->imageN;
+    }
+
+    /**
+     * @param string $imageN
+     */
+    public function setImageN($imageN)
+    {
+        $this->imageN = $imageN;
+    }
+
 
 }
 

@@ -199,5 +199,11 @@ class User extends BaseUser
     {
         return $this->adresse;
     }
+
+    public function __toString()
+    {
+        return (string)$this->id;
+    }
+
 }
 

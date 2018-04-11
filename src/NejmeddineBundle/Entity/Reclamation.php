@@ -59,6 +59,102 @@ class Reclamation
      */
     private $idUtilisateur;
 
+    /**
+     * @return int
+     */
+    public function getIdReclamation()
+    {
+        return $this->idReclamation;
+    }
+
+    /**
+     * @param int $idReclamation
+     */
+    public function setIdReclamation($idReclamation)
+    {
+        $this->idReclamation = $idReclamation;
+    }
+
+    /**
+     * @return string
+     */
+    public function getSujetRec()
+    {
+        return $this->sujetRec;
+    }
+
+    /**
+     * @param string $sujetRec
+     */
+    public function setSujetRec($sujetRec)
+    {
+        $this->sujetRec = $sujetRec;
+    }
+
+    /**
+     * @return string
+     */
+    public function getDescriptionRec()
+    {
+        return $this->descriptionRec;
+    }
+
+    /**
+     * @param string $descriptionRec
+     */
+    public function setDescriptionRec($descriptionRec)
+    {
+        $this->descriptionRec = $descriptionRec;
+    }
+
+    /**
+     * @return string
+     */
+    public function getDateRec()
+    {
+        return $this->dateRec;
+    }
+
+    /**
+     * @param string $dateRec
+     */
+    public function setDateRec($dateRec)
+    {
+        $this->dateRec = $dateRec;
+    }
+
+    /**
+     * @return int
+     */
+    public function getEtatRec()
+    {
+        return $this->etatRec;
+    }
+
+    /**
+     * @param int $etatRec
+     */
+    public function setEtatRec($etatRec)
+    {
+        $this->etatRec = $etatRec;
+    }
+
+    /**
+     * @return \User
+     */
+    public function getIdUtilisateur()
+    {
+        return $this->idUtilisateur;
+    }
+
+    /**
+     * @param \User $idUtilisateur
+     */
+    public function setIdUtilisateur($idUtilisateur)
+    {
+        $this->idUtilisateur = $idUtilisateur;
+    }
+
 
 }
 
