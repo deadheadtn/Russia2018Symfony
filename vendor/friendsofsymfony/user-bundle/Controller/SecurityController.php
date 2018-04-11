@@ -18,6 +18,7 @@ use Symfony\Component\HttpFoundation\Session\Session;
 use Symfony\Component\Security\Core\Exception\AuthenticationException;
 use Symfony\Component\Security\Core\Security;
 use Symfony\Component\Security\Csrf\CsrfTokenManagerInterface;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 
 /**
  * Controller managing security.
@@ -79,10 +80,15 @@ class SecurityController extends Controller
     {
         throw new \RuntimeException('You must configure the check path to be handled by the firewall using form_login in your security firewall configuration.');
     }
+    /**
+     * @return \Symfony\Component\HttpFoundation\Response
+     * @Route("/login",name="fos_user_security_login")
+     **/
 
     public function logoutAction()
     {
-        throw new \RuntimeException('You must activate the logout in your security firewall configuration.');
+       $this->render("@FOSUser/Security/login.html.twig");
+       // throw new \RuntimeException('You must activate the logout in your security firewall configuration.');
     }
 
     /**

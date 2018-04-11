@@ -1,5 +1,10 @@
-ticket:
-    resource: "@TicketBundle/Resources/config/routing.yml"
+fedi_fedi:
+    resource: "@FediFediBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+Fedi_Fedi:
+    resource: "@FediFediBundle/Resources/config/routing.yml"
     prefix:   /
 
 russia2_pi:
@@ -18,8 +23,10 @@ app:
     resource: '@AppBundle/Controller/'
     type: annotation
 
+
+
 fos_user:
     resource: "@FOSUserBundle/Resources/config/routing/all.xml"
 
-Nejmeddine:
-    resource: "@NejmeddineBundle/Resources/config/routing.yml"
+
+

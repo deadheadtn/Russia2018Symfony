@@ -30,6 +30,179 @@ class appProdProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBundle\R
         }
 
 
+        // ticket_homepage
+        if ('/tickets' === $pathinfo) {
+            return array (  '_controller' => 'TicketBundle\\Controller\\DefaultController::ticketAction',  '_route' => 'ticket_homepage',);
+        }
+
+        if (0 === strpos($pathinfo, '/Admin')) {
+            // _affichage
+            if ('/Admin/Tickets/Affichage' === $pathinfo) {
+                return array (  '_controller' => 'TicketBundle\\Controller\\AdminTicketController::AffichageAction',  '_route' => '_affichage',);
+            }
+
+            // _recherche
+            if ('/Admin/Tickets/Recherche' === $pathinfo) {
+                return array (  '_controller' => 'TicketBundle\\Controller\\AdminTicketController::RechercheAction',  '_route' => '_recherche',);
+            }
+
+            if (0 === strpos($pathinfo, '/Admin/tickets')) {
+                // _ajout
+                if ('/Admin/tickets/Ajout' === $pathinfo) {
+                    return array (  '_controller' => 'TicketBundle\\Controller\\AdminTicketController::AjoutAction',  '_route' => '_ajout',);
+                }
+
+                // _modif
+                if ('/Admin/tickets/modif' === $pathinfo) {
+                    return array (  '_controller' => 'TicketBundle\\Controller\\AdminTicketController::ModifAction',  '_route' => '_modif',);
+                }
+
+                // _delete
+                if ('/Admin/tickets/supprimer' === $pathinfo) {
+                    return array (  '_controller' => 'TicketBundle\\Controller\\AdminTicketController::DeleteAction',  '_route' => '_delete',);
+                }
+
+            }
+
+        }
+
+        // russia2_pi_homepage
+        if ('/client' === $pathinfo) {
+            return array (  '_controller' => 'RUSSIA2\\PIBundle\\Controller\\DefaultController::indexAction',  '_route' => 'russia2_pi_homepage',);
+        }
+
+        if (0 === strpos($pathinfo, '/admin')) {
+            // russiapi_homepage
+            if ('/admin' === $pathinfo) {
+                return array (  '_controller' => 'RUSSIA\\PIBundle\\Controller\\DefaultController::indexAction',  '_route' => 'russiapi_homepage',);
+            }
+
+            if (0 === strpos($pathinfo, '/admin/manage/news')) {
+                // admin_manage_news_index
+                if ('/admin/manage/news' === $trimmedPathinfo) {
+                    if ('GET' !== $canonicalMethod) {
+                        $allow[] = 'GET';
+                        goto not_admin_manage_news_index;
+                    }
+
+                    if (substr($pathinfo, -1) !== '/') {
+                        return $this->redirect($rawPathinfo.'/', 'admin_manage_news_index');
+                    }
+
+                    return array (  '_controller' => 'NejmeddineBundle\\Controller\\NewsController::indexAction',  '_route' => 'admin_manage_news_index',);
+                }
+                not_admin_manage_news_index:
+
+                // admin_manage_news_show
+                if (preg_match('#^/admin/manage/news/(?P<idNews>[^/]++)/show$#s', $pathinfo, $matches)) {
+                    if ('GET' !== $canonicalMethod) {
+                        $allow[] = 'GET';
+                        goto not_admin_manage_news_show;
+                    }
+
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'admin_manage_news_show')), array (  '_controller' => 'NejmeddineBundle\\Controller\\NewsController::showAction',));
+                }
+                not_admin_manage_news_show:
+
+                // admin_manage_news_new
+                if ('/admin/manage/news/new' === $pathinfo) {
+                    if (!in_array($canonicalMethod, array('GET', 'POST'))) {
+                        $allow = array_merge($allow, array('GET', 'POST'));
+                        goto not_admin_manage_news_new;
+                    }
+
+                    return array (  '_controller' => 'NejmeddineBundle\\Controller\\NewsController::newAction',  '_route' => 'admin_manage_news_new',);
+                }
+                not_admin_manage_news_new:
+
+                // admin_manage_news_edit
+                if (preg_match('#^/admin/manage/news/(?P<idNews>[^/]++)/edit$#s', $pathinfo, $matches)) {
+                    if (!in_array($canonicalMethod, array('GET', 'POST'))) {
+                        $allow = array_merge($allow, array('GET', 'POST'));
+                        goto not_admin_manage_news_edit;
+                    }
+
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'admin_manage_news_edit')), array (  '_controller' => 'NejmeddineBundle\\Controller\\NewsController::editAction',));
+                }
+                not_admin_manage_news_edit:
+
+                // admin_manage_news_delete
+                if (preg_match('#^/admin/manage/news/(?P<idNews>[^/]++)/delete$#s', $pathinfo, $matches)) {
+                    if ('DELETE' !== $canonicalMethod) {
+                        $allow[] = 'DELETE';
+                        goto not_admin_manage_news_delete;
+                    }
+
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'admin_manage_news_delete')), array (  '_controller' => 'NejmeddineBundle\\Controller\\NewsController::deleteAction',));
+                }
+                not_admin_manage_news_delete:
+
+            }
+
+            elseif (0 === strpos($pathinfo, '/admin/manage/reclamation')) {
+                // admin_manage_reclamation_index
+                if ('/admin/manage/reclamation' === $trimmedPathinfo) {
+                    if ('GET' !== $canonicalMethod) {
+                        $allow[] = 'GET';
+                        goto not_admin_manage_reclamation_index;
+                    }
+
+                    if (substr($pathinfo, -1) !== '/') {
+                        return $this->redirect($rawPathinfo.'/', 'admin_manage_reclamation_index');
+                    }
+
+                    return array (  '_controller' => 'NejmeddineBundle\\Controller\\ReclamationController::indexAction',  '_route' => 'admin_manage_reclamation_index',);
+                }
+                not_admin_manage_reclamation_index:
+
+                // admin_manage_reclamation_show
+                if (preg_match('#^/admin/manage/reclamation/(?P<idReclamation>[^/]++)/show$#s', $pathinfo, $matches)) {
+                    if ('GET' !== $canonicalMethod) {
+                        $allow[] = 'GET';
+                        goto not_admin_manage_reclamation_show;
+                    }
+
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'admin_manage_reclamation_show')), array (  '_controller' => 'NejmeddineBundle\\Controller\\ReclamationController::showAction',));
+                }
+                not_admin_manage_reclamation_show:
+
+                // admin_manage_reclamation_new
+                if ('/admin/manage/reclamation/new' === $pathinfo) {
+                    if (!in_array($canonicalMethod, array('GET', 'POST'))) {
+                        $allow = array_merge($allow, array('GET', 'POST'));
+                        goto not_admin_manage_reclamation_new;
+                    }
+
+                    return array (  '_controller' => 'NejmeddineBundle\\Controller\\ReclamationController::newAction',  '_route' => 'admin_manage_reclamation_new',);
+                }
+                not_admin_manage_reclamation_new:
+
+                // admin_manage_reclamation_edit
+                if (preg_match('#^/admin/manage/reclamation/(?P<idReclamation>[^/]++)/edit$#s', $pathinfo, $matches)) {
+                    if (!in_array($canonicalMethod, array('GET', 'POST'))) {
+                        $allow = array_merge($allow, array('GET', 'POST'));
+                        goto not_admin_manage_reclamation_edit;
+                    }
+
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'admin_manage_reclamation_edit')), array (  '_controller' => 'NejmeddineBundle\\Controller\\ReclamationController::editAction',));
+                }
+                not_admin_manage_reclamation_edit:
+
+                // admin_manage_reclamation_delete
+                if (preg_match('#^/admin/manage/reclamation/(?P<idReclamation>[^/]++)/delete$#s', $pathinfo, $matches)) {
+                    if ('DELETE' !== $canonicalMethod) {
+                        $allow[] = 'DELETE';
+                        goto not_admin_manage_reclamation_delete;
+                    }
+
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'admin_manage_reclamation_delete')), array (  '_controller' => 'NejmeddineBundle\\Controller\\ReclamationController::deleteAction',));
+                }
+                not_admin_manage_reclamation_delete:
+
+            }
+
+        }
+
         // user_homepage
         if ('' === $trimmedPathinfo) {
             if (substr($pathinfo, -1) !== '/') {

@@ -1,3 +1,23 @@
 ticket_homepage:
     path:     /tickets
     defaults: { _controller: TicketBundle:Default:ticket }
+
+_affichage:
+    path:     Admin/Tickets/Affichage
+    defaults: { _controller: TicketBundle:AdminTicket:Affichage }
+
+_ajout:
+    path:     Admin/tickets/Ajout
+    defaults: { _controller: TicketBundle:AdminTicket:Ajout }
+
+_modif:
+    path:     Admin/tickets/modif
+    defaults: { _controller: TicketBundle:AdminTicket:Modif }
+
+_delete:
+    path:     Admin/tickets/supprimer
+    defaults: { _controller: TicketBundle:AdminTicket:Delete }
+
+_recherche:
+    path:     Admin/Tickets/Recherche
+    defaults: { _controller: TicketBundle:AdminTicket:Recherche }

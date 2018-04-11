@@ -10,7 +10,7 @@ class DefaultController extends Controller
     public function ticketAction(Request $request)
     {
         $em = $this->getDoctrine()->getManager();
-        $ticket = $em->getRepository("TicketBundle:Tickets")->findAll();
+        $ticket = $em->getRepository("AppBundle:Tickets")->findAll();
         return $this->render("TicketBundle:Ticket/Administration:AdminTicket.html.twig",array('tickets'=>$ticket ));
     }
 }

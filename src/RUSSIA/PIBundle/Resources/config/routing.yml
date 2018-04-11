@@ -1,4 +1,5 @@
-russiapi_homepage:
+Page:
     path:     /admin
     defaults: { _controller: RUSSIAPIBundle:Default:index }
+
 

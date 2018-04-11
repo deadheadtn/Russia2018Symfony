@@ -48,29 +48,19 @@
             <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
                 <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents" data-parent="#exampleAccordion">
                     <i class="fa fa-fw fa-wrench"></i>
-                    <span class="nav-link-text">Components</span>
+                    <span class="nav-link-text">Tickets</span>
                 </a>
                 <ul class="sidenav-second-level collapse" id="collapseComponents">
                     <li>
-                        <a href="navbar.html">Navbar</a>
+                        <a href={{ path("_affichage") }}>Affichage Tickets</a>
                     </li>
                     <li>
                         <a href="cards.html">Cards</a>
                     </li>
                 </ul>
             </li>
-            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Reclamation">
-                <a class="nav-link" href="{{ path('admin_manage_reclamation_index')}}" data-parent="#exampleAccordion">
-                    <i class="fa fa-fw fa-file"></i>
-                    <span class="nav-link-text">Reclamation list</span>
-                </a>
-            </li>
-            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="News">
-                <a class="nav-link" href="{{ path('admin_manage_news_index') }}" data-parent="#exampleAccordion">
-                    <i class="fa fa-fw fa-file"></i>
-                    <span class="nav-link-text">News</span>
-                </a>
-            </li>
+
+
             <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Publicite">
                 <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseExamplePages" data-parent="#exampleAccordion">
                     <i class="fa fa-fw fa-file"></i>
@@ -213,13 +203,14 @@
                 </form>
             </li>
             <li class="nav-item">
-                <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
+                <a class="nav-link" data-toggle="modal" data-target="#exampleModal" a href={{ path("fos_user_security_logout") }}>
                     <i class="fa fa-fw fa-sign-out"></i>Logout</a>
             </li>
         </ul>
     </div>
 </nav>
 <div class="content-wrapper">
+    {% block content1 %}
     <div class="container-fluid">
         <!-- Breadcrumbs-->
         <ol class="breadcrumb">
@@ -584,9 +575,12 @@
             </div>
         </div>
         <!-- Example DataTables Card-->
+        {% block body %}
         <div class="card mb-3">
             <div class="card-header">
-                <i class="fa fa-table"></i> Data Table Example</div>
+
+                <i class="fa fa-table"></i>   Data Table Example </div>
+
             <div class="card-body">
                 <div class="table-responsive">
                     <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
@@ -1074,6 +1068,8 @@
             <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
         </div>
     </div>
+    {% endblock %}
+    {% endblock %}
     <!-- /.container-fluid-->
     <!-- /.content-wrapper-->
     <footer class="sticky-footer">
@@ -1100,7 +1096,8 @@
                 <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
                 <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="login.html">Logout</a>
+                    <a class="btn btn-primary" href={{ path("fos_user_security_logout") }}>Logout</a>
+
                 </div>
             </div>
         </div>
