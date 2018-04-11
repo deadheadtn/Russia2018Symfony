@@ -178,6 +178,6 @@ class __TwigTemplate_490a0195ac145e538f8be30a26c2ff254fc77c751f14ec3b3ccd1330fe1
     {% endfor %}
     </tbody>
 </table>
-", "@Twig/Exception/logs.html.twig", "C:\\wamp64\\www\\Russia2018Symfony\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\TwigBundle\\Resources\\views\\Exception\\logs.html.twig");
+", "@Twig/Exception/logs.html.twig", "C:\\wamp64\\www\\Russia2018Symfony2\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\TwigBundle\\Resources\\views\\Exception\\logs.html.twig");
     }
 }

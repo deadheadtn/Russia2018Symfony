@@ -1070,6 +1070,6 @@ class __TwigTemplate_a38801ae9f82067e009d4216a128b8cfb246283ed755a68818440bc93a3
         <span>{{ route|default(controller) }}</span>
     {%- endif %}
 {% endmacro %}
-", "@WebProfiler/Collector/request.html.twig", "C:\\wamp64\\www\\Russia2018Symfony\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\WebProfilerBundle\\Resources\\views\\Collector\\request.html.twig");
+", "@WebProfiler/Collector/request.html.twig", "C:\\wamp64\\www\\Russia2018Symfony2\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\WebProfilerBundle\\Resources\\views\\Collector\\request.html.twig");
     }
 }

@@ -171,6 +171,6 @@ class __TwigTemplate_58a62388ed1affc5489ddb3b86b5f511fa3f99fc731366f1a555bf01429
         </div>
     </div>
 </div>
-", "@Twig/Exception/traces.html.twig", "C:\\wamp64\\www\\Russia2018Symfony\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\TwigBundle\\Resources\\views\\Exception\\traces.html.twig");
+", "@Twig/Exception/traces.html.twig", "C:\\wamp64\\www\\Russia2018Symfony2\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\TwigBundle\\Resources\\views\\Exception\\traces.html.twig");
     }
 }

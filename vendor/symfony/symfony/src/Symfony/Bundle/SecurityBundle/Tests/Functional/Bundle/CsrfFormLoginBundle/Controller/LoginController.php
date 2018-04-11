@@ -31,7 +31,7 @@ class LoginController implements ContainerAwareInterface
 
     public function afterLoginAction()
     {
-        return new Response($this->container->get('twig')->render('@CsrfFormLogin/Login/after_login.html.twig'));
+        return new Response($this->container->get('twig')->render('@CsrfFormLogin/Login/after_login.html.twin'));
     }
 
     public function loginCheckAction()

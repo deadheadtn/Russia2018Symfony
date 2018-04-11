@@ -16,7 +16,7 @@ class User extends BaseUser
 {
     /**
      * @ORM\Id
-     * @ORM\Column(type="integer")
+     * @ORM\Column(type="integer")ROLE_ADMIN
      * @ORM\GeneratedValue(strategy="AUTO")
      */
     protected $id;
@@ -65,6 +65,7 @@ class User extends BaseUser
     {
         parent::__construct();
         // your own logic
+      //  $this->roles = array('ROLE_USER');
     }
 
     /**
