@@ -1,6 +1,9 @@
 <?php
+
 namespace NejmeddineBundle\Entity;
+
 use Doctrine\ORM\Mapping as ORM;
+
 /**
  * Reclamation
  *
@@ -17,24 +20,28 @@ class Reclamation
      * @ORM\GeneratedValue(strategy="IDENTITY")
      */
     private $idReclamation;
+
     /**
      * @var string
      *
      * @ORM\Column(name="SUJET_REC", type="string", length=20, nullable=true)
      */
     private $sujetRec;
+
     /**
      * @var string
      *
      * @ORM\Column(name="DESCRIPTION_REC", type="text", length=65535, nullable=true)
      */
     private $descriptionRec;
+
     /**
      * @var string
      *
      * @ORM\Column(name="DATE_REC", type="string", length=20, nullable=true)
      */
     private $dateRec;
+
     /**
      * @var integer
      *
@@ -42,101 +49,6 @@ class Reclamation
      */
     private $etatRec;
 
-    /**
-     * @return int
-     */
-    public function getIdReclamation()
-    {
-        return $this->idReclamation;
-    }
-
-    /**
-     * @param int $idReclamation
-     */
-    public function setIdReclamation($idReclamation)
-    {
-        $this->idReclamation = $idReclamation;
-    }
-
-    /**
-     * @return string
-     */
-    public function getSujetRec()
-    {
-        return $this->sujetRec;
-    }
-
-    /**
-     * @param string $sujetRec
-     */
-    public function setSujetRec($sujetRec)
-    {
-        $this->sujetRec = $sujetRec;
-    }
-
-    /**
-     * @return string
-     */
-    public function getDescriptionRec()
-    {
-        return $this->descriptionRec;
-    }
-
-    /**
-     * @param string $descriptionRec
-     */
-    public function setDescriptionRec($descriptionRec)
-    {
-        $this->descriptionRec = $descriptionRec;
-    }
-
-    /**
-     * @return string
-     */
-    public function getDateRec()
-    {
-        return $this->dateRec;
-    }
-
-    /**
-     * @param string $dateRec
-     */
-    public function setDateRec($dateRec)
-    {
-        $this->dateRec = $dateRec;
-    }
-
-    /**
-     * @return int
-     */
-    public function getEtatRec()
-    {
-        return $this->etatRec;
-    }
-
-    /**
-     * @param int $etatRec
-     */
-    public function setEtatRec($etatRec)
-    {
-        $this->etatRec = $etatRec;
-    }
-
-    /**
-     * @return \User
-     */
-    public function getIdUtilisateur()
-    {
-        return $this->idUtilisateur;
-    }
-
-    /**
-     * @param \User $idUtilisateur
-     */
-    public function setIdUtilisateur($idUtilisateur)
-    {
-        $this->idUtilisateur = $idUtilisateur;
-    }
     /**
      * @var \User
      *
@@ -146,4 +58,7 @@ class Reclamation
      * })
      */
     private $idUtilisateur;
+
+
 }
+

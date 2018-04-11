@@ -4,4 +4,6 @@ nejmeddine_admin_manage_news:
 nejmeddine_admin_manage_reclamation:
     resource: "@NejmeddineBundle/Resources/config/routing/reclamation.yml"
     prefix:   /admin/manage/reclamation
-
+app_admin_manage_publicite:
+    resource: "@NejmeddineBundle/Resources/config/routing/publicite.yml"
+    prefix:   /admin/manage/publicite
