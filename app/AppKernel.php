@@ -8,6 +8,7 @@ class AppKernel extends Kernel
     public function registerBundles()
     {
         $bundles = [
+            new Ivory\CKEditorBundle\IvoryCKEditorBundle(),
             new Symfony\Bundle\FrameworkBundle\FrameworkBundle(),
             new Symfony\Bundle\SecurityBundle\SecurityBundle(),
             new Symfony\Bundle\TwigBundle\TwigBundle(),
@@ -20,8 +21,15 @@ class AppKernel extends Kernel
             new FOS\UserBundle\FOSUserBundle(),
             new RUSSIA\PIBundle\RUSSIAPIBundle(),
             new RUSSIA2\PIBundle\RUSSIA2PIBundle(),
-            new TicketBundle\TicketBundle(),
-            new \NejmeddineBundle\NejmeddineBundle()
+            new \NejmeddineBundle\NejmeddineBundle(),
+            new Nesrine\JoueurBundle\NesrineJoueurBundle(),
+            new Knp\Bundle\PaginatorBundle\KnpPaginatorBundle(),
+            new CMEN\GoogleChartsBundle\CMENGoogleChartsBundle(),
+            new \Fedi\FediBundle\FediFediBundle(),
+            new \TicketBundle\TicketBundle(),
+            new ForumBundle\ForumBundle(),
+            new Nomaya\SocialBundle\NomayaSocialBundle(),
+
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

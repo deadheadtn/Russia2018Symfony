@@ -1,0 +1,9 @@
+PageAffichageFront:
+    path:     /affichageFront
+    defaults: { _controller: NesrineJoueurBundle:Joueur:affichageFront }
+PageAffichageEquipeFront:
+    path:     /affichageEquipeFront
+    defaults: { _controller: NesrineJoueurBundle:Equipe:affichageFront }
+Graphe:
+    path:     /graph
+    defaults: { _controller: NesrineJoueurBundle:Joueur:Index }

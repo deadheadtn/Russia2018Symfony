@@ -25,7 +25,7 @@
             </tr>
             <tr>
                 <th>Texte</th>
-                <td>{{ news.texteN }}</td>
+                <td>{{ news.texteN | raw}}</td>
             </tr>
             <tr>
                 <th>Image</th>
@@ -36,14 +36,18 @@
 
     <ul>
         <li>
-            <a href="{{ path('admin_manage_news_index') }}">Back to the list</a>
+            <button type="button" class="btn btn-outline-danger and-all-other-classes">
+            <a href="{{ path('admin_manage_news_index') }}" style="color:inherit">Back to the list</a>
+            </button>
         </li>
         <li>
-            <a href="{{ path('admin_manage_news_edit', { 'idNews': news.idNews }) }}">Edit</a>
+            <button type="button" class="btn btn-outline-primary">
+            <a href="{{ path('admin_manage_news_edit', { 'idNews': news.idNews }) }}" style="color:inherit">Modifier</a>
+            </button>
         </li>
         <li>
             {{ form_start(delete_form) }}
-                <input type="submit" value="Delete">
+            <button type="submit" value="Delete" class="btn btn-outline-warning">Delete</button>
             {{ form_end(delete_form) }}
         </li>
     </ul>

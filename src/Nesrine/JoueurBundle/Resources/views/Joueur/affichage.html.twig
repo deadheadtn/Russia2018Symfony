@@ -1,0 +1,70 @@
+{% extends 'NejmeddineBundle:Default:layout.html.twig' %}
+
+
+{% block body %}
+<div class="card-header">
+                <i class="fa fa-table"></i> Affichage des joueurs
+        <div class="home-contact" style="float: right;">
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="search" id="Rechercher">
+                <a href="{{ path('PageAffichage') }}" ></a>
+
+            </div><!-- /input-group -->
+
+            <table id="table" border="1">
+                <thead>
+                <tr style="color: darkred">
+                    <th>Identifiant</th>
+                    <th>Nom</th>
+                    <th>Prenom</th>
+                    <th>Age</th>
+                    <th>Nom Equipe</th>
+                    <th>Numero</th>
+                    <th>Nombre de buts</th>
+                    <th>Emplacement</th>
+                    <th>Photo</th>
+                    <th>Appreciation</th>
+                    <th>Nationalite</th>
+                </tr>
+                </thead>
+                {% for i in m %}
+                    <tr class="Joueurs">
+                        <td>{{ i.idJoueur }}</td>
+                        <td>{{ i.nomJ }}</td>
+                        <td>{{ i.prenomJ }}</td>
+                        <td>{{ i.ageJ }}</td>
+                        <td>{{ i.nomEquipe }}</td>
+                        <td>{{ i.numeroJ }}</td>
+                        <td>{{ i.nbbutsJ }}</td>
+                        <td>{{ i.emplacementJ }}</td>
+                        <td><img src="{{ asset('images/') }}{{ i.photoJ }}" style="width: 50px;height: 50px"></td>
+                        <td>{{ i.appreciationJ }}</td>
+                        <td>{{ i.nationaliteJ }}</td>
+                        <td><a href="{{ path('delete',{'id':i.idJoueur}) }}">Supprimer</a></td>
+                        <td><a href="{{ path('modifierJoueur',{'id':i.idJoueur}) }}">modifier</a> </td>
+
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+    <div class="container">
+            <br><center><a href="{{ path('ajoutJoueur') }}">Ajouter içi</a></center>
+    </div>
+            <script src="{{ asset('bundles/russiapi/vendor/jquery/jquery.js') }}"></script>
+            <script>
+                $("#Rechercher").keyup(
+                    function () {
+                        $.ajax({
+                            url: "{{ path('PageAffichage')}}",
+                            data: {'nom':$(this).val()}
+                        }).done(function(response){
+                                var table =$(response).find(".Joueurs");
+                            $('#table tr:not(:first)').remove();
+                            $('#table').append(table);
+                            }
+                        );
+                    }
+                );
+            </script>
+{% endblock %}

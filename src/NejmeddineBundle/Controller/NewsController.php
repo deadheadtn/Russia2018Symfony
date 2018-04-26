@@ -3,6 +3,7 @@
 namespace NejmeddineBundle\Controller;
 
 use NejmeddineBundle\Entity\News;
+use NejmeddineBundle\Entity\Publicite;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 
@@ -19,14 +20,24 @@ class NewsController extends Controller
     public function indexAction()
     {
         $em = $this->getDoctrine()->getManager();
-
         $news = $em->getRepository('NejmeddineBundle:News')->findAll();
 
         return $this->render('NejmeddineBundle:ViewsNews:index.html.twig', array(
-            'news' => $news,
+            'news' => $news
         ));
     }
+    public function indexCAction()
+    {
+        $em = $this->getDoctrine()->getManager();
 
+        $news = $em->getRepository('NejmeddineBundle:News')->findAll();
+        $publicites = $em->getRepository('NejmeddineBundle:Publicite')->findAll();
+        $pub=$publicites[0];
+        return $this->render('RUSSIA2PIBundle:Default:index.html.twig', array(
+            'news' => $news,
+            'pub'=> $pub
+        ));
+    }
     /**
      * Creates a new news entity.
      *
@@ -64,7 +75,18 @@ class NewsController extends Controller
             'delete_form' => $deleteForm->createView(),
         ));
     }
-
+    public function showNewsAction(News $news1)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $news = $em->getRepository('NejmeddineBundle:News')->findAll();
+        $publicites = $em->getRepository('NejmeddineBundle:Publicite')->findAll();
+        $pub=$publicites[0];
+        return $this->render('RUSSIA2PIBundle:Default:layoutArticle.html.twig', array(
+            'news1' => $news1,
+            'news' => $news,
+            'pub'=> $pub
+        ));
+    }
     /**
      * Displays a form to edit an existing news entity.
      *

@@ -1,0 +1,32 @@
+{% extends 'NejmeddineBundle:Default:layout.html.twig' %}
+
+        {% block body %}
+
+            <h3 align="center">Affichage du staff technique</h3>
+            <table border="1">
+                <tr>
+                    <td>Identifiant</td>
+                    <td>Nom</td>
+                    <td>Prenom</td>
+                    <td>Nom de l'equipe</td>
+                    <td>Fonction</td>
+                    <td>Presence</td>
+                </tr>
+                {% for i in m %}
+                    <tr>
+                        <td>{{ i.idStaff }}</td>
+                        <td>{{ i.nomS }}</td>
+                        <td>{{ i.prenomS }}</td>
+                        <td>{{ i.nomEquipe }}</td>
+                        <td>{{ i.fonctionS }}</td>
+                        <td>{{ i.presenceS }}</td>
+                        <td><a href="{{ path('deletS',{'ID':i.idStaff}) }}">Supprimer</a></td>
+                        <td><a href="{{ path('modifierStaff',{'id':i.idStaff}) }}">modifier</a> </td>
+
+                    </tr>
+                {% endfor %}
+            </table>
+
+            <br><center><a href="{{ path('ajoutStaff') }}">Ajouter içi</a></center>
+
+        {% endblock %}

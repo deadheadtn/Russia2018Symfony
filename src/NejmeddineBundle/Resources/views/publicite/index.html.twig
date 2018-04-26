@@ -2,10 +2,10 @@
 
 {% block body %}
     <h1>Publicites list</h1>
-
-    <table>
+<div class="table-responsive">
+    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
         <thead>
-            <tr>
+        <tr>
                 <th>Id</th>
                 <th>Title</th>
                 <th>Url</th>
@@ -27,10 +27,14 @@
                 <td>
                     <ul>
                         <li>
-                            <a href="{{ path('admin_manage_publicite_show', { 'id': publicite.id }) }}">show</a>
+                            <button type="button" class="btn btn-outline-success and-all-other-classes">
+                            <a href="{{ path('admin_manage_publicite_show', { 'id': publicite.id }) }}" style="color:inherit">Afficher</a>
+                            </button>
                         </li>
                         <li>
-                            <a href="{{ path('admin_manage_publicite_edit', { 'id': publicite.id }) }}">edit</a>
+                            <button type="button" class="btn btn-outline-primary">
+                            <a href="{{ path('admin_manage_publicite_edit', { 'id': publicite.id }) }}" style="color:inherit">Modifier</a>
+                            </button>
                         </li>
                     </ul>
                 </td>

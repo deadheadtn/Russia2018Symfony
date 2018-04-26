@@ -70,21 +70,8 @@
                                         </div>
                                     </div>
                                     <div class="header-register">
-                                        <a href="#" class="">Register</a>
-                                        <div>
-                                            <form action="#" class="default-form">
-                                                <p class="form-row">
-                                                    <input type="text" class="form-control" placeholder="Username">
-                                                </p>
-                                                <p class="form-row">
-                                                    <input type="email" class="form-control" placeholder="Email">
-                                                </p>
-                                                <p class="form-row">
-                                                    <input type="password" class="form-control" placeholder="Password">
-                                                </p>
-                                                <input type="submit" class="btn full-width" value="Register">
-                                            </form>
-                                        </div>
+                                        {%  block login %}
+                                        {% endblock %}
                                     </div>
                                 </div>
                             </li>
@@ -104,21 +91,17 @@
                             <li class="has-submenu">
                                 <a href="#">Home</a>
                                 <ul class="sub-menu custom-list">
-                                    <li class="active"><a href="index.html">Home Default</a></li>
-                                    <li><a href="home2.html">Home Variation 2 (teams)</a></li>
-                                    <li><a href="home3.html">Home Variation 3 (newsletter block)</a></li>
-                                    <li><a href="home4.html">Home Variation 4 (timeline & gallery block a)</a></li>
-                                    <li><a href="home5.html">Home Variation 5 (video & trophies)</a></li>
-                                    <li><a href="home6.html">Home Variation 6 (video & social)</a></li>
-                                    <li><a href="home7.html">Home Variation 7 (video & widgets)</a></li>
-                                    <li><a href="home8.html">Home Variation 8 (contact form block)</a></li>
+                                    <li class="active"><a href="/Russia2018Symfony/web/app_dev.php/client">Home Default</a></li>
+
                                 </ul>
                             </li>
-                            <li><a href="#about">About</a></li>
-                            <li><a href="#teams">Teams</a></li>
-                            <li><a href="#news">News</a></li>
-                            <li><a href="#footer">Contact</a></li>
-                            <li><a href="{{ ('hotelclient') }}">Reservation hotel</a></li>
+
+                            <li><a href="{{ path ('PageAffichageEquipeFront') }}">Teams</a></li>
+                            <li><a href="{{ path ('PageAffichageFront') }}">Player</a></li>
+                            <li><a href="{{ path ('Graphe') }}">Stats</a></li>
+                            <li><a href="{{ path ('hotelclient') }}">Reservation hotel</a></li>
+                            <li><a href="{{ path ('transportclient') }}">Transport</a></li>
+                            <li><a href="/Russia2018Symfony/web/app_dev.php/client/reclamation/new">Contact</a></li>
 
                         </ul>
                     </nav>
@@ -1143,39 +1126,10 @@
             <!-- End Heading -->
 
             <!-- Start Single-News -->
-            <div class="single-news col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                <article>
-                    <img src="img/article-thumbnail.jpg" alt="" class="thumbnail">
-                    <div class="article-content">
-                        <h5><a href="#">#AFCvHCFC: live audio on Arsenal Player</a></h5>
-                        <p>Theo Walcott and Serge Gnabry in line to make return to action for club's second string at Meadow Park on Friday evening</p>
-                    </div>
-                </article>
-            </div>
+            {% block news %}
+            {%  endblock %}
             <!-- End Single-News -->
 
-            <!-- Start Single-News -->
-            <div class="single-news col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                <article>
-                    <img src="img/article-thumbnail2.jpg" alt="" class="thumbnail">
-                    <div class="article-content">
-                        <h5><a href="#">Welbeck - I’m loving this new adventure</a></h5>
-                        <p>Theo Walcott and Serge Gnabry in line to make return to action for club's second string at Meadow Park on Friday evening</p>
-                    </div>
-                </article>
-            </div>
-            <!-- End Single-News -->
-
-            <!-- Start Single-News -->
-            <div class="single-news col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                <article>
-                    <img src="img/article-thumbnail3.jpg" alt="" class="thumbnail">
-                    <div class="article-content">
-                        <h5><a href="#">#AFCvHCFC: live audio on Arsenal Player</a></h5>
-                        <p>Theo Walcott and Serge Gnabry in line to make return to action for club's second string at Meadow Park on Friday evening</p>
-                    </div>
-                </article>
-            </div>
             <!-- End Single-News -->
 
         </div>
@@ -1183,15 +1137,9 @@
     <!-- End News -->
 
     <!-- Start Twitter -->
-    <div class="twitter-widget loading">
-        <div class="container">
-            <div class="col-lg-12">
-                <i class="fa fa-twitter"></i>
-                <div class="widget-content">
-                    <div class="twitter-feed paginated" data-id="uouapps" data-limit="3" data-interval="0"><span class="loading-anim"><span></span></span></div>
-                </div>
-            </div>
-        </div>
+    <div class="container">
+        {% block pub %}
+        {% endblock %}
     </div>
     <!-- End Twitter -->
 

@@ -26,7 +26,16 @@ class PubliciteController extends Controller
             'publicites' => $publicites,
         ));
     }
+    public function indexfAction()
+    {
+        $em = $this->getDoctrine()->getManager();
 
+        $publicites = $em->getRepository('NejmeddineBundle:Publicite')->findAll();
+        $pub=$publicites[0];
+        return $this->render('RUSSIA2PIBundle:Default:pub.html.twig', array(
+            'pub' => $pub
+        ));
+    }
     /**
      * Creates a new publicite entity.
      *

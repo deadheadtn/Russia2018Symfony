@@ -56,8 +56,14 @@ class ComposerStaticInit18e1bb6cd69770a7c6900af1a8faf0c5
         array (
             'Monolog\\' => 8,
         ),
+        'K' => 
+        array (
+            'Knp\\Bundle\\PaginatorBundle\\' => 27,
+        ),
         'I' => 
         array (
+            'Ivory\\JsonBuilder\\' => 18,
+            'Ivory\\CKEditorBundle\\' => 21,
             'Incenteev\\ParameterHandler\\' => 27,
         ),
         'F' => 
@@ -76,6 +82,7 @@ class ComposerStaticInit18e1bb6cd69770a7c6900af1a8faf0c5
         'C' => 
         array (
             'Composer\\CaBundle\\' => 18,
+            'CMEN\\GoogleChartsBundle\\' => 24,
         ),
     );
 
@@ -180,6 +187,18 @@ class ComposerStaticInit18e1bb6cd69770a7c6900af1a8faf0c5
         array (
             0 => __DIR__ . '/..' . '/monolog/monolog/src/Monolog',
         ),
+        'Knp\\Bundle\\PaginatorBundle\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/knplabs/knp-paginator-bundle',
+        ),
+        'Ivory\\JsonBuilder\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/egeloen/json-builder/src',
+        ),
+        'Ivory\\CKEditorBundle\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/egeloen/ckeditor-bundle',
+        ),
         'Incenteev\\ParameterHandler\\' => 
         array (
             0 => __DIR__ . '/..' . '/incenteev/composer-parameter-handler',
@@ -216,6 +235,10 @@ class ComposerStaticInit18e1bb6cd69770a7c6900af1a8faf0c5
         array (
             0 => __DIR__ . '/..' . '/composer/ca-bundle/src',
         ),
+        'CMEN\\GoogleChartsBundle\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/cmen/google-charts-bundle',
+        ),
     );
 
     public static $fallbackDirsPsr4 = array (
@@ -235,6 +258,20 @@ class ComposerStaticInit18e1bb6cd69770a7c6900af1a8faf0c5
             'SensioLabs\\Security' => 
             array (
                 0 => __DIR__ . '/..' . '/sensiolabs/security-checker',
+            ),
+        ),
+        'N' => 
+        array (
+            'Nomaya\\SocialBundle\\' => 
+            array (
+                0 => __DIR__ . '/..' . '/nomaya/social-bundle',
+            ),
+        ),
+        'K' => 
+        array (
+            'Knp\\Component' => 
+            array (
+                0 => __DIR__ . '/..' . '/knplabs/knp-components/src',
             ),
         ),
         'D' => 

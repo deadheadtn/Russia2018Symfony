@@ -1,0 +1,55 @@
+{% extends 'NejmeddineBundle:Default:layout.html.twig' %}
+
+        {% block body %}
+            <div class="heading col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <h4 class="border">Ajouter un joueur</h4>
+            </div>
+            {{ form_start(form) }}
+
+            <table>
+            <tr>
+                <td>Nom </td>
+            <td>{{ form_widget(form.nomJ) }}</td>
+            </tr>
+            <tr>
+                <td>Prenom</td>
+                <td>{{ form_widget(form.prenomJ) }} </td>
+            </tr>
+            <tr>
+
+                <td>Age</td>
+                <td>{{ form_widget(form.ageJ) }} </td>
+            </tr>
+            <tr>
+                <td>Nom equipe</td>
+                <td>{{ form_widget(form.nomEquipe) }} </td>
+            </tr>
+            <tr>
+                <td>Numero</td>
+                <td>{{ form_widget(form.numeroJ) }} </td>
+            </tr>
+            <tr>
+                <td>Nombre de buts</td>
+                <td>{{ form_widget(form.nbbutsJ) }} </td>
+            </tr>
+                <tr>
+                    <td>Emplacement</td>
+                    <td>{{ form_widget(form.emplacementJ) }} </td>
+                </tr>
+            <tr>
+                <td>Image</td>
+                <td>{{ form_widget(form.file) }} </td>
+            </tr>
+            <tr>
+                <td>Appreciation</td>
+                <td>{{ form_widget(form.appreciationJ) }} </td>
+            </tr>
+            <tr>
+                <td>Nationalite</td>
+                <td>{{ form_widget(form.nationaliteJ) }} </td>
+            </tr>
+            </table>
+            {{ form_end(form) }}
+
+
+        {% endblock %}

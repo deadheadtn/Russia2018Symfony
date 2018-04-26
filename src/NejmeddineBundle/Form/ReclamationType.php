@@ -5,7 +5,7 @@ namespace NejmeddineBundle\Form;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
-
+use Ivory\CKEditorBundle\Form\Type\CKEditorType;
 class ReclamationType extends AbstractType
 {
     /**
@@ -13,7 +13,7 @@ class ReclamationType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('sujetRec')->add('descriptionRec')->add('dateRec')->add('etatRec')->add('idUtilisateur');
+        $builder->add('sujetRec')->add('descriptionRec',CKEditorType::class);
     }/**
      * {@inheritdoc}
      */

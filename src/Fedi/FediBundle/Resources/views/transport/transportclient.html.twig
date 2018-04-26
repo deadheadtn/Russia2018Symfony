@@ -1,0 +1,437 @@
+{% block head %}
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>RUSSIA 2018</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="{{ asset('bundles/russia2pi/css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('bundles/russia2pi/css/owl.carousel.css') }}">
+
+    <!-- Google Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+
+    <!--[if IE 9]>
+    <script src="{{ asset('bundles/russia2pi/js/media.match.min.js') }}"></script>
+    <![endif]-->
+    <header id="header" class="second-version">
+        <div class="container">
+            <div class="header__logo">
+
+                Fifa World Cup Russia 2018 | Минспорт России
+                <a class="logo" href="<img"></a>
+
+            </div>
+            <a href="index.html"><img src="img/logo.png" alt=""></a>
+            <div class="triangle-left"></div>
+            <div class="triangle-right"></div>
+        </div>
+        </div>
+        <div class="header-toolbar">
+            <div class="container">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="header-language pull-left">
+                        <a href="#">
+                            <i class="fa fa-globe"></i>
+                            <span>EN</span>
+                            <i class="fa fa-chevron-down"></i>
+                        </a>
+                        <ul class="custom-list">
+                            <li class="active"><a href="#">EN</a></li>
+                            <li><a href="#">FR</a></li>
+                            <li><a href="#">PT</a></li>
+                            <li><a href="#">IT</a></li>
+                        </ul>
+                    </div>
+                    <div class="header-user pull-right">
+                        <ul class="custom-list">
+                            <li>
+                                <div class="header-user-forms">
+                                    <div class="header-login">
+                                        <a href="#" class="">Login</a>
+                                        <div>
+                                            <form action="#" class="default-form">
+                                                <p class="form-row">
+                                                    <input type="text" class="form-control" placeholder="Username">
+                                                </p>
+                                                <p class="form-row">
+                                                    <input type="password" class="form-control" placeholder="Password">
+                                                </p>
+                                                <p class="form-row">
+                                                    <input type="submit" class="btn full-width" value="Login">
+                                                </p>
+                                                <a href="#" class="btn btn-link">Forgot Password?</a>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <div class="header-register">
+                                        <a href="#" class="">Register</a>
+                                        <div>
+                                            <form action="#" class="default-form">
+                                                <p class="form-row">
+                                                    <input type="text" class="form-control" placeholder="Username">
+                                                </p>
+                                                <p class="form-row">
+                                                    <input type="email" class="form-control" placeholder="Email">
+                                                </p>
+                                                <p class="form-row">
+                                                    <input type="password" class="form-control" placeholder="Password">
+                                                </p>
+                                                <input type="submit" class="btn full-width" value="Register">
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-navbar">
+            <div class="container">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <nav class="navigation">
+                        <ul class="list-inline text-center custom-list">
+                            <li class="has-submenu">
+                                <a href="#">Home</a>
+                                <ul class="sub-menu custom-list">
+                                    <li class="active"><a href="/Russia2018Symfony/web/app_dev.php/client">Home Default</a></li>
+
+                                </ul>
+                            </li>
+
+                            <li><a href="{{ path ('PageAffichageEquipeFront') }}">Teams</a></li>
+                            <li><a href="{{ path ('PageAffichageFront') }}">Player</a></li>
+                            <li><a href="{{ path ('Graphe') }}">Stats</a></li>
+                            <li><a href="{{ path ('hotelclient') }}">Reservation hotel</a></li>
+                            <li><a href="{{ path ('transportclient') }}">Transport</a></li>
+                            <li><a href="#footer">Contact</a></li>
+
+                        </ul>
+                    </nav>
+
+                    <ul class="social list-inline">
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                    </ul>
+                    <button class="navbar-toggle">
+                        <i class="fa fa-list"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div id="main-wrapper">
+
+    <!-- Start Header -->
+
+
+
+
+
+    <!-- Start Tab-Content -->
+    {% block container %}
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <!-- Start Back-to-Top -->
+
+        <!-- End Back-to-Top -->
+
+        </div>
+        <div class="container-wrapper">
+            <h3 align="center">Liste des Transport Disponnible</h3>
+            <table border="1" class="table-fill" >
+                <thead>
+                <tr>
+                    <th>TYPE</th>
+                    <th>DEPART</th>
+                    <th>DESTINATION</th>
+                    <th>DATE_DEPART</th>
+                    <th>DATE_ARRIVEE</th>
+                    <th>NOMBRE VOYAGEURS</th>
+                </tr>
+
+                </thead>
+                <tbody class="table-hover">
+                {% for i in transports %}
+                    <tr>
+                        <td>{{ i.type }}</td>
+                        <td>{{ i.depart }}</td>
+                        <td>{{ i.destination }}</td>
+                        <td>{{ i.dateDepart }}</td>
+                        <td>{{ i.dateArrivee }}</td>
+                        <td>{{ i.nbrVoyageurs }}</td>
+                        <td><a href="{{ path('reservertransport',{'id':i.idTransport}) }}"><img src="{{ asset('bundles/russiapi/image/res.jpg') }}" width="150px"> </a> </td>
+
+
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+
+            <style>
+
+
+                body {
+
+                    font-family: "Roboto", helvetica, arial, sans-serif;
+                    font-size: 16px;
+                    font-weight: 400;
+                    text-rendering: optimizeLegibility;
+                }
+
+                div.table-title {
+                    display: block;
+                    margin: auto;
+                    max-width: 600px;
+                    padding:5px;
+                    width: 100%;
+                }
+
+                .table-title h3 {
+                    color: #fafafa;
+                    font-size: 30px;
+                    font-weight: 400;
+                    font-style:normal;
+                    font-family: "Roboto", helvetica, arial, sans-serif;
+                    text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+                    text-transform:uppercase;
+                }
+
+
+                /*** Table Styles **/
+
+                .table-fill {
+                    background: white;
+                    border-radius:3px;
+                    border-collapse: collapse;
+                    height: 320px;
+                    margin: auto;
+                    max-width: 600px;
+                    padding:5px;
+                    width: 100%;
+                    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+                    animation: float 5s infinite;
+                }
+
+                th {
+                    color:#D5DDE5;;
+                    background:#1b1e24;
+                    border-bottom:4px solid #9ea7af;
+                    border-right: 1px solid #343a45;
+                    font-size:23px;
+                    font-weight: 100;
+                    padding:24px;
+                    text-align:left;
+                    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+                    vertical-align:middle;
+                }
+
+                th:first-child {
+                    border-top-left-radius:3px;
+                }
+
+                th:last-child {
+                    border-top-right-radius:3px;
+                    border-right:none;
+                }
+
+                tr {
+                    border-top: 1px solid #C1C3D1;
+                    border-bottom-: 1px solid #C1C3D1;
+                    color:#666B85;
+                    font-size:16px;
+                    font-weight:normal;
+                    text-shadow: 0 1px 1px rgba(256, 256, 256, 0.1);
+                }
+
+                tr:hover td {
+                    background:#4E5066;
+                    color:#FFFFFF;
+                    border-top: 1px solid #22262e;
+                }
+
+                tr:first-child {
+                    border-top:none;
+                }
+
+                tr:last-child {
+                    border-bottom:none;
+                }
+
+                tr:nth-child(odd) td {
+                    background:#EBEBEB;
+                }
+
+                tr:nth-child(odd):hover td {
+                    background:#4E5066;
+                }
+
+                tr:last-child td:first-child {
+                    border-bottom-left-radius:3px;
+                }
+
+                tr:last-child td:last-child {
+                    border-bottom-right-radius:3px;
+                }
+
+                td {
+                    background:#FFFFFF;
+                    padding:20px;
+                    text-align:left;
+                    vertical-align:middle;
+                    font-weight:300;
+                    font-size:18px;
+                    text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+                    border-right: 1px solid #C1C3D1;
+                }
+
+                td:last-child {
+                    border-right: 0px;
+                }
+
+                th.text-left {
+                    text-align: left;
+                }
+
+                th.text-center {
+                    text-align: center;
+                }
+
+                th.text-right {
+                    text-align: right;
+                }
+
+                td.text-left {
+                    text-align: left;
+                }
+
+                td.text-center {
+                    text-align: center;
+                }
+
+                td.text-right {
+                    text-align: right;
+                }
+
+            </style>
+        </div>
+        <a href="#" id="back-to-top">
+            <i class="fa fa-angle-up"></i>
+        </a>
+    {% endblock %}
+
+    <!-- End Tab-Content -->
+    {% block footer %}
+
+        <!-- Start Footer -->
+        <footer id="footer">
+            <div class="container">
+
+                <!-- Start Footer-Top -->
+                <div class="footer-top clearfix">
+                    <div class="widget col-lg-3 col-md-3 col-sm-6">
+                        <h5 class="widget-title">About FC</h5>
+                        <p>Lorem ipsum dolor sit amet consete adipisicing elit. Proin nibh augue.</p>
+                        <ul class="contact-info custom-list">
+                            <li><i class="fa fa-map-marker"></i><span>10 Milk Street #230 Boston, MA 02108</span></li>
+                            <li><i class="fa fa-phone"></i><span>+1 (123) 456-7890</span></li>
+                            <li><i class="fa fa-envelope"></i><span><a href="mailto:example@example.com">example@example.com</a></span></li>
+                        </ul>
+                    </div>
+                    <div class="widget col-lg-3 col-md-3 col-sm-6">
+                        <h5 class="widget-title">Information</h5>
+                        <ul class="custom-list">
+                            <li><a href="#">About the Club</a></li>
+                            <li><a href="#">Shop</a></li>
+                            <li><a href="#">Our Team</a></li>
+                            <li><a href="#">Tickets and Membership</a></li>
+                            <li><a href="#">Features</a></li>
+                            <li><a href="#">404 Error Page</a></li>
+                        </ul>
+                    </div>
+                    <div class="widget col-lg-3 col-md-3 col-sm-6">
+                        <h5 class="widget-title">Support</h5>
+                        <ul class="custom-list">
+                            <li><a href="#">Terms and Conditions</a></li>
+                            <li><a href="#">Website Accessibility Statement</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Sitemap</a></li>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Account</a></li>
+                        </ul>
+                    </div>
+                    <div class="widget col-lg-3 col-md-3 col-sm-6">
+                        <h5 class="widget-title">Gallery</h5>
+                        <ul class="gallery custom-list row">
+                            <li><a href="#"><img src="img/gallery_footer.jpg" alt=""></a></li>
+                            <li><a href="#"><img src="img/gallery_footer2.jpg" alt=""></a></li>
+                            <li><a href="#"><img src="img/gallery_footer3.jpg" alt=""></a></li>
+                            <li><a href="#"><img src="img/gallery_footer4.jpg" alt=""></a></li>
+                            <li><a href="#"><img src="img/gallery_footer5.jpg" alt=""></a></li>
+                            <li><a href="#"><img src="img/gallery_footer6.jpg" alt=""></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- End Footer-Top -->
+
+                <!-- Start Sposnors -->
+                <div class="sponsors clearfix">
+                    <h5 class="text-center">Sponsors</h5>
+                    <div class="sponsor-logo text-center col-lg-2 col-md-2 col-sm-4">
+                        <img src="img/partner.png" alt="">
+                    </div>
+                    <div class="sponsor-logo text-center col-lg-2 col-md-2 col-sm-4">
+                        <img src="img/partner2.png" alt="">
+                    </div>
+                    <div class="sponsor-logo text-center col-lg-2 col-md-2 col-sm-4">
+                        <img src="img/partner3.png" alt="">
+                    </div>
+                    <div class="sponsor-logo text-center col-lg-2 col-md-2 col-sm-4">
+                        <img src="img/partner4.png" alt="">
+                    </div>
+                    <div class="sponsor-logo text-center col-lg-2 col-md-2 col-sm-4">
+                        <img src="img/partner5.png" alt="">
+                    </div>
+                    <div class="sponsor-logo text-center col-lg-2 col-md-2 col-sm-4">
+                        <img src="img/partner6.png" alt="">
+                    </div>
+                </div>
+                <!-- End Sponsors -->
+
+            </div>
+
+            <!-- Start Copyrights -->
+            <div class="copyrights clearfix text-center">
+                <p class="col-lg-12">© Copyright 2014 FC Theme. All Rights Reserved</p>
+            </div>
+            <!-- End Copyrights -->
+
+        </footer>
+        <!-- Start Back-to-Top -->
+        <a href="#" id="back-to-top">
+            <i class="fa fa-angle-up"></i>
+        </a>
+        <!-- End Back-to-Top -->
+
+        </div>
+
+    {% endblock %}
+
+{% endblock %}

@@ -1,11 +1,3 @@
-fedi_fedi:
-    resource: "@FediFediBundle/Controller/"
-    type:     annotation
-    prefix:   /
-
-Fedi_Fedi:
-    resource: "@FediFediBundle/Resources/config/routing.yml"
-    prefix:   /
 
 russia2_pi:
     resource: "@RUSSIA2PIBundle/Resources/config/routing.yml"
@@ -29,3 +21,22 @@ fos_user:
 Nejmeddine:
     resource: "@NejmeddineBundle/Resources/config/routing.yml"
 
+Nesrine:
+    resource: "@NesrineJoueurBundle/Resources/config/routing1.yml"
+    prefix: /admin/manage/
+Nesrine1:
+    resource: "@NesrineJoueurBundle/Resources/config/routing.yml"
+    prefix: /client/
+
+fedic:
+    resource: "@FediFediBundle/Resources/config/routing.yml"
+    prefix: /client/
+fedia:
+    resource: "@FediFediBundle/Resources/config/routing1.yml"
+    prefix: /admin/manage/
+ticketroute:
+    resource: "@TicketBundle/Resources/config/routing.yml"
+WafaA:
+    resource: "@ForumBundle/Resources/config/routing.yml"
+WafaC:
+    resource: "@ForumBundle/Resources/config/routingc.yml"

@@ -3,9 +3,10 @@
 {% block body %}
     <h1>Reclamations list</h1>
 
-    <table>
+<div class="table-responsive">
+    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
         <thead>
-            <tr>
+        <tr>
                 <th>Idreclamation</th>
                 <th>Sujetrec</th>
                 <th>Descriptionrec</th>
@@ -25,10 +26,20 @@
                 <td>
                     <ul>
                         <li>
-                            <a href="{{ path('admin_manage_reclamation_show', { 'idReclamation': reclamation.idReclamation }) }}">Afficher</a>
+                            <button type="button" class="btn btn-outline-success and-all-other-classes">
+                                <a href="{{ path('admin_manage_reclamation_show', { 'idReclamation': reclamation.idReclamation }) }}" style="color:inherit"> Afficher </a>
+                            </button>
+
                         </li>
                         <li>
-                            <a href="{{ path('admin_manage_reclamation_edit', { 'idReclamation': reclamation.idReclamation }) }}">Répondre</a>
+                            <button type="button" class="btn btn-outline-primary">
+                                <a href="{{ path('admin_manage_reclamation_edit', { 'idReclamation': reclamation.idReclamation }) }}" style="color:inherit"> Repondre </a>
+                            </button>
+                        </li>
+                        <li>
+                            <button type="button" class="btn btn btn-outline-warning">
+                                <a href="{{ path('admin_manage_reclamation_changeetat', { 'idReclamation': reclamation.idReclamation }) }}" style="color:inherit"> Resolu </a>
+                            </button>
                         </li>
                     </ul>
                 </td>
@@ -37,9 +48,4 @@
         </tbody>
     </table>
 
-    <ul>
-        <li>
-            <a href="{{ path('admin_manage_reclamation_new') }}">Create a new reclamation</a>
-        </li>
-    </ul>
 {% endblock %}

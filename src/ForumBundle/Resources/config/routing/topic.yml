@@ -1,0 +1,24 @@
+topic_indexadmin:
+    path:     /
+    defaults: { _controller: "ForumBundle:Topic:indexadmin" }
+    methods:  GET
+
+topic_showadmin:
+    path:     /{id}/show
+    defaults: { _controller: "ForumBundle:Topic:showadmin" }
+    methods:  GET
+
+topic_newadmin:
+    path:     /new
+    defaults: { _controller: "ForumBundle:Topic:new" }
+    methods:  [GET, POST]
+
+topic_editadmin:
+    path:     /{id}/edit
+    defaults: { _controller: "ForumBundle:Topic:edit" }
+    methods:  [GET, POST]
+
+topic_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "ForumBundle:Topic:delete" }
+    methods:  DELETE

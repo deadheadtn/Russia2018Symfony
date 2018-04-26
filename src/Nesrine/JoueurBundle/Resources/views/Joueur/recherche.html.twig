@@ -1,0 +1,66 @@
+{% extends 'NejmeddineBundle:Default:layout.html.twig' %}
+
+
+        {% block body %}
+
+        <div class="card mb-3">
+            <div class="card-header">
+                <i class="fa fa-table"></i> Affichage des joueurs</div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                        <thead>
+                        <tr>
+                            <th>Identifiant</th>
+                            <th>Nom</th>
+                            <th>Prenom</th>
+                            <th>Age</th>
+                            <th>Nom Equipe</th>
+                            <th>Numero</th>
+                            <th>Nombre de buts</th>
+                            <th>Emplacement</th>
+                            <th>Photo</th>
+                            <th>Appreciation</th>
+                            <th>Nationalite</th>
+                        </tr>
+                        </thead>
+                        <tfoot>
+                        <tr>
+                            <th>Identifiant</th>
+                            <th>Nom</th>
+                            <th>Prenom</th>
+                            <th>Age</th>
+                            <th>Nom Equipe</th>
+                            <th>Numero</th>
+                            <th>Nombre de buts</th>
+                            <th>Emplacement</th>
+                            <th>Photo</th>
+                            <th>Appreciation</th>
+                            <th>Nationalite</th>
+                        </tr>
+                        </tfoot>
+                        <tbody>
+                        {% for i in joueurs %}
+                            <tr>
+                                <td>{{ i.idJoueur }}</td>
+                                <td>{{ i.nomJ }}</td>
+                                <td>{{ i.prenomJ }}</td>
+                                <td>{{ i.ageJ }}</td>
+                                <td>{{ i.nomEquipe }}</td>
+                                <td>{{ i.numeroJ }}</td>
+                                <td>{{ i.nbbutsJ }}</td>
+                                <td>{{ i.emplacementJ }}</td>
+                                <td><img src="{{ asset('images/') }}{{ i.photoJ }}" style="width: 50px;height: 50px"></td>
+                                <td>{{ i.appreciationJ }}</td>
+                                <td>{{ i.nationaliteJ }}</td>
+                                <td><a href="{{ path('delete',{'id':i.idJoueur}) }}">Supprimer</a></td>
+                                <td><a href="{{ path('modifierJoueur',{'id':i.idJoueur}) }}">modifier</a> </td>
+
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+
+                    <br><center><a href="{{ path('ajoutJoueur') }}">Ajouter içi</a></center>
+                    {% endblock %}
+

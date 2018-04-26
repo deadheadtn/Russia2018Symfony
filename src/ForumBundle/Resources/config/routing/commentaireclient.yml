@@ -1,0 +1,24 @@
+commentaire_index:
+    path:     /
+    defaults: { _controller: "ForumBundle:Commentaire:indexclient" }
+    methods:  GET
+
+commentaire_show:
+    path:     /{id}/show
+    defaults: { _controller: "ForumBundle:Commentaire:show" }
+    methods:  GET
+
+commentaire_new:
+    path:     /new/{id}
+    defaults: { _controller: "ForumBundle:Commentaire:newclient" }
+    methods:  [GET, POST]
+
+commentaire_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "ForumBundle:Commentaire:editclient" }
+    methods:  [GET, POST]
+
+commentaire_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "ForumBundle:Commentaire:delete" }
+    methods:  DELETE

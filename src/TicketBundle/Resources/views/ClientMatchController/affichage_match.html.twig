@@ -1,0 +1,680 @@
+{% extends 'RUSSIA2PIBundle:Default:index.html.twig' %}
+{% block mahdi %}
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <nav>
+                    <ul class="nav nav-pills nav-justified">
+                        <li style="margin: 30px" class="active transiction-teste"><a href="#groupeA" >Groupe A</a></li>
+                        <li style="margin: 30px"><a href="#groupeB" style="margin: 10%">Groupe B</a></li>
+                        <li style="margin: 30px"><a href="#groupec">Groupe C</a></li>
+                        <li style="margin: 30px"><a href="#groupeD">Groupe D</a></li>
+                        <li style="margin: 30px"><a href="#groupeE">Groupe E</a></li>
+                        <li style="margin: 30px"><a href="#groupeF">Groupe F</a></li>
+                        <li style="margin: 30px"><a href="#groupeG">Groupe G</a></li>
+                        <li style="margin: 30px"><a href="#groupeH">Groupe H</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <section class="container-wrapper">
+    <div class="row">
+        <div class="col-md-12" id="groupeA">
+            <table class="table table-hover table-bordered">
+                <caption>Groupe A</caption>
+                <thead>
+                <tr>
+                    <th>Equipe</th>
+                    <th>J</th>
+                    <th>V</th>
+                    <th>E</th>
+                    <th>D</th>
+                    <th>GF</th>
+                    <th>GS</th>
+                    <th>Pts</th>
+
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    {% for i in classement  %}
+                        {% if i.nomequipe.nomEquipe=='Russia' %}
+                            <td>{{ i.nomequipe.nomEquipe}}</td>
+                            <td>{{ i.joue }}</td>
+                            <td>{{ i.victoire }}</td>
+                            <td>{{ i.equiv }}</td>
+                            <td>{{ i.defaite }}</td>
+                            <td>{{ i.gF }}</td>
+                            <td>{{ i.gS }}</td>
+                            <td>{{ i.pts }}</td>
+
+                        {% endif %}
+                    {% endfor %}
+                </tr>
+                <tr>
+                    {% for i in classement  %}
+                        {% if i.nomequipe.nomEquipe=='Saudi Arabia' %}
+                            <td>{{ i.nomequipe.nomEquipe}}</td>
+                            <td>{{ i.joue}}</td>
+                            <td>{{ i.victoire }}</td>
+                            <td>{{ i.equiv }}</td>
+                            <td>{{ i.defaite }}</td>
+                            <td>{{ i.gF }}</td>
+                            <td>{{ i.gS }}</td>
+                            <td>{{ i.pts }}</td>
+
+                        {% endif %}
+                    {% endfor %}
+                </tr>
+                <tr>
+                    {% for i in classement  %}
+                        {% if i.nomequipe.nomEquipe=='Egypt'%}
+
+                            <td>{{ i.nomequipe.nomEquipe}}</td>
+                            <td>{{ i.joue }}</td>
+                            <td>{{ i.victoire }}</td>
+                            <td>{{ i.equiv }}</td>
+                            <td>{{ i.defaite }}</td>
+                            <td>{{ i.gF }}</td>
+                            <td>{{ i.gS }}</td>
+                            <td>{{ i.pts }}</td>
+
+                        {% endif %}
+                    {% endfor %}
+                </tr>
+                <tr>
+                    {% for i in classement  %}
+                        {% if i.nomequipe.nomEquipe=='URUGUAY' %}
+
+                            <td>{{ i.nomequipe.nomEquipe}}</td>
+                            <td>{{ i.joue }}</td>
+                            <td>{{ i.victoire }}</td>
+                            <td>{{ i.equiv }}</td>
+                            <td>{{ i.defaite }}</td>
+                            <td>{{ i.gF }}</td>
+                            <td>{{ i.gS }}</td>
+                            <td>{{ i.pts }}</td>
+
+                        {% endif %}
+                    {% endfor %}
+
+
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="col-md-12" id="groupeB" style="display: none;width: 100%" >
+            <table class="table table-hover table-bordered" width="100%">
+                <caption>Groupe B</caption>
+                <thead>
+                <tr>
+                    <th>Equipe</th>
+                    <th>J</th>
+                    <th>V</th>
+                    <th>E</th>
+                    <th>D</th>
+                    <th>GF</th>
+                    <th>GS</th>
+                    <th>Pts</th>
+
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    {% for i in classement  %}
+                        {% if i.nomequipe.nomEquipe=='Portugal' %}
+                            <td>{{ i.nomequipe.nomEquipe}}</td>
+                            <td>{{ i.joue }}</td>
+                            <td>{{ i.victoire }}</td>
+                            <td>{{ i.equiv }}</td>1
+                            <td>{{ i.defaite }}</td>
+                            <td>{{ i.gF }}</td>
+                            <td>{{ i.gS }}</td>
+                            <td>{{ i.pts }}</td>
+                            <td><a href="{{ path('_modif_standings',{'s':i.id}) }}">modifier</a></td>
+                        {% endif %}
+                    {% endfor %}
+
+                </tr>
+                <tr>
+                    {% for i in classement  %}
+                        {% if i.nomequipe.nomEquipe=='Spain' %}
+                            <td>{{ i.nomequipe.nomEquipe}}</td>
+                            <td>{{ i.joue }}</td>
+                            <td>{{ i.victoire }}</td>
+                            <td>{{ i.equiv }}</td>
+                            <td>{{ i.defaite }}</td>
+                            <td>{{ i.gF }}</td>
+                            <td>{{ i.gS }}</td>
+                            <td>{{ i.pts }}</td>
+                            <td><a href="{{ path('_modif_standings',{'s':i.id}) }}">modifier</a></td>
+                        {% endif %}
+                    {% endfor %}
+
+                </tr>
+                <tr>
+                    {% for i in classement  %}
+                        {% if i.nomequipe.nomEquipe=='Morroco' %}
+                            <td>{{ i.nomequipe.nomEquipe}}</td>
+                            <td>{{ i.joue }}</td>
+                            <td>{{ i.victoire }}</td>
+                            <td>{{ i.equiv }}</td>
+                            <td>{{ i.defaite }}</td>
+                            <td>{{ i.gF }}</td>
+                            <td>{{ i.gS }}</td>
+                            <td>{{ i.pts }}</td>
+                            <td><a href="{{ path('_modif_standings',{'s':i.id}) }}">modifier</a></td>
+                        {% endif %}
+                    {% endfor %}
+                </tr>
+                <tr>
+                    {% for i in classement  %}
+                        {% if i.nomequipe.nomEquipe=='Iran' %}
+                            <td>{{ i.nomequipe.nomEquipe}}</td>
+                            <td>{{ i.joue }}</td>
+                            <td>{{ i.victoire }}</td>
+                            <td>{{ i.equiv }}</td>
+                            <td>{{ i.defaite }}</td>
+                            <td>{{ i.gF }}</td>
+                            <td>{{ i.gS }}</td>
+                            <td>{{ i.pts }}</td>
+                            <td><a href="{{ path('_modif_standings',{'s':i.id}) }}">modifier</a></td>
+                        {% endif %}
+                    {% endfor %}
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-md-12" id="groupec" style="display: none">
+            <table class="table table-hover table-bordered">
+                <caption>Groupe C</caption>
+                <thead>
+                <tr>
+                    <th>Equipe</th>
+                    <th>J</th>
+                    <th>V</th>
+                    <th>E</th>
+                    <th>D</th>
+                    <th>GF</th>
+                    <th>GS</th>
+                    <th>Pts</th>
+                    <th>modifier</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    {% for i in classement  %}
+                        {% if i.nomequipe.nomEquipe=='France' %}
+                            <td>{{ i.nomequipe.nomEquipe}}</td>
+                            <td>{{ i.joue }}</td>
+                            <td>{{ i.victoire }}</td>
+                            <td>{{ i.equiv }}</td>
+                            <td>{{ i.defaite }}</td>
+                            <td>{{ i.gF }}</td>
+                            <td>{{ i.gS }}</td>
+                            <td>{{ i.pts }}</td>
+                            <td><a href="{{ path('_modif_standings',{'s':i.id}) }}">modifier</a></td>
+                        {% endif %}
+                    {% endfor %}
+                </tr>
+                <tr>
+                    {% for i in classement  %}
+                        {% if i.nomequipe.nomEquipe=='Australia' %}
+                            <td>{{ i.nomequipe.nomEquipe}}</td>
+                            <td>{{ i.joue }}</td>
+                            <td>{{ i.victoire }}</td>
+                            <td>{{ i.equiv }}</td>
+                            <td>{{ i.defaite }}</td>
+                            <td>{{ i.gF }}</td>
+                            <td>{{ i.gS }}</td>
+                            <td>{{ i.pts }}</td>
+                            <td><a href="{{ path('_modif_standings',{'s':i.id}) }}">modifier</a></td>
+                        {% endif %}
+                    {% endfor %}
+                </tr>
+                <tr>
+                    {% for i in classement  %}
+                        {% if i.nomequipe.nomEquipe=='Peru' %}
+                            <td>{{ i.nomequipe.nomEquipe}}</td>
+                            <td>{{ i.joue }}</td>
+                            <td>{{ i.victoire }}</td>
+                            <td>{{ i.equiv }}</td>
+                            <td>{{ i.defaite }}</td>
+                            <td>{{ i.gF }}</td>
+                            <td>{{ i.gS }}</td>
+                            <td>{{ i.pts }}</td>
+                            <td><a href="{{ path('_modif_standings',{'s':i.id}) }}">modifier</a></td>
+                        {% endif %}
+                    {% endfor %}
+                </tr>
+                <tr>
+                    {% for i in classement  %}
+                        {% if i.nomequipe.nomEquipe=='Denmark' %}
+                            <td>{{ i.nomequipe.nomEquipe}}</td>
+                            <td>{{ i.joue }}</td>
+                            <td>{{ i.victoire }}</td>
+                            <td>{{ i.equiv }}</td>
+                            <td>{{ i.defaite }}</td>
+                            <td>{{ i.gF }}</td>
+                            <td>{{ i.gS }}</td>
+                            <td>{{ i.pts }}</td>
+                            <td><a href="{{ path('_modif_standings',{'s':i.id}) }}">modifier</a></td>
+                        {% endif %}
+                    {% endfor %}
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-md-12" id="groupeD" style="display: none">
+            <table class="table table-hover table-bordered">
+                <caption>Groupe D</caption>
+                <thead>
+                <tr>
+                    <th>Equipe</th>
+                    <th>J</th>
+                    <th>V</th>
+                    <th>E</th>
+                    <th>D</th>
+                    <th>GF</th>
+                    <th>GS</th>
+                    <th>Pts</th>
+                    <th>modifier</th>
+                </tr>
+                <tr>
+                    {% for i in classement  %}
+                        {% if i.nomequipe.nomEquipe=='Argentina' %}
+                            <td>{{ i.nomequipe.nomEquipe}}</td>
+                            <td>{{ i.joue }}</td>
+                            <td>{{ i.victoire }}</td>
+                            <td>{{ i.equiv }}</td>
+                            <td>{{ i.defaite }}</td>
+                            <td>{{ i.gF }}</td>
+                            <td>{{ i.gS }}</td>
+                            <td>{{ i.pts }}</td>
+                            <td><a href="{{ path('_modif_standings',{'s':i.id}) }}">modifier</a></td>
+                        {% endif %}
+                    {% endfor %}
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    {% for i in classement  %}
+                        {% if i.nomequipe.nomEquipe=='Iceland' %}
+                            <td>{{ i.nomequipe.nomEquipe}}</td>
+                            <td>{{ i.joue }}</td>
+                            <td>{{ i.victoire }}</td>
+                            <td>{{ i.equiv }}</td>
+                            <td>{{ i.defaite }}</td>
+                            <td>{{ i.gF }}</td>
+                            <td>{{ i.gS }}</td>
+                            <td>{{ i.pts }}</td>
+                            <td><a href="{{ path('_modif_standings',{'s':i.id}) }}">modifier</a></td>
+                        {% endif %}
+                    {% endfor %}
+                </tr>
+                <tr>
+                    {% for i in classement  %}
+                        {% if i.nomequipe.nomEquipe=='Croatia' %}
+                            <td>{{ i.nomequipe.nomEquipe}}</td>
+                            <td>{{ i.joue }}</td>
+                            <td>{{ i.victoire }}</td>
+                            <td>{{ i.equiv }}</td>
+                            <td>{{ i.defaite }}</td>
+                            <td>{{ i.gF }}</td>
+                            <td>{{ i.gS }}</td>
+                            <td>{{ i.pts }}</td>
+                            <td><a href="{{ path('_modif_standings',{'s':i.id}) }}">modifier</a></td>
+                        {% endif %}
+                    {% endfor %}
+                </tr>
+                <tr>
+                    {% for i in classement  %}
+                        {% if i.nomequipe.nomEquipe=='Nigeria' %}
+                            <td>{{ i.nomequipe.nomEquipe}}</td>
+                            <td>{{ i.joue }}</td>
+                            <td>{{ i.victoire }}</td>
+                            <td>{{ i.equiv }}</td>
+                            <td>{{ i.defaite }}</td>
+                            <td>{{ i.gF }}</td>
+                            <td>{{ i.gS }}</td>
+                            <td>{{ i.pts }}</td>
+                            <td><a href="{{ path('_modif_standings',{'s':i.id}) }}">modifier</a></td>
+                        {% endif %}
+                    {% endfor %}
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-md-12" id="groupeE" style="display: none">
+            <table class="table table-hover table-bordered">
+                <caption>Groupe E</caption>
+                <thead>
+                <tr>
+                    <th>Equipe</th>
+                    <th>J</th>
+                    <th>V</th>
+                    <th>E</th>
+                    <th>D</th>
+                    <th>GF</th>
+                    <th>GS</th>
+                    <th>Pts</th>
+                    <th>modifier</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    {% for i in classement  %}
+                        {% if i.nomequipe.nomEquipe=='Brazil' %}
+                            <td>{{ i.nomequipe.nomEquipe}}</td>
+                            <td>{{ i.joue }}</td>
+                            <td>{{ i.victoire }}</td>
+                            <td>{{ i.equiv }}</td>
+                            <td>{{ i.defaite }}</td>
+                            <td>{{ i.gF }}</td>
+                            <td>{{ i.gS }}</td>
+                            <td>{{ i.pts }}</td>
+                            <td><a href="{{ path('_modif_standings',{'s':i.id}) }}">modifier</a></td>
+                        {% endif %}
+                    {% endfor %}
+                </tr>
+                <tr>
+                    {% for i in classement  %}
+                        {% if i.nomequipe.nomEquipe=='Switzeland' %}
+                            <td>{{ i.nomequipe.nomEquipe}}</td>
+                            <td>{{ i.joue }}</td>
+                            <td>{{ i.victoire }}</td>
+                            <td>{{ i.equiv }}</td>
+                            <td>{{ i.defaite }}</td>
+                            <td>{{ i.gF }}</td>
+                            <td>{{ i.gS }}</td>
+                            <td>{{ i.pts }}</td>
+                            <td><a href="{{ path('_modif_standings',{'s':i.id}) }}">modifier</a></td>
+                        {% endif %}
+                    {% endfor %}
+                </tr>
+                <tr>
+                    {% for i in classement  %}
+                        {% if i.nomequipe.nomEquipe=='Costa Rica' %}
+                            <td>{{ i.nomequipe.nomEquipe}}</td>
+                            <td>{{ i.joue }}</td>
+                            <td>{{ i.victoire }}</td>
+                            <td>{{ i.equiv }}</td>
+                            <td>{{ i.defaite }}</td>
+                            <td>{{ i.gF }}</td>
+                            <td>{{ i.gS }}</td>
+                            <td>{{ i.pts }}</td>
+                            <td><a href="{{ path('_modif_standings',{'s':i.id}) }}">modifier</a></td>
+                        {% endif %}
+                    {% endfor %}
+                </tr>
+                <tr>
+                    {% for i in classement  %}
+                        {% if i.nomequipe.nomEquipe=='Serbia' %}
+                            <td>{{ i.nomequipe.nomEquipe}}</td>
+                            <td>{{ i.joue }}</td>
+                            <td>{{ i.victoire }}</td>
+                            <td>{{ i.equiv }}</td>
+                            <td>{{ i.defaite }}</td>
+                            <td>{{ i.gF }}</td>
+                            <td>{{ i.gS }}</td>
+                            <td>{{ i.pts }}</td>
+                            <td><a href="{{ path('_modif_standings',{'s':i.id}) }}">modifier</a></td>
+                        {% endif %}
+                    {% endfor %}
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-md-12" id="groupeF" style="display: none">
+            <table class="table table-hover table-bordered">
+                <caption>Groupe F</caption>
+                <thead>
+                <tr>
+                    <th>Equipe</th>
+                    <th>J</th>
+                    <th>V</th>
+                    <th>E</th>
+                    <th>D</th>
+                    <th>GF</th>
+                    <th>GS</th>
+                    <th>Pts</th>
+                    <th>modifier</th>
+
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    {% for i in classement  %}
+                        {% if i.nomequipe.nomEquipe=='Germany' %}
+                            <td>{{ i.nomequipe.nomEquipe}}</td>
+                            <td>{{ i.joue }}</td>
+                            <td>{{ i.victoire }}</td>
+                            <td>{{ i.equiv }}</td>
+                            <td>{{ i.defaite }}</td>
+                            <td>{{ i.gF }}</td>
+                            <td>{{ i.gS }}</td>
+                            <td>{{ i.pts }}</td>
+                            <td><a href="{{ path('_modif_standings',{'s':i.id}) }}">modifier</a></td>
+                        {% endif %}
+                    {% endfor %}
+                </tr>
+                <tr>
+                    {% for i in classement  %}
+                        {% if i.nomequipe.nomEquipe=='Mexico' %}
+                            <td>{{ i.nomequipe.nomEquipe}}</td>
+                            <td>{{ i.joue }}</td>
+                            <td>{{ i.victoire }}</td>
+                            <td>{{ i.equiv }}</td>
+                            <td>{{ i.defaite }}</td>
+                            <td>{{ i.gF }}</td>
+                            <td>{{ i.gS }}</td>
+                            <td>{{ i.pts }}</td>
+                            <td><a href="{{ path('_modif_standings',{'s':i.id}) }}">modifier</a></td>
+                        {% endif %}
+                    {% endfor %}
+                </tr>
+                <tr>
+                    {% for i in classement  %}
+                        {% if i.nomequipe.nomEquipe=='Sweden' %}
+                            <td>{{ i.nomequipe.nomEquipe}}</td>
+                            <td>{{ i.joue }}</td>
+                            <td>{{ i.victoire }}</td>
+                            <td>{{ i.equiv }}</td>
+                            <td>{{ i.defaite }}</td>
+                            <td>{{ i.gF }}</td>
+                            <td>{{ i.gS }}</td>
+                            <td>{{ i.pts }}</td>
+                            <td><a href="{{ path('_modif_standings',{'s':i.id}) }}">modifier</a></td>
+                        {% endif %}
+                    {% endfor %}
+                </tr>
+                <tr>
+                    {% for i in classement  %}
+                        {% if i.nomequipe.nomEquipe=='Korea_R' %}
+                            <td>{{ i.nomequipe.nomEquipe}}</td>
+                            <td>{{ i.joue }}</td>
+                            <td>{{ i.victoire }}</td>
+                            <td>{{ i.equiv }}</td>
+                            <td>{{ i.defaite }}</td>
+                            <td>{{ i.gF }}</td>
+                            <td>{{ i.gS }}</td>
+                            <td>{{ i.pts }}</td>
+                            <td><a href="{{ path('_modif_standings',{'s':i.id}) }}">modifier</a></td>
+                        {% endif %}
+                    {% endfor %}
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-md-12" id="groupeG" style="display: none">
+            <table class="table table-hover table-bordered">
+                <caption>Groupe G</caption>
+                <thead>
+                <tr>
+                    <th>Equipe</th>
+                    <th>J</th>
+                    <th>V</th>
+                    <th>E</th>
+                    <th>D</th>
+                    <th>GF</th>
+                    <th>GS</th>
+                    <th>Pts</th>
+                    <th>modifier</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    {% for i in classement  %}
+                        {% if i.nomequipe.nomEquipe=='Belgium' %}
+                            <td>{{ i.nomequipe.nomEquipe}}</td>
+                            <td>{{ i.joue }}</td>
+                            <td>{{ i.victoire }}</td>
+                            <td>{{ i.equiv }}</td>
+                            <td>{{ i.defaite }}</td>
+                            <td>{{ i.gF }}</td>
+                            <td>{{ i.gS }}</td>
+                            <td>{{ i.pts }}</td>
+                            <td><a href="{{ path('_modif_standings',{'s':i.id}) }}">modifier</a></td>
+                        {% endif %}
+                    {% endfor %}
+                </tr>
+                <tr>
+                    {% for i in classement  %}
+                        {% if i.nomequipe.nomEquipe=='Panama' %}
+                            <td>{{ i.nomequipe.nomEquipe}}</td>
+                            <td>{{ i.joue }}</td>
+                            <td>{{ i.victoire }}</td>
+                            <td>{{ i.equiv }}</td>
+                            <td>{{ i.defaite }}</td>
+                            <td>{{ i.gF }}</td>
+                            <td>{{ i.gS }}</td>
+                            <td>{{ i.pts }}</td>
+                            <td><a href="{{ path('_modif_standings',{'s':i.id}) }}">modifier</a></td>
+                        {% endif %}
+                    {% endfor %}
+                </tr>
+                <tr>
+                    {% for i in classement  %}
+                        {% if i.nomequipe.nomEquipe=='Tunisia' %}
+                            <td>{{ i.nomequipe.nomEquipe}}</td>
+                            <td>{{ i.joue }}</td>
+                            <td>{{ i.victoire }}</td>
+                            <td>{{ i.equiv }}</td>
+                            <td>{{ i.defaite }}</td>
+                            <td>{{ i.gF }}</td>
+                            <td>{{ i.gS }}</td>
+                            <td>{{ i.pts }}</td>
+                            <td><a href="{{ path('_modif_standings',{'s':i.id}) }}">modifier</a></td>
+                        {% endif %}
+                    {% endfor %}
+                </tr>
+                <tr>
+                    {% for i in classement  %}
+                        {% if i.nomequipe.nomEquipe=='England' %}
+                            <td>{{ i.nomequipe.nomEquipe}}</td>
+                            <td>{{ i.joue }}</td>
+                            <td>{{ i.victoire }}</td>
+                            <td>{{ i.equiv }}</td>
+                            <td>{{ i.defaite }}</td>
+                            <td>{{ i.gF }}</td>
+                            <td>{{ i.gS }}</td>
+                            <td>{{ i.pts }}</td>
+                            <td><a href="{{ path('_modif_standings',{'s':i.id}) }}">modifier</a></td>
+                        {% endif %}
+                    {% endfor %}
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-md-12" id="groupeH" style="display: none">
+            <table class="table table-hover table-bordered">
+                <caption>Groupe H</caption>
+                <thead>
+                <tr>
+                    <th>Equipe</th>
+                    <th>J</th>
+                    <th>V</th>
+                    <th>E</th>
+                    <th>D</th>
+                    <th>GF</th>
+                    <th>GS</th>
+                    <th>Pts</th>
+                    <th>modifier</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    {% for i in classement  %}
+                        {% if i.nomequipe.nomEquipe=='Poland' %}
+                            <td>{{ i.nomequipe.nomEquipe}}</td>
+                            <td>{{ i.joue }}</td>
+                            <td>{{ i.victoire }}</td>
+                            <td>{{ i.equiv }}</td>
+                            <td>{{ i.defaite }}</td>
+                            <td>{{ i.gF }}</td>
+                            <td>{{ i.gS }}</td>
+                            <td>{{ i.pts }}</td>
+                            <td><a href="{{ path('_modif_standings',{'s':i.id}) }}">modifier</a></td>
+                        {% endif %}
+                    {% endfor %}
+                </tr>
+                <tr>
+                    {% for i in classement  %}
+                        {% if i.nomequipe.nomEquipe=='Senegal' %}
+                            <td>{{ i.nomequipe.nomEquipe}}</td>
+                            <td>{{ i.joue }}</td>
+                            <td>{{ i.victoire }}</td>
+                            <td>{{ i.equiv }}</td>
+                            <td>{{ i.defaite }}</td>
+                            <td>{{ i.gF }}</td>
+                            <td>{{ i.gS }}</td>
+                            <td>{{ i.pts }}</td>
+                            <td><a href="{{ path('_modif_standings',{'s':i.id}) }}">modifier</a></td>
+                        {% endif %}
+                    {% endfor %}
+                </tr>
+                <tr>
+                    {% for i in classement  %}
+                        {% if i.nomequipe.nomEquipe=='Colombia' %}
+                            <td>{{ i.nomequipe.nomEquipe}}</td>
+                            <td>{{ i.joue }}</td>
+                            <td>{{ i.victoire }}</td>
+                            <td>{{ i.equiv }}</td>
+                            <td>{{ i.defaite }}</td>
+                            <td>{{ i.gF }}</td>
+                            <td>{{ i.gS }}</td>
+                            <td>{{ i.pts }}</td>
+                            <td><a href="{{ path('_modif_standings',{'s':i.id}) }}">modifier</a></td>
+                        {% endif %}
+                    {% endfor %}
+                </tr>
+                <tr>
+                    {% for i in classement  %}
+                        {% if i.nomequipe.nomEquipe=='Japan' %}
+                            <td>{{ i.nomequipe.nomEquipe}}</td>
+                            <td>{{ i.joue }}</td>
+                            <td>{{ i.victoire }}</td>
+                            <td>{{ i.equiv }}</td>
+                            <td>{{ i.defaite }}</td>
+                            <td>{{ i.gF }}</td>
+                            <td>{{ i.gS }}</td>
+                            <td>{{ i.pts }}</td>
+                            <td><a href="{{ path('_modif_standings',{'s':i.id}) }}">modifier</a></td>
+                        {% endif %}
+                    {% endfor %}
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+{% endblock %}

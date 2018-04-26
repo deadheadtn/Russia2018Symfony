@@ -34,81 +34,82 @@
                 </a>
             </li>
             <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
-                <a class="nav-link" href="{{ ('transport') }}">
+                <a class="nav-link" href="{{ path ('PageAffichage') }}">
                     <i class="fa fa-fw fa-area-chart"></i>
+                    <span class="nav-link-text">Joueurs</span>
+                </a>
+            </li>
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
+                <a class="nav-link" href="{{ path ('PageAffichageEquipe') }}">
+                    <i class="fa fa-fw fa-area-chart"></i>
+                    <span class="nav-link-text">Equipes</span>
+                </a>
+            </li>
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
+                <a class="nav-link" href="{{ path ('PageAffichageStaff') }}">
+                    <i class="fa fa-fw fa-area-chart"></i>
+                    <span class="nav-link-text">Staff technique</span>
+                </a>
+            </li>
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Reclamation">
+                <a class="nav-link" href="{{ path ('admin_manage_reclamation_index')}}">
+                    <i class="fa fa-fw fa-file"></i>
+                    <span class="nav-link-text">Reclamation list</span>
+                </a>
+            </li>
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Transport">
+                <a class="nav-link" href="{{ path ('transport')}}">
+                    <i class="fa fa-fw fa-file"></i>
                     <span class="nav-link-text">Transport</span>
                 </a>
             </li>
-            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
-                <a class="nav-link" href="{{ ('hotel') }}">
-                    <i class="fa fa-fw fa-table"></i>
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Hotel">
+                <a class="nav-link" href="{{ path ('hotel')}}">
+                    <i class="fa fa-fw fa-file"></i>
                     <span class="nav-link-text">Hotel</span>
+                </a>
+            </li>
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
+                <a class="nav-link" href="{{ path("_affichage") }}" data-parent="#exampleAccordion">
+                    <i class="fa fa-fw fa-wrench">Ticket</i>
                 </a>
             </li>
             <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
                 <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents" data-parent="#exampleAccordion">
                     <i class="fa fa-fw fa-wrench"></i>
-                    <span class="nav-link-text">Tickets</span>
+                    <span class="nav-link-text">Reservation</span>
                 </a>
                 <ul class="sidenav-second-level collapse" id="collapseComponents">
                     <li>
-                        <a href={{ path("_affichage") }}>Affichage Tickets</a>
+                        <a href="{{ ('hoteladmin') }}">Hotel</a>
                     </li>
                     <li>
-                        <a href="cards.html">Cards</a>
+                        <a href="{{ ('transportadmin') }}">Transport</a>
                     </li>
                 </ul>
             </li>
-
-
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu Levels">
+                <a class="nav-link" href="{{ path('_affichage_standings') }}" data-parent="#exampleAccordion">
+                    <i class="fa fa-fw fa-sitemap">Classement</i>
+                </a>
+            </li>
             <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Publicite">
-                <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseExamplePages" data-parent="#exampleAccordion">
+                <a class="nav-link" href="{{ path ('admin_manage_publicite_index')}}" data-parent="#exampleAccordion">
                     <i class="fa fa-fw fa-file"></i>
                     <span class="nav-link-text">Publicite</span>
                 </a>
             </li>
-            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu Levels">
-                <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti" data-parent="#exampleAccordion">
-                    <i class="fa fa-fw fa-sitemap"></i>
-                    <span class="nav-link-text">Menu Levels</span>
-                </a>
-                <ul class="sidenav-second-level collapse" id="collapseMulti">
-                    <li>
-                        <a href="#">Second Level Item</a>
-                    </li>
-                    <li>
-                        <a href="#">Second Level Item</a>
-                    </li>
-                    <li>
-                        <a href="#">Second Level Item</a>
-                    </li>
-                    <li>
-                        <a class="nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti2">Third Level</a>
-                        <ul class="sidenav-third-level collapse" id="collapseMulti2">
-                            <li>
-                                <a href="#">Third Level Item</a>
-                            </li>
-                            <li>
-                                <a href="#">Third Level Item</a>
-                            </li>
-                            <li>
-                                <a href="#">Third Level Item</a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
-            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Link">
-                <a class="nav-link" href="#">
-                    <i class="fa fa-fw fa-link"></i>
-                    <span class="nav-link-text">Link</span>
+
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Reclamation">
+                <a class="nav-link" href="{{ path('admin_manage_reclamation_index')}}" data-parent="#exampleAccordion">
+                    <i class="fa fa-fw fa-file"></i>
+                    <span class="nav-link-text">Reclamation list</span>
                 </a>
             </li>
-        </ul>
-        <ul class="navbar-nav sidenav-toggler">
-            <li class="nav-item">
-                <a class="nav-link text-center" id="sidenavToggler">
-                    <i class="fa fa-fw fa-angle-left"></i>
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="News">
+                <a class="nav-link" href="{{ path('admin_manage_news_index') }}" data-parent="#exampleAccordion">
+                    <i class="fa fa-fw fa-file"></i>
+                    <span class="nav-link-text">News</span>
                 </a>
             </li>
         </ul>
@@ -203,14 +204,14 @@
                 </form>
             </li>
             <li class="nav-item">
-                <a class="nav-link" data-toggle="modal" data-target="#exampleModal" a href={{ path("fos_user_security_logout") }}>
+                <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
                     <i class="fa fa-fw fa-sign-out"></i>Logout</a>
             </li>
         </ul>
     </div>
 </nav>
 <div class="content-wrapper">
-    {% block content1 %}
+
     <div class="container-fluid">
         <!-- Breadcrumbs-->
         <ol class="breadcrumb">
@@ -287,6 +288,10 @@
             </div>
         </div>
         <!-- Area Chart Example-->
+        {% block content1 %}
+        {% endblock %}
+        {% block body %}
+        {% endblock %}
         <div class="card mb-3">
             <div class="card-header">
                 <i class="fa fa-area-chart"></i> Area Chart Example</div>
@@ -431,7 +436,7 @@
                             <h6 class="card-title mb-1"><a href="#">Jeffery Wellings</a></h6>
                             <p class="card-text small">Nice shot from the skate park!
                                 <a href="#">#kickflip</a>
-                                <a href="#">#holdmybeer</a>
+                                <a href="#">holdmybeer</a>
                                 <a href="#">#igotthis</a>
                             </p>
                         </div>
@@ -575,12 +580,9 @@
             </div>
         </div>
         <!-- Example DataTables Card-->
-        {% block body %}
         <div class="card mb-3">
             <div class="card-header">
-
-                <i class="fa fa-table"></i>   Data Table Example </div>
-
+                <i class="fa fa-table"></i> Data Table Example</div>
             <div class="card-body">
                 <div class="table-responsive">
                     <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
@@ -1068,8 +1070,6 @@
             <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
         </div>
     </div>
-    {% endblock %}
-    {% endblock %}
     <!-- /.container-fluid-->
     <!-- /.content-wrapper-->
     <footer class="sticky-footer">
@@ -1096,8 +1096,7 @@
                 <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
                 <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href={{ path("fos_user_security_logout") }}>Logout</a>
-
+                    <a class="btn btn-primary" href="login.html">Logout</a>
                 </div>
             </div>
         </div>

@@ -1,0 +1,24 @@
+post_index:
+    path:     /
+    defaults: { _controller: "ForumBundle:Post:indexclient" }
+    methods:  GET
+
+post_show:
+    path:     /{id}/show
+    defaults: { _controller: "ForumBundle:Post:show" }
+    methods:  GET
+
+post_new:
+    path:     /new/{id}
+    defaults: { _controller: "ForumBundle:Post:newclient" }
+    methods:  [GET, POST]
+
+post_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "ForumBundle:Post:editclient" }
+    methods:  [GET, POST]
+
+post_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "ForumBundle:Post:delete" }
+    methods:  DELETE

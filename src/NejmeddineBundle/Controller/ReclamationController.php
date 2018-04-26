@@ -31,26 +31,31 @@ class ReclamationController extends Controller
      * Creates a new reclamation entity.
      *
      */
-    public function newAction(Request $request)
+
+    public function newfrontAction(Request $request)
     {
         $reclamation = new Reclamation();
+
         $form = $this->createForm('NejmeddineBundle\Form\ReclamationType', $reclamation);
         $form->handleRequest($request);
-
         if ($form->isSubmitted() && $form->isValid()) {
             $em = $this->getDoctrine()->getManager();
+            $Date = new \DateTime('now');
+            $reclamation->setDateRec($Date->format('M-D-Y'));
+            $user = $this->getUser();
+            $reclamation->setIdUtilisateur($user);
+            $reclamation->setEtatRec('0');
             $em->persist($reclamation);
             $em->flush();
 
-            return $this->redirectToRoute('admin_manage_reclamation_show', array('idReclamation' => $reclamation->getIdreclamation()));
+            return $this->redirectToRoute('russia2_pi_homepage', array('idReclamation' => $reclamation->getIdreclamation()));
         }
 
-        return $this->render('NejmeddineBundle:Reclamationviews:new.html.twig', array(
+        return $this->render('RUSSIA2PIBundle:Default:reclamation.html.twig', array(
             'reclamation' => $reclamation,
             'form' => $form->createView(),
         ));
     }
-
     /**
      * Finds and displays a reclamation entity.
      *
@@ -64,27 +69,32 @@ class ReclamationController extends Controller
             'delete_form' => $deleteForm->createView(),
         ));
     }
+    public function changeetatAction(Request $request){
 
-    /**
-     * Displays a form to edit an existing reclamation entity.
-     *
-     */
+    }
+
+
     public function editAction(Request $request, Reclamation $reclamation)
     {
-        $deleteForm = $this->createDeleteForm($reclamation);
-        $editForm = $this->createForm('NejmeddineBundle\Form\ReclamationType', $reclamation);
+        $editForm = $this->createForm('NejmeddineBundle\Form\ReclamationType');
         $editForm->handleRequest($request);
 
         if ($editForm->isSubmitted() && $editForm->isValid()) {
-            $this->getDoctrine()->getManager()->flush();
 
+            $em = $this->getDoctrine()->getManager();
+            $users=$em->getRepository('NejmeddineBundle:User')->find($reclamation->getIdUtilisateur());
+            $message= \Swift_Message::newInstance()->setSubject($editForm->get('sujetRec')->getData())
+                ->setFrom('russia2018.pi@gmail.com')
+                ->setTo($users->getemail())->setBody(
+                    $this->renderView(
+                        'NejmeddineBundle:Reclamationviews:Reponse.twig.html',
+                        array('name' => $users->getnom(),'text'=>$editForm->get('descriptionRec')->getData()), 'text/html'));
+            $this->get('mailer')->send($message);
             return $this->redirectToRoute('admin_manage_reclamation_edit', array('idReclamation' => $reclamation->getIdreclamation()));
         }
 
         return $this->render('NejmeddineBundle:Reclamationviews:edit.html.twig', array(
-            'reclamation' => $reclamation,
-            'edit_form' => $editForm->createView(),
-            'delete_form' => $deleteForm->createView(),
+            'edit_form' => $editForm->createView()
         ));
     }
 

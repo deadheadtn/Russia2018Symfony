@@ -1,0 +1,39 @@
+{{ form_start(f) }}
+<table>
+    <tr>
+        <td>joue :</td>
+        <td>{{ form_widget(f.joue) }}</td>
+    </tr>
+    <tr>
+        <td>victoire :</td>
+        <td>{{ form_widget(f.victoire) }}</td>
+    </tr>
+    <tr>
+        <td>Nulle:</td>
+        <td>{{ form_widget(f.equiv) }}</td>
+    </tr>
+    <tr>
+        <td>defaite:</td>
+        <td>{{ form_widget(f.defaite) }}</td>
+    </tr>
+    <tr>
+        <td>gF:</td>
+        <td>{{ form_widget(f.gF) }}</td>
+    </tr>
+    <tr>
+        <td>gS:</td>
+        <td>{{ form_widget(f.gS) }}</td>
+    </tr>
+    <tr>
+        <td>points:</td>
+        <td>{{ form_widget(f.pts) }}</td>
+    </tr>
+    <tr>
+        <td>{{ form_widget(f.valider) }}</td>
+    </tr>
+
+    <tr>
+        <td><br><a href="{{ path('_affichage_standings') }}">Retour</a></td>
+    </tr>
+</table>
+{{ form_end(f) }}

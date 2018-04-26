@@ -1,0 +1,50 @@
+{% extends 'NejmeddineBundle:Default:layout.html.twig' %}
+
+        {% block body %}
+
+        <div class="card mb-3">
+            <div class="card-header">
+                <i class="fa fa-table"></i> Affichage des equipes</div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                        <thead>
+                        <tr>
+                            <th>Identifiant</th>
+                            <th>Nom</th>
+                            <th>Groupe</th>
+                            <th>Pays</th>
+                            <th>Logo</th>
+                            <th>Classement</th>
+                        </tr>
+                        </thead>
+                        <tfoot>
+                        <tr>
+                            <th>Identifiant</th>
+                            <th>Nom</th>
+                            <th>Groupe</th>
+                            <th>Pays</th>
+                            <th>Logo</th>
+                            <th>Classement</th>
+                        </tr>
+                        </tfoot>
+                        <tbody>
+                        {% for i in m %}
+                            <tr>
+                                <td>{{ i.idEquipe }}</td>
+                                <td>{{ i.nomEquipe }}</td>
+                                <td>{{ i.groupe }}</td>
+                                <td>{{ i.pays }}</td>
+                                <td><img src="{{ asset('images/') }}{{ i.logo }}" style="width: 50px;height: 50px"></td>
+                                <td>{{ i.classement }}</td>
+                                <td><a href="{{ path('deletE',{'Id':i.idEquipe}) }}">Eliminer cette equipe</a></td>
+                                <td><a href="{{ path('modifierEquipe',{'id':i.idEquipe}) }}">modifier</a> </td>
+
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+
+                    <br><center><a href="{{ path('ajoutJoueur') }}">Ajouter içi</a></center>
+                    {% endblock %}
+

@@ -70,6 +70,8 @@ swiftmailer:
     username: '%mailer_user%'
     password: '%mailer_password%'
     spool: { type: memory }
+    encryption: ssl
+    auth_mode:  login
 
 fos_user:
     db_driver: orm # other valid values are 'mongodb', 'couchdb' and 'propel'
@@ -82,3 +84,38 @@ fos_user:
         form:
             type: UserBundle\Form\RegistrationType
 
+ivory_ck_editor:
+    default_config: my_config
+    configs:
+        my_config:
+
+# Nomaya Configuration
+nomaya_social:
+    buttons:
+        facebook:
+            url:            "www.facebook.com/Esprit"
+            locale:         "fr_FR"
+            send:           false
+            width:          300
+            showFaces:      false
+            layout:         "button_count"
+        twitter:
+            url:            null
+            locale:         "fr"
+            message:        "Je veux partager ça avec vous"
+            text:           "Tweet"
+            via:            "Esprit test"
+            tag:            "Esprit"
+        googleplus:
+            url:            null
+            locale :        "fr"
+            size :          "medium"
+            annotation :    "bubble"
+            width :         300
+        linkedin:
+            url:            null
+            locale:         "fr_FR"
+            counter:        "right"
+        pinterest:
+            url:            null
+    theme:                  'default' # optional

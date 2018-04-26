@@ -1,0 +1,11 @@
+forum_client_topic:
+    resource: "@ForumBundle/Resources/config/routing/topicclient.yml"
+    prefix:   /client/topic
+
+forum_client_commentaire:
+    resource: "@ForumBundle/Resources/config/routing/commentaireclient.yml"
+    prefix:   /client/commentaire
+
+forum_client_ post:
+    resource: "@ForumBundle/Resources/config/routing/postclient.yml"
+    prefix:   /client/post

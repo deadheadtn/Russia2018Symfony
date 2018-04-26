@@ -22,3 +22,7 @@ admin_manage_reclamation_delete:
     path:     /{idReclamation}/delete
     defaults: { _controller: "NejmeddineBundle:Reclamation:delete" }
     methods:  DELETE
+admin_manage_reclamation_changeetat:
+    path:     /{idReclamation}/etat
+    defaults: { _controller: "NejmeddineBundle:Reclamation:delete" }
+    methods:  GET

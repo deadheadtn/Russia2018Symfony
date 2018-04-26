@@ -103,246 +103,797 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
 
         }
 
-        // fedi_fedi_default_index
-        if ('' === $trimmedPathinfo) {
-            if (substr($pathinfo, -1) !== '/') {
-                return $this->redirect($rawPathinfo.'/', 'fedi_fedi_default_index');
+        elseif (0 === strpos($pathinfo, '/client')) {
+            // russia2_pi_homepage
+            if ('/client' === $pathinfo) {
+                return array (  '_controller' => 'NejmeddineBundle\\Controller\\NewsController::indexCAction',  '_route' => 'russia2_pi_homepage',);
             }
 
-            return array (  '_controller' => 'Fedi\\FediBundle\\Controller\\DefaultController::indexAction',  '_route' => 'fedi_fedi_default_index',);
-        }
+            // ViewArticle
+            if (0 === strpos($pathinfo, '/client/news') && preg_match('#^/client/news/(?P<idNews>[^/]++)/show$#s', $pathinfo, $matches)) {
+                if ('GET' !== $canonicalMethod) {
+                    $allow[] = 'GET';
+                    goto not_ViewArticle;
+                }
 
-<<<<<<< Updated upstream
-        // hotel
-        if ('/hotel' === $pathinfo) {
-            return array (  '_controller' => 'Fedi\\FediBundle\\Controller\\hotelController::hotelAction',  '_route' => 'hotel',);
-        }
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'ViewArticle')), array (  '_controller' => 'NejmeddineBundle\\Controller\\NewsController::showNewsAction',));
+            }
+            not_ViewArticle:
 
-        // Pageaffichage
-        if ('/affichage' === $pathinfo) {
-            return array (  '_controller' => 'Fedi\\FediBundle\\Controller\\hotelController::affichehotelAction',  '_route' => 'Pageaffichage',);
-        }
+            // Reclamation
+            if ('/client/reclamation/new' === $pathinfo) {
+                if (!in_array($canonicalMethod, array('GET', 'POST'))) {
+                    $allow = array_merge($allow, array('GET', 'POST'));
+                    goto not_Reclamation;
+                }
 
-        // Page
-        if ('/admin' === $pathinfo) {
-            return array (  '_controller' => 'RUSSIA\\PIBundle\\Controller\\DefaultController::indexAction',  '_route' => 'Page',);
-        }
+                return array (  '_controller' => 'NejmeddineBundle\\Controller\\ReclamationController::newfrontAction',  '_route' => 'Reclamation',);
+            }
+            not_Reclamation:
 
-        if (0 === strpos($pathinfo, '/Ajout')) {
-            // ajout
-            if ('/Ajout' === $pathinfo) {
-                return array (  '_controller' => 'Fedi\\FediBundle\\Controller\\hotelController::Ajout2Action',  '_route' => 'ajout',);
+            // reservertransport
+            if (0 === strpos($pathinfo, '/client/reservertransport') && preg_match('#^/client/reservertransport/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'reservertransport')), array (  '_controller' => 'Fedi\\FediBundle\\Controller\\reservationTController::AjoutR2Action',));
             }
 
-            // ajouttransport
-            if ('/AjoutT' === $pathinfo) {
-                return array (  '_controller' => 'Fedi\\FediBundle\\Controller\\transportController::Ajout2Action',  '_route' => 'ajouttransport',);
+            // PageAffichageFront
+            if ('/client/affichageFront' === $pathinfo) {
+                return array (  '_controller' => 'Nesrine\\JoueurBundle\\Controller\\JoueurController::affichageFrontAction',  '_route' => 'PageAffichageFront',);
+            }
+
+            // PageAffichageEquipeFront
+            if ('/client/affichageEquipeFront' === $pathinfo) {
+                return array (  '_controller' => 'Nesrine\\JoueurBundle\\Controller\\EquipeController::affichageFrontAction',  '_route' => 'PageAffichageEquipeFront',);
+            }
+
+            // Graphe
+            if ('/client/graph' === $pathinfo) {
+                return array (  '_controller' => 'Nesrine\\JoueurBundle\\Controller\\JoueurController::IndexAction',  '_route' => 'Graphe',);
+            }
+
+            if (0 === strpos($pathinfo, '/client/hotel')) {
+                // hotelclient
+                if ('/client/hotelclient' === $pathinfo) {
+                    return array (  '_controller' => 'Fedi\\FediBundle\\Controller\\hotelController::hotelclientAction',  '_route' => 'hotelclient',);
+                }
+
+                // pagehotelclient
+                if ('/client/hotel/map' === $pathinfo) {
+                    return array (  '_controller' => 'Fedi\\FediBundle\\Controller\\hotelController::hotelclient2Action',  '_route' => 'pagehotelclient',);
+                }
+
+                // reserverhotel
+                if ('/client/hotel/reserver' === $pathinfo) {
+                    return array (  '_controller' => 'Fedi\\FediBundle\\Controller\\reservationHController::AjoutRAction',  '_route' => 'reserverhotel',);
+                }
+
+            }
+
+            // transportclient
+            if ('/client/transportclient' === $pathinfo) {
+                return array (  '_controller' => 'Fedi\\FediBundle\\Controller\\transportController::transportclientAction',  '_route' => 'transportclient',);
+            }
+
+            if (0 === strpos($pathinfo, '/client/topic')) {
+                // topic_index
+                if ('/client/topic' === $trimmedPathinfo) {
+                    if ('GET' !== $canonicalMethod) {
+                        $allow[] = 'GET';
+                        goto not_topic_index;
+                    }
+
+                    if (substr($pathinfo, -1) !== '/') {
+                        return $this->redirect($rawPathinfo.'/', 'topic_index');
+                    }
+
+                    return array (  '_controller' => 'ForumBundle\\Controller\\TopicController::indexclientAction',  '_route' => 'topic_index',);
+                }
+                not_topic_index:
+
+                // topic_show
+                if (preg_match('#^/client/topic/(?P<id>[^/]++)/show$#s', $pathinfo, $matches)) {
+                    if ('GET' !== $canonicalMethod) {
+                        $allow[] = 'GET';
+                        goto not_topic_show;
+                    }
+
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'topic_show')), array (  '_controller' => 'ForumBundle\\Controller\\TopicController::showclientAction',));
+                }
+                not_topic_show:
+
+            }
+
+            elseif (0 === strpos($pathinfo, '/client/commentaire')) {
+                // commentaire_index
+                if ('/client/commentaire' === $trimmedPathinfo) {
+                    if ('GET' !== $canonicalMethod) {
+                        $allow[] = 'GET';
+                        goto not_commentaire_index;
+                    }
+
+                    if (substr($pathinfo, -1) !== '/') {
+                        return $this->redirect($rawPathinfo.'/', 'commentaire_index');
+                    }
+
+                    return array (  '_controller' => 'ForumBundle\\Controller\\CommentaireController::indexclientAction',  '_route' => 'commentaire_index',);
+                }
+                not_commentaire_index:
+
+                // commentaire_show
+                if (preg_match('#^/client/commentaire/(?P<id>[^/]++)/show$#s', $pathinfo, $matches)) {
+                    if ('GET' !== $canonicalMethod) {
+                        $allow[] = 'GET';
+                        goto not_commentaire_show;
+                    }
+
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'commentaire_show')), array (  '_controller' => 'ForumBundle\\Controller\\CommentaireController::showAction',));
+                }
+                not_commentaire_show:
+
+                // commentaire_new
+                if (0 === strpos($pathinfo, '/client/commentaire/new') && preg_match('#^/client/commentaire/new/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                    if (!in_array($canonicalMethod, array('GET', 'POST'))) {
+                        $allow = array_merge($allow, array('GET', 'POST'));
+                        goto not_commentaire_new;
+                    }
+
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'commentaire_new')), array (  '_controller' => 'ForumBundle\\Controller\\CommentaireController::newclientAction',));
+                }
+                not_commentaire_new:
+
+                // commentaire_edit
+                if (preg_match('#^/client/commentaire/(?P<id>[^/]++)/edit$#s', $pathinfo, $matches)) {
+                    if (!in_array($canonicalMethod, array('GET', 'POST'))) {
+                        $allow = array_merge($allow, array('GET', 'POST'));
+                        goto not_commentaire_edit;
+                    }
+
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'commentaire_edit')), array (  '_controller' => 'ForumBundle\\Controller\\CommentaireController::editclientAction',));
+                }
+                not_commentaire_edit:
+
+                // commentaire_delete
+                if (preg_match('#^/client/commentaire/(?P<id>[^/]++)/delete$#s', $pathinfo, $matches)) {
+                    if ('DELETE' !== $canonicalMethod) {
+                        $allow[] = 'DELETE';
+                        goto not_commentaire_delete;
+                    }
+
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'commentaire_delete')), array (  '_controller' => 'ForumBundle\\Controller\\CommentaireController::deleteAction',));
+                }
+                not_commentaire_delete:
+
+            }
+
+            elseif (0 === strpos($pathinfo, '/client/post')) {
+                // post_index
+                if ('/client/post' === $trimmedPathinfo) {
+                    if ('GET' !== $canonicalMethod) {
+                        $allow[] = 'GET';
+                        goto not_post_index;
+                    }
+
+                    if (substr($pathinfo, -1) !== '/') {
+                        return $this->redirect($rawPathinfo.'/', 'post_index');
+                    }
+
+                    return array (  '_controller' => 'ForumBundle\\Controller\\PostController::indexclientAction',  '_route' => 'post_index',);
+                }
+                not_post_index:
+
+                // post_show
+                if (preg_match('#^/client/post/(?P<id>[^/]++)/show$#s', $pathinfo, $matches)) {
+                    if ('GET' !== $canonicalMethod) {
+                        $allow[] = 'GET';
+                        goto not_post_show;
+                    }
+
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'post_show')), array (  '_controller' => 'ForumBundle\\Controller\\PostController::showAction',));
+                }
+                not_post_show:
+
+                // post_new
+                if (0 === strpos($pathinfo, '/client/post/new') && preg_match('#^/client/post/new/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                    if (!in_array($canonicalMethod, array('GET', 'POST'))) {
+                        $allow = array_merge($allow, array('GET', 'POST'));
+                        goto not_post_new;
+                    }
+
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'post_new')), array (  '_controller' => 'ForumBundle\\Controller\\PostController::newclientAction',));
+                }
+                not_post_new:
+
+                // post_edit
+                if (preg_match('#^/client/post/(?P<id>[^/]++)/edit$#s', $pathinfo, $matches)) {
+                    if (!in_array($canonicalMethod, array('GET', 'POST'))) {
+                        $allow = array_merge($allow, array('GET', 'POST'));
+                        goto not_post_edit;
+                    }
+
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'post_edit')), array (  '_controller' => 'ForumBundle\\Controller\\PostController::editclientAction',));
+                }
+                not_post_edit:
+
+                // post_delete
+                if (preg_match('#^/client/post/(?P<id>[^/]++)/delete$#s', $pathinfo, $matches)) {
+                    if ('DELETE' !== $canonicalMethod) {
+                        $allow[] = 'DELETE';
+                        goto not_post_delete;
+                    }
+
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'post_delete')), array (  '_controller' => 'ForumBundle\\Controller\\PostController::deleteAction',));
+                }
+                not_post_delete:
+
             }
 
         }
 
-        elseif (0 === strpos($pathinfo, '/Delete')) {
-            // supp
-            if (preg_match('#^/Delete/(?P<s>[^/]++)$#s', $pathinfo, $matches)) {
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'supp')), array (  '_controller' => 'Fedi\\FediBundle\\Controller\\hotelController::DeleteAction',));
+        elseif (0 === strpos($pathinfo, '/admin')) {
+            // Page
+            if ('/admin' === $pathinfo) {
+                return array (  '_controller' => 'RUSSIA\\PIBundle\\Controller\\DefaultController::indexAction',  '_route' => 'Page',);
             }
 
-            // supptransport
-            if (0 === strpos($pathinfo, '/DeleteT') && preg_match('#^/DeleteT/(?P<s>[^/]++)$#s', $pathinfo, $matches)) {
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'supptransport')), array (  '_controller' => 'Fedi\\FediBundle\\Controller\\transportController::DeleteAction',));
+            if (0 === strpos($pathinfo, '/admin/manage')) {
+                if (0 === strpos($pathinfo, '/admin/manage/news')) {
+                    // admin_manage_news_index
+                    if ('/admin/manage/news' === $trimmedPathinfo) {
+                        if ('GET' !== $canonicalMethod) {
+                            $allow[] = 'GET';
+                            goto not_admin_manage_news_index;
+                        }
+
+                        if (substr($pathinfo, -1) !== '/') {
+                            return $this->redirect($rawPathinfo.'/', 'admin_manage_news_index');
+                        }
+
+                        return array (  '_controller' => 'NejmeddineBundle\\Controller\\NewsController::indexAction',  '_route' => 'admin_manage_news_index',);
+                    }
+                    not_admin_manage_news_index:
+
+                    // admin_manage_news_show
+                    if (preg_match('#^/admin/manage/news/(?P<idNews>[^/]++)/show$#s', $pathinfo, $matches)) {
+                        if ('GET' !== $canonicalMethod) {
+                            $allow[] = 'GET';
+                            goto not_admin_manage_news_show;
+                        }
+
+                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'admin_manage_news_show')), array (  '_controller' => 'NejmeddineBundle\\Controller\\NewsController::showAction',));
+                    }
+                    not_admin_manage_news_show:
+
+                    // admin_manage_news_new
+                    if ('/admin/manage/news/new' === $pathinfo) {
+                        if (!in_array($canonicalMethod, array('GET', 'POST'))) {
+                            $allow = array_merge($allow, array('GET', 'POST'));
+                            goto not_admin_manage_news_new;
+                        }
+
+                        return array (  '_controller' => 'NejmeddineBundle\\Controller\\NewsController::newAction',  '_route' => 'admin_manage_news_new',);
+                    }
+                    not_admin_manage_news_new:
+
+                    // admin_manage_news_edit
+                    if (preg_match('#^/admin/manage/news/(?P<idNews>[^/]++)/edit$#s', $pathinfo, $matches)) {
+                        if (!in_array($canonicalMethod, array('GET', 'POST'))) {
+                            $allow = array_merge($allow, array('GET', 'POST'));
+                            goto not_admin_manage_news_edit;
+                        }
+
+                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'admin_manage_news_edit')), array (  '_controller' => 'NejmeddineBundle\\Controller\\NewsController::editAction',));
+                    }
+                    not_admin_manage_news_edit:
+
+                    // admin_manage_news_delete
+                    if (preg_match('#^/admin/manage/news/(?P<idNews>[^/]++)/delete$#s', $pathinfo, $matches)) {
+                        if ('DELETE' !== $canonicalMethod) {
+                            $allow[] = 'DELETE';
+                            goto not_admin_manage_news_delete;
+                        }
+
+                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'admin_manage_news_delete')), array (  '_controller' => 'NejmeddineBundle\\Controller\\NewsController::deleteAction',));
+                    }
+                    not_admin_manage_news_delete:
+
+                }
+
+                elseif (0 === strpos($pathinfo, '/admin/manage/reclamation')) {
+                    // admin_manage_reclamation_index
+                    if ('/admin/manage/reclamation' === $trimmedPathinfo) {
+                        if ('GET' !== $canonicalMethod) {
+                            $allow[] = 'GET';
+                            goto not_admin_manage_reclamation_index;
+                        }
+
+                        if (substr($pathinfo, -1) !== '/') {
+                            return $this->redirect($rawPathinfo.'/', 'admin_manage_reclamation_index');
+                        }
+
+                        return array (  '_controller' => 'NejmeddineBundle\\Controller\\ReclamationController::indexAction',  '_route' => 'admin_manage_reclamation_index',);
+                    }
+                    not_admin_manage_reclamation_index:
+
+                    // admin_manage_reclamation_show
+                    if (preg_match('#^/admin/manage/reclamation/(?P<idReclamation>[^/]++)/show$#s', $pathinfo, $matches)) {
+                        if ('GET' !== $canonicalMethod) {
+                            $allow[] = 'GET';
+                            goto not_admin_manage_reclamation_show;
+                        }
+
+                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'admin_manage_reclamation_show')), array (  '_controller' => 'NejmeddineBundle\\Controller\\ReclamationController::showAction',));
+                    }
+                    not_admin_manage_reclamation_show:
+
+                    // admin_manage_reclamation_new
+                    if ('/admin/manage/reclamation/new' === $pathinfo) {
+                        if (!in_array($canonicalMethod, array('GET', 'POST'))) {
+                            $allow = array_merge($allow, array('GET', 'POST'));
+                            goto not_admin_manage_reclamation_new;
+                        }
+
+                        return array (  '_controller' => 'NejmeddineBundle\\Controller\\ReclamationController::newAction',  '_route' => 'admin_manage_reclamation_new',);
+                    }
+                    not_admin_manage_reclamation_new:
+
+                    // admin_manage_reclamation_edit
+                    if (preg_match('#^/admin/manage/reclamation/(?P<idReclamation>[^/]++)/edit$#s', $pathinfo, $matches)) {
+                        if (!in_array($canonicalMethod, array('GET', 'POST'))) {
+                            $allow = array_merge($allow, array('GET', 'POST'));
+                            goto not_admin_manage_reclamation_edit;
+                        }
+
+                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'admin_manage_reclamation_edit')), array (  '_controller' => 'NejmeddineBundle\\Controller\\ReclamationController::editAction',));
+                    }
+                    not_admin_manage_reclamation_edit:
+
+                    // admin_manage_reclamation_delete
+                    if (preg_match('#^/admin/manage/reclamation/(?P<idReclamation>[^/]++)/delete$#s', $pathinfo, $matches)) {
+                        if ('DELETE' !== $canonicalMethod) {
+                            $allow[] = 'DELETE';
+                            goto not_admin_manage_reclamation_delete;
+                        }
+
+                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'admin_manage_reclamation_delete')), array (  '_controller' => 'NejmeddineBundle\\Controller\\ReclamationController::deleteAction',));
+                    }
+                    not_admin_manage_reclamation_delete:
+
+                    // admin_manage_reclamation_changeetat
+                    if (preg_match('#^/admin/manage/reclamation/(?P<idReclamation>[^/]++)/etat$#s', $pathinfo, $matches)) {
+                        if ('GET' !== $canonicalMethod) {
+                            $allow[] = 'GET';
+                            goto not_admin_manage_reclamation_changeetat;
+                        }
+
+                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'admin_manage_reclamation_changeetat')), array (  '_controller' => 'NejmeddineBundle\\Controller\\ReclamationController::deleteAction',));
+                    }
+                    not_admin_manage_reclamation_changeetat:
+
+                }
+
+                // recherche
+                if ('/admin/manage/recherche' === $pathinfo) {
+                    return array (  '_controller' => 'Nesrine\\JoueurBundle\\Controller\\JoueurController::rechercheAction',  '_route' => 'recherche',);
+                }
+
+                if (0 === strpos($pathinfo, '/admin/manage/publicite')) {
+                    // admin_manage_publicite_index
+                    if ('/admin/manage/publicite' === $trimmedPathinfo) {
+                        if ('GET' !== $canonicalMethod) {
+                            $allow[] = 'GET';
+                            goto not_admin_manage_publicite_index;
+                        }
+
+                        if (substr($pathinfo, -1) !== '/') {
+                            return $this->redirect($rawPathinfo.'/', 'admin_manage_publicite_index');
+                        }
+
+                        return array (  '_controller' => 'NejmeddineBundle\\Controller\\PubliciteController::indexAction',  '_route' => 'admin_manage_publicite_index',);
+                    }
+                    not_admin_manage_publicite_index:
+
+                    // admin_manage_publicite_show
+                    if (preg_match('#^/admin/manage/publicite/(?P<id>[^/]++)/show$#s', $pathinfo, $matches)) {
+                        if ('GET' !== $canonicalMethod) {
+                            $allow[] = 'GET';
+                            goto not_admin_manage_publicite_show;
+                        }
+
+                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'admin_manage_publicite_show')), array (  '_controller' => 'NejmeddineBundle\\Controller\\PubliciteController::showAction',));
+                    }
+                    not_admin_manage_publicite_show:
+
+                    // admin_manage_publicite_new
+                    if ('/admin/manage/publicite/new' === $pathinfo) {
+                        if (!in_array($canonicalMethod, array('GET', 'POST'))) {
+                            $allow = array_merge($allow, array('GET', 'POST'));
+                            goto not_admin_manage_publicite_new;
+                        }
+
+                        return array (  '_controller' => 'NejmeddineBundle\\Controller\\PubliciteController::newAction',  '_route' => 'admin_manage_publicite_new',);
+                    }
+                    not_admin_manage_publicite_new:
+
+                    // admin_manage_publicite_edit
+                    if (preg_match('#^/admin/manage/publicite/(?P<id>[^/]++)/edit$#s', $pathinfo, $matches)) {
+                        if (!in_array($canonicalMethod, array('GET', 'POST'))) {
+                            $allow = array_merge($allow, array('GET', 'POST'));
+                            goto not_admin_manage_publicite_edit;
+                        }
+
+                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'admin_manage_publicite_edit')), array (  '_controller' => 'NejmeddineBundle\\Controller\\PubliciteController::editAction',));
+                    }
+                    not_admin_manage_publicite_edit:
+
+                    // admin_manage_publicite_delete
+                    if (preg_match('#^/admin/manage/publicite/(?P<id>[^/]++)/delete$#s', $pathinfo, $matches)) {
+                        if ('DELETE' !== $canonicalMethod) {
+                            $allow[] = 'DELETE';
+                            goto not_admin_manage_publicite_delete;
+                        }
+
+                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'admin_manage_publicite_delete')), array (  '_controller' => 'NejmeddineBundle\\Controller\\PubliciteController::deleteAction',));
+                    }
+                    not_admin_manage_publicite_delete:
+
+                }
+
+                elseif (0 === strpos($pathinfo, '/admin/manage/a')) {
+                    if (0 === strpos($pathinfo, '/admin/manage/affichag')) {
+                        // PageAffichage
+                        if ('/admin/manage/affichage' === $pathinfo) {
+                            return array (  '_controller' => 'Nesrine\\JoueurBundle\\Controller\\JoueurController::affichageAction',  '_route' => 'PageAffichage',);
+                        }
+
+                        // PageAffichageEquipe
+                        if ('/admin/manage/affichagE' === $pathinfo) {
+                            return array (  '_controller' => 'Nesrine\\JoueurBundle\\Controller\\EquipeController::affichageAction',  '_route' => 'PageAffichageEquipe',);
+                        }
+
+                        // PageAffichageStaff
+                        if ('/admin/manage/affichagS' === $pathinfo) {
+                            return array (  '_controller' => 'Nesrine\\JoueurBundle\\Controller\\StaffController::affichageAction',  '_route' => 'PageAffichageStaff',);
+                        }
+
+                    }
+
+                    elseif (0 === strpos($pathinfo, '/admin/manage/ajout')) {
+                        // ajoutJoueur
+                        if ('/admin/manage/ajout' === $pathinfo) {
+                            return array (  '_controller' => 'Nesrine\\JoueurBundle\\Controller\\JoueurController::ajoutAction',  '_route' => 'ajoutJoueur',);
+                        }
+
+                        // ajoutEquipe
+                        if ('/admin/manage/ajoutE' === $pathinfo) {
+                            return array (  '_controller' => 'Nesrine\\JoueurBundle\\Controller\\EquipeController::ajoutAction',  '_route' => 'ajoutEquipe',);
+                        }
+
+                        // ajoutStaff
+                        if ('/admin/manage/ajoutS' === $pathinfo) {
+                            return array (  '_controller' => 'Nesrine\\JoueurBundle\\Controller\\StaffController::ajoutAction',  '_route' => 'ajoutStaff',);
+                        }
+
+                    }
+
+                    elseif (0 === strpos($pathinfo, '/admin/manage/admin/hotel')) {
+                        // Pageaffichage
+                        if ('/admin/manage/admin/hotel/affichage' === $pathinfo) {
+                            return array (  '_controller' => 'Fedi\\FediBundle\\Controller\\hotelController::affichehotelAction',  '_route' => 'Pageaffichage',);
+                        }
+
+                        // ajout
+                        if ('/admin/manage/admin/hotel/Ajout' === $pathinfo) {
+                            return array (  '_controller' => 'Fedi\\FediBundle\\Controller\\hotelController::Ajout2Action',  '_route' => 'ajout',);
+                        }
+
+                        // supp
+                        if (0 === strpos($pathinfo, '/admin/manage/admin/hotel/Delete') && preg_match('#^/admin/manage/admin/hotel/Delete/(?P<s>[^/]++)$#s', $pathinfo, $matches)) {
+                            return $this->mergeDefaults(array_replace($matches, array('_route' => 'supp')), array (  '_controller' => 'Fedi\\FediBundle\\Controller\\hotelController::DeleteAction',));
+                        }
+
+                    }
+
+                }
+
+                elseif (0 === strpos($pathinfo, '/admin/manage/supprimer')) {
+                    // delete
+                    if (preg_match('#^/admin/manage/supprimer/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'delete')), array (  '_controller' => 'Nesrine\\JoueurBundle\\Controller\\JoueurController::deleteAction',));
+                    }
+
+                    // deletE
+                    if (0 === strpos($pathinfo, '/admin/manage/supprimerE') && preg_match('#^/admin/manage/supprimerE/(?P<Id>[^/]++)$#s', $pathinfo, $matches)) {
+                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'deletE')), array (  '_controller' => 'Nesrine\\JoueurBundle\\Controller\\EquipeController::deleteAction',));
+                    }
+
+                    // deletS
+                    if (0 === strpos($pathinfo, '/admin/manage/supprimerS') && preg_match('#^/admin/manage/supprimerS/(?P<ID>[^/]++)$#s', $pathinfo, $matches)) {
+                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'deletS')), array (  '_controller' => 'Nesrine\\JoueurBundle\\Controller\\StaffController::deleteAction',));
+                    }
+
+                }
+
+                elseif (0 === strpos($pathinfo, '/admin/manage/updat')) {
+                    // modifierJoueur
+                    if (0 === strpos($pathinfo, '/admin/manage/update') && preg_match('#^/admin/manage/update/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'modifierJoueur')), array (  '_controller' => 'Nesrine\\JoueurBundle\\Controller\\JoueurController::updateAction',));
+                    }
+
+                    // modifierEquipe
+                    if (0 === strpos($pathinfo, '/admin/manage/updatE') && preg_match('#^/admin/manage/updatE/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'modifierEquipe')), array (  '_controller' => 'Nesrine\\JoueurBundle\\Controller\\EquipeController::updateAction',));
+                    }
+
+                    // modifierStaff
+                    if (0 === strpos($pathinfo, '/admin/manage/updatS') && preg_match('#^/admin/manage/updatS/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'modifierStaff')), array (  '_controller' => 'Nesrine\\JoueurBundle\\Controller\\StaffController::updateAction',));
+                    }
+
+                }
+
+                elseif (0 === strpos($pathinfo, '/admin/manage/hotel')) {
+                    // hotel
+                    if ('/admin/manage/hotel' === $pathinfo) {
+                        return array (  '_controller' => 'Fedi\\FediBundle\\Controller\\hotelController::hotelAction',  '_route' => 'hotel',);
+                    }
+
+                    // modif
+                    if (0 === strpos($pathinfo, '/admin/manage/hotel/Modifier') && preg_match('#^/admin/manage/hotel/Modifier/(?P<s>[^/]++)$#s', $pathinfo, $matches)) {
+                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'modif')), array (  '_controller' => 'Fedi\\FediBundle\\Controller\\hotelController::ModifierAction',));
+                    }
+
+                    // hoteladmin
+                    if ('/admin/manage/hoteladmin' === $pathinfo) {
+                        return array (  '_controller' => 'Fedi\\FediBundle\\Controller\\reservationHController::hoteladminAction',  '_route' => 'hoteladmin',);
+                    }
+
+                }
+
+                elseif (0 === strpos($pathinfo, '/admin/manage/transport')) {
+                    // transport
+                    if ('/admin/manage/transport' === $pathinfo) {
+                        return array (  '_controller' => 'Fedi\\FediBundle\\Controller\\transportController::transportAction',  '_route' => 'transport',);
+                    }
+
+                    // ajouttransport
+                    if ('/admin/manage/transport/AjoutT' === $pathinfo) {
+                        return array (  '_controller' => 'Fedi\\FediBundle\\Controller\\transportController::Ajout2Action',  '_route' => 'ajouttransport',);
+                    }
+
+                    // modiftransport
+                    if (0 === strpos($pathinfo, '/admin/manage/transport/ModifierT') && preg_match('#^/admin/manage/transport/ModifierT/(?P<s>[^/]++)$#s', $pathinfo, $matches)) {
+                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'modiftransport')), array (  '_controller' => 'Fedi\\FediBundle\\Controller\\transportController::ModifierAction',));
+                    }
+
+                    // transportadmin
+                    if ('/admin/manage/transportadmin' === $pathinfo) {
+                        return array (  '_controller' => 'Fedi\\FediBundle\\Controller\\reservationTController::transportadminAction',  '_route' => 'transportadmin',);
+                    }
+
+                }
+
+                // supptransport
+                if (0 === strpos($pathinfo, '/admin/manage/DeleteT') && preg_match('#^/admin/manage/DeleteT/(?P<s>[^/]++)$#s', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'supptransport')), array (  '_controller' => 'Fedi\\FediBundle\\Controller\\transportController::DeleteAction',));
+                }
+
+                // etatreshotel
+                if (0 === strpos($pathinfo, '/admin/manage/etatreshotel') && preg_match('#^/admin/manage/etatreshotel/(?P<s>[^/]++)$#s', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'etatreshotel')), array (  '_controller' => 'Fedi\\FediBundle\\Controller\\reservationHController::modifierAction',));
+                }
+
             }
 
-        }
-
-        elseif (0 === strpos($pathinfo, '/Modifier')) {
-            // modif
-            if (preg_match('#^/Modifier/(?P<s>[^/]++)$#s', $pathinfo, $matches)) {
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'modif')), array (  '_controller' => 'Fedi\\FediBundle\\Controller\\hotelController::ModifierAction',));
-            }
-
-            // modiftransport
-            if (0 === strpos($pathinfo, '/ModifierT') && preg_match('#^/ModifierT/(?P<s>[^/]++)$#s', $pathinfo, $matches)) {
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'modiftransport')), array (  '_controller' => 'Fedi\\FediBundle\\Controller\\transportController::ModifierAction',));
-            }
-
-        }
-
-        // transport
-        if ('/transport' === $pathinfo) {
-            return array (  '_controller' => 'Fedi\\FediBundle\\Controller\\transportController::transportAction',  '_route' => 'transport',);
-        }
-
-        // russia2_pi_homepage
-        if ('/client' === $pathinfo) {
-            return array (  '_controller' => 'RUSSIA2\\PIBundle\\Controller\\DefaultController::indexAction',  '_route' => 'russia2_pi_homepage',);
-=======
-        if (0 === strpos($pathinfo, '/Admin')) {
             // _affichage
-            if ('/Admin/Tickets/Affichage' === $pathinfo) {
+            if ('/admin/Tickets/Affichage' === $pathinfo) {
                 return array (  '_controller' => 'TicketBundle\\Controller\\AdminTicketController::AffichageAction',  '_route' => '_affichage',);
             }
 
             // _recherche
-            if ('/Admin/Tickets/Recherche' === $pathinfo) {
+            if ('/admin/Tickets/Recherche' === $pathinfo) {
                 return array (  '_controller' => 'TicketBundle\\Controller\\AdminTicketController::RechercheAction',  '_route' => '_recherche',);
             }
 
-            if (0 === strpos($pathinfo, '/Admin/tickets')) {
+            if (0 === strpos($pathinfo, '/admin/tickets')) {
                 // _ajout
-                if ('/Admin/tickets/Ajout' === $pathinfo) {
+                if ('/admin/tickets/Ajout' === $pathinfo) {
                     return array (  '_controller' => 'TicketBundle\\Controller\\AdminTicketController::AjoutAction',  '_route' => '_ajout',);
                 }
 
                 // _modif
-                if ('/Admin/tickets/modif' === $pathinfo) {
+                if ('/admin/tickets/modif' === $pathinfo) {
                     return array (  '_controller' => 'TicketBundle\\Controller\\AdminTicketController::ModifAction',  '_route' => '_modif',);
                 }
 
                 // _delete
-                if ('/Admin/tickets/supprimer' === $pathinfo) {
-                    return array (  '_controller' => 'TicketBundle\\Controller\\AdminTicketController::DeleteAction',  '_route' => '_delete',);
+                if (0 === strpos($pathinfo, '/admin/tickets/supprimer?sup=') && preg_match('#^/admin/tickets/supprimer\\?sup\\=(?P<sup>[^/]++)$#s', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => '_delete')), array (  '_controller' => 'TicketBundle\\Controller\\AdminTicketController::DeleteAction',));
                 }
 
             }
 
-        }
-
-        // russia2_pi_homepage
-        if ('/client' === $pathinfo) {
-            return array (  '_controller' => 'RUSSIA2\\PIBundle\\Controller\\DefaultController::indexAction',  '_route' => 'russia2_pi_homepage',);
-        }
-
-        if (0 === strpos($pathinfo, '/admin')) {
-            // russiapi_homepage
-            if ('/admin' === $pathinfo) {
-                return array (  '_controller' => 'RUSSIA\\PIBundle\\Controller\\DefaultController::indexAction',  '_route' => 'russiapi_homepage',);
-            }
-
-            if (0 === strpos($pathinfo, '/admin/manage/news')) {
-                // admin_manage_news_index
-                if ('/admin/manage/news' === $trimmedPathinfo) {
+            elseif (0 === strpos($pathinfo, '/admin/topic')) {
+                // topic_indexadmin
+                if ('/admin/topic' === $trimmedPathinfo) {
                     if ('GET' !== $canonicalMethod) {
                         $allow[] = 'GET';
-                        goto not_admin_manage_news_index;
+                        goto not_topic_indexadmin;
                     }
 
                     if (substr($pathinfo, -1) !== '/') {
-                        return $this->redirect($rawPathinfo.'/', 'admin_manage_news_index');
+                        return $this->redirect($rawPathinfo.'/', 'topic_indexadmin');
                     }
 
-                    return array (  '_controller' => 'NejmeddineBundle\\Controller\\NewsController::indexAction',  '_route' => 'admin_manage_news_index',);
+                    return array (  '_controller' => 'ForumBundle\\Controller\\TopicController::indexadminAction',  '_route' => 'topic_indexadmin',);
                 }
-                not_admin_manage_news_index:
+                not_topic_indexadmin:
 
-                // admin_manage_news_show
-                if (preg_match('#^/admin/manage/news/(?P<idNews>[^/]++)/show$#s', $pathinfo, $matches)) {
+                // topic_showadmin
+                if (preg_match('#^/admin/topic/(?P<id>[^/]++)/show$#s', $pathinfo, $matches)) {
                     if ('GET' !== $canonicalMethod) {
                         $allow[] = 'GET';
-                        goto not_admin_manage_news_show;
+                        goto not_topic_showadmin;
                     }
 
-                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'admin_manage_news_show')), array (  '_controller' => 'NejmeddineBundle\\Controller\\NewsController::showAction',));
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'topic_showadmin')), array (  '_controller' => 'ForumBundle\\Controller\\TopicController::showadminAction',));
                 }
-                not_admin_manage_news_show:
+                not_topic_showadmin:
 
-                // admin_manage_news_new
-                if ('/admin/manage/news/new' === $pathinfo) {
+                // topic_newadmin
+                if ('/admin/topic/new' === $pathinfo) {
                     if (!in_array($canonicalMethod, array('GET', 'POST'))) {
                         $allow = array_merge($allow, array('GET', 'POST'));
-                        goto not_admin_manage_news_new;
+                        goto not_topic_newadmin;
                     }
 
-                    return array (  '_controller' => 'NejmeddineBundle\\Controller\\NewsController::newAction',  '_route' => 'admin_manage_news_new',);
+                    return array (  '_controller' => 'ForumBundle\\Controller\\TopicController::newAction',  '_route' => 'topic_newadmin',);
                 }
-                not_admin_manage_news_new:
+                not_topic_newadmin:
 
-                // admin_manage_news_edit
-                if (preg_match('#^/admin/manage/news/(?P<idNews>[^/]++)/edit$#s', $pathinfo, $matches)) {
+                // topic_editadmin
+                if (preg_match('#^/admin/topic/(?P<id>[^/]++)/edit$#s', $pathinfo, $matches)) {
                     if (!in_array($canonicalMethod, array('GET', 'POST'))) {
                         $allow = array_merge($allow, array('GET', 'POST'));
-                        goto not_admin_manage_news_edit;
+                        goto not_topic_editadmin;
                     }
 
-                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'admin_manage_news_edit')), array (  '_controller' => 'NejmeddineBundle\\Controller\\NewsController::editAction',));
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'topic_editadmin')), array (  '_controller' => 'ForumBundle\\Controller\\TopicController::editAction',));
                 }
-                not_admin_manage_news_edit:
+                not_topic_editadmin:
 
-                // admin_manage_news_delete
-                if (preg_match('#^/admin/manage/news/(?P<idNews>[^/]++)/delete$#s', $pathinfo, $matches)) {
+                // topic_delete
+                if (preg_match('#^/admin/topic/(?P<id>[^/]++)/delete$#s', $pathinfo, $matches)) {
                     if ('DELETE' !== $canonicalMethod) {
                         $allow[] = 'DELETE';
-                        goto not_admin_manage_news_delete;
+                        goto not_topic_delete;
                     }
 
-                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'admin_manage_news_delete')), array (  '_controller' => 'NejmeddineBundle\\Controller\\NewsController::deleteAction',));
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'topic_delete')), array (  '_controller' => 'ForumBundle\\Controller\\TopicController::deleteAction',));
                 }
-                not_admin_manage_news_delete:
+                not_topic_delete:
 
             }
 
-            elseif (0 === strpos($pathinfo, '/admin/manage/reclamation')) {
-                // admin_manage_reclamation_index
-                if ('/admin/manage/reclamation' === $trimmedPathinfo) {
+            elseif (0 === strpos($pathinfo, '/admin/Match')) {
+                // _affichage_standings
+                if ('/admin/Match/Affichage' === $pathinfo) {
+                    return array (  '_controller' => 'TicketBundle\\Controller\\AdminMatchController::AffichageStandingsAction',  '_route' => '_affichage_standings',);
+                }
+
+                // _ajout_standings
+                if (0 === strpos($pathinfo, '/admin/Match/ajout') && preg_match('#^/admin/Match/ajout/(?P<s>[^/]++)$#s', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => '_ajout_standings')), array (  '_controller' => 'TicketBundle\\Controller\\AdminMatchController::AjoutAction',));
+                }
+
+                // _modif_standings
+                if (0 === strpos($pathinfo, '/admin/Match/modif') && preg_match('#^/admin/Match/modif/(?P<s>[^/]++)$#s', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => '_modif_standings')), array (  '_controller' => 'TicketBundle\\Controller\\AdminMatchController::ModifierAction',));
+                }
+
+            }
+
+            elseif (0 === strpos($pathinfo, '/admin/commentaire')) {
+                // commentaire_indexadmin
+                if ('/admin/commentaire' === $trimmedPathinfo) {
                     if ('GET' !== $canonicalMethod) {
                         $allow[] = 'GET';
-                        goto not_admin_manage_reclamation_index;
+                        goto not_commentaire_indexadmin;
                     }
 
                     if (substr($pathinfo, -1) !== '/') {
-                        return $this->redirect($rawPathinfo.'/', 'admin_manage_reclamation_index');
+                        return $this->redirect($rawPathinfo.'/', 'commentaire_indexadmin');
                     }
 
-                    return array (  '_controller' => 'NejmeddineBundle\\Controller\\ReclamationController::indexAction',  '_route' => 'admin_manage_reclamation_index',);
+                    return array (  '_controller' => 'ForumBundle\\Controller\\CommentaireController::indexAction',  '_route' => 'commentaire_indexadmin',);
                 }
-                not_admin_manage_reclamation_index:
+                not_commentaire_indexadmin:
 
-                // admin_manage_reclamation_show
-                if (preg_match('#^/admin/manage/reclamation/(?P<idReclamation>[^/]++)/show$#s', $pathinfo, $matches)) {
+                // commentaire_showadmin
+                if (preg_match('#^/admin/commentaire/(?P<id>[^/]++)/show$#s', $pathinfo, $matches)) {
                     if ('GET' !== $canonicalMethod) {
                         $allow[] = 'GET';
-                        goto not_admin_manage_reclamation_show;
+                        goto not_commentaire_showadmin;
                     }
 
-                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'admin_manage_reclamation_show')), array (  '_controller' => 'NejmeddineBundle\\Controller\\ReclamationController::showAction',));
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'commentaire_showadmin')), array (  '_controller' => 'ForumBundle\\Controller\\CommentaireController::showAction',));
                 }
-                not_admin_manage_reclamation_show:
+                not_commentaire_showadmin:
 
-                // admin_manage_reclamation_new
-                if ('/admin/manage/reclamation/new' === $pathinfo) {
+                // commentaire_newadmin
+                if ('/admin/commentaire/new' === $pathinfo) {
                     if (!in_array($canonicalMethod, array('GET', 'POST'))) {
                         $allow = array_merge($allow, array('GET', 'POST'));
-                        goto not_admin_manage_reclamation_new;
+                        goto not_commentaire_newadmin;
                     }
 
-                    return array (  '_controller' => 'NejmeddineBundle\\Controller\\ReclamationController::newAction',  '_route' => 'admin_manage_reclamation_new',);
+                    return array (  '_controller' => 'ForumBundle\\Controller\\CommentaireController::newAction',  '_route' => 'commentaire_newadmin',);
                 }
-                not_admin_manage_reclamation_new:
+                not_commentaire_newadmin:
 
-                // admin_manage_reclamation_edit
-                if (preg_match('#^/admin/manage/reclamation/(?P<idReclamation>[^/]++)/edit$#s', $pathinfo, $matches)) {
+                // commentaire_editadmin
+                if (preg_match('#^/admin/commentaire/(?P<id>[^/]++)/edit$#s', $pathinfo, $matches)) {
                     if (!in_array($canonicalMethod, array('GET', 'POST'))) {
                         $allow = array_merge($allow, array('GET', 'POST'));
-                        goto not_admin_manage_reclamation_edit;
+                        goto not_commentaire_editadmin;
                     }
 
-                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'admin_manage_reclamation_edit')), array (  '_controller' => 'NejmeddineBundle\\Controller\\ReclamationController::editAction',));
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'commentaire_editadmin')), array (  '_controller' => 'ForumBundle\\Controller\\CommentaireController::editAction',));
                 }
-                not_admin_manage_reclamation_edit:
-
-                // admin_manage_reclamation_delete
-                if (preg_match('#^/admin/manage/reclamation/(?P<idReclamation>[^/]++)/delete$#s', $pathinfo, $matches)) {
-                    if ('DELETE' !== $canonicalMethod) {
-                        $allow[] = 'DELETE';
-                        goto not_admin_manage_reclamation_delete;
-                    }
-
-                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'admin_manage_reclamation_delete')), array (  '_controller' => 'NejmeddineBundle\\Controller\\ReclamationController::deleteAction',));
-                }
-                not_admin_manage_reclamation_delete:
+                not_commentaire_editadmin:
 
             }
 
->>>>>>> Stashed changes
+            elseif (0 === strpos($pathinfo, '/admin/post')) {
+                // post_indexadmin
+                if ('/admin/post' === $trimmedPathinfo) {
+                    if ('GET' !== $canonicalMethod) {
+                        $allow[] = 'GET';
+                        goto not_post_indexadmin;
+                    }
+
+                    if (substr($pathinfo, -1) !== '/') {
+                        return $this->redirect($rawPathinfo.'/', 'post_indexadmin');
+                    }
+
+                    return array (  '_controller' => 'ForumBundle\\Controller\\PostController::indexAction',  '_route' => 'post_indexadmin',);
+                }
+                not_post_indexadmin:
+
+                // post_showadmin
+                if (preg_match('#^/admin/post/(?P<id>[^/]++)/show$#s', $pathinfo, $matches)) {
+                    if ('GET' !== $canonicalMethod) {
+                        $allow[] = 'GET';
+                        goto not_post_showadmin;
+                    }
+
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'post_showadmin')), array (  '_controller' => 'ForumBundle\\Controller\\PostController::showAction',));
+                }
+                not_post_showadmin:
+
+                // post_newadmin
+                if ('/admin/post/new' === $pathinfo) {
+                    if (!in_array($canonicalMethod, array('GET', 'POST'))) {
+                        $allow = array_merge($allow, array('GET', 'POST'));
+                        goto not_post_newadmin;
+                    }
+
+                    return array (  '_controller' => 'ForumBundle\\Controller\\PostController::newAction',  '_route' => 'post_newadmin',);
+                }
+                not_post_newadmin:
+
+                // post_editadmin
+                if (preg_match('#^/admin/post/(?P<id>[^/]++)/edit$#s', $pathinfo, $matches)) {
+                    if (!in_array($canonicalMethod, array('GET', 'POST'))) {
+                        $allow = array_merge($allow, array('GET', 'POST'));
+                        goto not_post_editadmin;
+                    }
+
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'post_editadmin')), array (  '_controller' => 'ForumBundle\\Controller\\PostController::editAction',));
+                }
+                not_post_editadmin:
+
+            }
+
         }
 
         // user_homepage
@@ -538,6 +1089,21 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
             }
             not_fos_user_resetting_check_email:
 
+        }
+
+        // _affichage_match
+        if ('/AffichageMatch' === $pathinfo) {
+            return array (  '_controller' => 'TicketBundle\\Controller\\ClientMatchControllerController::AffichageMatchAction',  '_route' => '_affichage_match',);
+        }
+
+        // _affichage_ticket
+        if ('/Client/AffichageTicket' === $pathinfo) {
+            return array (  '_controller' => 'TicketBundle\\Controller\\ClientTicketControllerController::AffichageTicketAction',  '_route' => '_affichage_ticket',);
+        }
+
+        // ajout_ticket
+        if ('/Client/AjoutTicket' === $pathinfo) {
+            return array (  '_controller' => 'TicketBundle\\Controller\\ClientTicketControllerController::AjoutTicketAction',  '_route' => 'ajout_ticket',);
         }
 
         throw 0 < count($allow) ? new MethodNotAllowedException(array_unique($allow)) : new ResourceNotFoundException();

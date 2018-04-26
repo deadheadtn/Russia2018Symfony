@@ -1,2 +1,49 @@
 {% extends "RUSSIA2PIBundle::layout.html.twig" %}
+{% block body %}
+            {% set i=0 %}
+            {% for news in news %}
+                {%  set i=i+1 %}
+                {% if i<4  %}
+<div class="item">
 
+    <!-- Start Video Background -->
+    <div id="video_intro" data-vide-bg="{{ news.imageN }}" data-vide-options="position: 0% 50%"></div>
+    <div class="video_gradient"></div>
+    <!-- End Video Background -->
+
+    <div class="slide-content col-lg-6 col-lg-offset-3 col-md-12 col-sm-12 text-center">
+        <h1> {{ news.titreN }} </h1>
+        <p> {{ news.texteN[0:350] }}...</p>
+        <a href="{{ path('ViewArticle', { 'idNews': news.idNews }) }}" class="button"><span>Read More</span><i class="fa fa-arrow-circle-right"></i></a>
+
+    </div>
+</div>
+                {% endif %}
+            {% endfor %}
+{% endblock %}
+{% block pub %}
+    <div class="container">
+        <div class="row">
+            <!-- Post Content Column -->
+            <div class="col-lg-8">
+                <img src="{{ pub.url }}">
+            </div>
+        </div>
+    </div>
+{% endblock %}
+{% block news %}
+{% set i=0 %}
+            {% for news in news %}
+                {%  set i=i+1 %}
+                {% if i<4  %}
+<div class="single-news col-lg-4 col-md-4 col-sm-12 col-xs-12">
+    <article>
+        <img src="{{ path('ViewArticle', { 'idNews': news.idNews }) }}" alt="" class="thumbnail">
+        <div class="article-content">
+            <h5><a href="{{ path('ViewArticle', { 'idNews': news.idNews }) }}">{{ news.titreN}}</a></h5>
+            <p>{{ news.texteN[0:250]}}</p>
+    </article>
+</div>
+                    {% endif %}
+                {% endfor %}
+{% endblock %}

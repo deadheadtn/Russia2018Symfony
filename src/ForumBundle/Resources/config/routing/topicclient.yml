@@ -1,0 +1,11 @@
+topic_index:
+    path:     /
+    defaults: { _controller: "ForumBundle:Topic:indexclient" }
+    methods:  GET
+
+
+topic_show:
+    path:     /{id}/show
+    defaults: { _controller: "ForumBundle:Topic:showclient" }
+    methods:  GET
+

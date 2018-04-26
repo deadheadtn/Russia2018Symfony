@@ -1,3 +1,12 @@
 russia2_pi_homepage:
     path:     /client
-    defaults: { _controller: RUSSIA2PIBundle:Default:index }
+    defaults: { _controller: "NejmeddineBundle:News:indexC" }
+ViewArticle:
+    path:     /client/news/{idNews}/show
+    defaults: { _controller: "NejmeddineBundle:News:showNews" }
+    methods:  GET
+Reclamation:
+    path:     /client/reclamation/new
+    defaults: { _controller: "NejmeddineBundle:Reclamation:newfront" }
+    methods:  [GET, POST]
+

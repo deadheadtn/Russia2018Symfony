@@ -1,0 +1,40 @@
+PageAffichage:
+    path:     /affichage
+    defaults: { _controller: NesrineJoueurBundle:Joueur:affichage }
+delete:
+    path:     /supprimer/{id}
+    defaults: { _controller: NesrineJoueurBundle:Joueur:delete }
+PageAffichageEquipe:
+    path:     /affichagE
+    defaults: { _controller: NesrineJoueurBundle:Equipe:affichage }
+deletE:
+    path:     /supprimerE/{Id}
+    defaults: { _controller: NesrineJoueurBundle:Equipe:delete }
+PageAffichageStaff:
+    path:     /affichagS
+    defaults: { _controller: NesrineJoueurBundle:Staff:affichage }
+deletS:
+    path:     /supprimerS/{ID}
+    defaults: { _controller: NesrineJoueurBundle:Staff:delete }
+ajoutJoueur:
+    path:     /ajout
+    defaults: { _controller: NesrineJoueurBundle:Joueur:ajout }
+ajoutEquipe:
+    path:     /ajoutE
+    defaults: { _controller: NesrineJoueurBundle:Equipe:ajout }
+ajoutStaff:
+    path:     /ajoutS
+    defaults: { _controller: NesrineJoueurBundle:Staff:ajout }
+modifierJoueur:
+    path:     /update/{id}
+    defaults: { _controller: NesrineJoueurBundle:Joueur:update }
+modifierEquipe:
+    path:     /updatE/{id}
+    defaults: { _controller: NesrineJoueurBundle:Equipe:update }
+modifierStaff:
+    path:     /updatS/{id}
+    defaults: { _controller: NesrineJoueurBundle:Staff:update }
+recherche:
+    path:     /recherche
+    defaults: { _controller: NesrineJoueurBundle:Joueur:recherche }
+

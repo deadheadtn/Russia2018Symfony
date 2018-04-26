@@ -1,23 +1,37 @@
-ticket_homepage:
-    path:     /tickets
-    defaults: { _controller: TicketBundle:Default:ticket }
-
 _affichage:
-    path:     Admin/Tickets/Affichage
+    path:     /admin/Tickets/Affichage
     defaults: { _controller: TicketBundle:AdminTicket:Affichage }
 
 _ajout:
-    path:     Admin/tickets/Ajout
+    path:     /admin/tickets/Ajout
     defaults: { _controller: TicketBundle:AdminTicket:Ajout }
 
 _modif:
-    path:     Admin/tickets/modif
+    path:     /admin/tickets/modif
     defaults: { _controller: TicketBundle:AdminTicket:Modif }
-
 _delete:
-    path:     Admin/tickets/supprimer
+    path:     /admin/tickets/supprimer?sup={sup}
     defaults: { _controller: TicketBundle:AdminTicket:Delete }
-
 _recherche:
-    path:     Admin/Tickets/Recherche
+    path:     /admin/Tickets/Recherche
     defaults: { _controller: TicketBundle:AdminTicket:Recherche }
+_affichage_standings:
+    path:     /admin/Match/Affichage
+    defaults: { _controller: TicketBundle:AdminMatch:AffichageStandings }
+_ajout_standings:
+    path:     /admin/Match/ajout/{s}
+    defaults: { _controller: TicketBundle:AdminMatch:Ajout }
+_modif_standings:
+    path:     /admin/Match/modif/{s}
+    defaults: { _controller: TicketBundle:AdminMatch:Modifier }
+_affichage_match:
+    path:     /AffichageMatch
+    defaults: { _controller: TicketBundle:ClientMatchController:AffichageMatch }
+
+_affichage_ticket:
+    path:     Client/AffichageTicket
+    defaults: { _controller: TicketBundle:ClientTicketController:AffichageTicket }
+ajout_ticket:
+    path:     Client/AjoutTicket
+    defaults: { _controller: TicketBundle:ClientTicketController:AjoutTicket }
+

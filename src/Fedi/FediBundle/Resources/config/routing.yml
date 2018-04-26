@@ -1,0 +1,15 @@
+hotelclient:
+    path:     /hotelclient
+    defaults: { _controller: FediFediBundle:hotel:hotelclient }
+pagehotelclient:
+    path:     /hotel/map
+    defaults: { _controller: FediFediBundle:hotel:hotelclient2 }
+reserverhotel:
+    path:     /hotel/reserver
+    defaults: { _controller: FediFediBundle:reservationH:AjoutR }
+transportclient:
+    path:     /transportclient
+    defaults: { _controller: FediFediBundle:transport:transportclient }
+reservertransport:
+    path:     /reservertransport/{id}
+    defaults: { _controller: FediFediBundle:reservationT:AjoutR2 }

@@ -5,6 +5,7 @@ namespace NejmeddineBundle\Form;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Ivory\CKEditorBundle\Form\Type\CKEditorType;
 
 class NewsType extends AbstractType
 {
@@ -13,7 +14,13 @@ class NewsType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('idCooperation')->add('titreN')->add('typeN')->add('motCles')->add('texteN')->add('imageN');
+        $builder
+            ->add('idCooperation')
+            ->add('titreN')
+            ->add('typeN')
+            ->add('motCles')
+            ->add('texteN',CKEditorType::class)
+            ->add('imageN');
     }/**
      * {@inheritdoc}
      */

@@ -1,0 +1,4 @@
+app_admin_manage_publicite:
+    resource: "@AppBundle/Resources/config/routing/publicite.yml"
+    prefix:   /admin/manage/publicite
+

@@ -3,8 +3,10 @@
     <div class="card-header">
         <i class="fa fa-table"></i> Data Table Example</div>
     <div class="card-body>
+    <div class="card mb-3">
     <h1>Liste des News</h1>
     <div class="table-responsive">
+<div id="dataTable_wrapper" class="dataTables_wrapper container-fluid dt-bootstrap4"><div class="row"><div class="col-sm-12 col-md-6"><div class="dataTables_length" id="dataTable_length"><label>Show <select name="dataTable_length" aria-controls="dataTable" class="form-control form-control-sm"><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select> entries</label></div></div><div class="col-sm-12 col-md-6"><div id="dataTable_filter" class="dataTables_filter"><label>Search:<input type="search" class="form-control form-control-sm" placeholder="" aria-controls="dataTable"></label></div></div></div><div class="row"><div class="col-sm-12"><table class="table table-bordered dataTable" id="dataTable" width="100%" cellspacing="0" role="grid" aria-describedby="dataTable_info" style="width: 100%;">
         <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
         <thead>
             <tr>
@@ -24,15 +26,19 @@
                 <td>{{ news.titreN }}</td>
                 <td>{{ news.typeN }}</td>
                 <td>{{ news.motCles }}</td>
-                <td style="width: 88px;">{{ news.texteN }}</td>
+                <td style="width: 88px;">{{ news.texteN[1:500] }}</td>
                 <td><img width="50px" src="{{ news.imageN }}"></td>
                 <td>
                     <ul>
                         <li>
-                            <a href="{{ path('admin_manage_news_show', { 'idNews': news.idNews }) }}">Afficher</a>
+                            <button type="button" class="btn btn-outline-success and-all-other-classes">
+                            <a href="{{ path('admin_manage_news_show', { 'idNews': news.idNews }) }}" style="color:inherit">Afficher</a>
+                            </button>
                         </li>
                         <li>
-                            <a href="{{ path('admin_manage_news_edit', { 'idNews': news.idNews }) }}">Modifier</a>
+                            <button type="button" class="btn btn-outline-primary">
+                            <a href="{{ path('admin_manage_news_edit', { 'idNews': news.idNews }) }}" style="color:inherit">Modifier</a>
+                            </button>
                         </li>
                     </ul>
                 </td>
@@ -40,11 +46,23 @@
         {% endfor %}
         </tbody>
     </table>
+            </table>
+        </div>
+    </div>
+</div>
+
 </div>
     <ul>
         <li>
             <a href="{{ path('admin_manage_news_new') }}">Creer une News</a>
         </li>
     </ul>
-
+    <div class="card mb-3">
+        <div class="card-header">
+            <i class="fa fa-area-chart"></i> Area Chart Example</div>
+        <div class="card-body">
+            <canvas id="myAreaChart" width="100%" height="30"></canvas>
+        </div>
+        <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+    </div>
 {% endblock %}
