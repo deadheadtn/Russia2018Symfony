@@ -13,3 +13,15 @@ transportclient:
 reservertransport:
     path:     /reservertransport/{id}
     defaults: { _controller: FediFediBundle:reservationT:AjoutR2 }
+mobilehotel:
+    path:     /webservice
+    defaults: { _controller: FediFediBundle:webservice:affichehotel}
+mobilereservation:
+    path:     /mobilereservation
+    defaults: { _controller: FediFediBundle:webservice:AjoutR}
+mobiletransport:
+    path:     /mobiletransport
+    defaults: { _controller: FediFediBundle:webservice:transport}
+mobilereservation2:
+    path:     /mobilereservation2
+    defaults: { _controller: FediFediBundle:webservice:AjoutR2}

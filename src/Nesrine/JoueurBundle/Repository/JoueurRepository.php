@@ -13,7 +13,10 @@ class JoueurRepository extends \Doctrine\ORM\EntityRepository
     public function findbyJoueur($nom){
 
         $query=$this->getEntityManager()
-            ->createQuery("select j from NesrineJoueurBundle:Joueur j where  j.nomJ LIKE :nom")
+            ->createQuery("
+        select j from NesrineJoueurBundle:Joueur j where  j.nomJ LIKE :nom
+        ")
+
             ->setParameter('nom',$nom.'%');
         return $query ->getResult();
 

@@ -3,6 +3,7 @@
 namespace Fedi\FediBundle\Controller;
 
 use Fedi\FediBundle\Entity\Hotel;
+use Fedi\FediBundle\Entity\User ;
 use Fedi\FediBundle\FediFediBundle;
 use Fedi\FediBundle\Form\HotelType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -27,6 +28,7 @@ class hotelController extends Controller
         $em=$this->getDoctrine()->getManager();
         $ev=$em->getRepository("FediFediBundle:Hotel")->findAll();
         return $this->render('FediFediBundle:hotel:hotel.html.twig', array('hotels'=>$ev));
+
     }
     public function AjoutAction(Request $request)
     {

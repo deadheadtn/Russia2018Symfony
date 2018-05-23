@@ -22,3 +22,7 @@ admin_manage_news_delete:
     path:     /{idNews}/delete
     defaults: { _controller: "NejmeddineBundle:News:delete" }
     methods:  DELETE
+admin_manage_news_json:
+    path:     /json
+    defaults: { _controller: "NejmeddineBundle:News:indexJson" }
+    methods:  GET

@@ -4,9 +4,10 @@ namespace NejmeddineBundle\Controller;
 
 use NejmeddineBundle\Entity\News;
 use NejmeddineBundle\Entity\Publicite;
+use \Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
-
+use \Symfony\Component\HttpFoundation\Response;
 /**
  * News controller.
  *
@@ -25,6 +26,18 @@ class NewsController extends Controller
         return $this->render('NejmeddineBundle:ViewsNews:index.html.twig', array(
             'news' => $news
         ));
+    }
+
+    /**
+     * @return JsonResponse
+     */
+    public function indexJsonAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+        $news = $em->getRepository('NejmeddineBundle:News')->findAll();
+        $serializer = $this->get('jms_serializer');
+        $response = $serializer->serialize($news,'json');
+        return new Response($response);
     }
     public function indexCAction()
     {

@@ -7,9 +7,15 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/cmen/google-charts-bundle" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/egeloen/ckeditor-bundle" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/egeloen/json-builder" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/jms/metadata" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/jms/parser-lib" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/jms/serializer" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/jms/serializer-bundle" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/knplabs/knp-components" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/knplabs/knp-paginator-bundle" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/nomaya/social-bundle" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/phpcollection/phpcollection" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/phpoption/phpoption" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

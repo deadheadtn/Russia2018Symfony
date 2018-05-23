@@ -63,19 +63,68 @@ class appProdDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBun
                 return $this->mergeDefaults(array_replace($matches, array('_route' => 'reservertransport')), array (  '_controller' => 'Fedi\\FediBundle\\Controller\\reservationTController::AjoutR2Action',));
             }
 
-            // PageAffichageFront
-            if ('/client/affichageFront' === $pathinfo) {
-                return array (  '_controller' => 'Nesrine\\JoueurBundle\\Controller\\JoueurController::affichageFrontAction',  '_route' => 'PageAffichageFront',);
-            }
+            if (0 === strpos($pathinfo, '/client/a')) {
+                if (0 === strpos($pathinfo, '/client/affichag')) {
+                    // PageAffichageFront
+                    if ('/client/affichageFront' === $pathinfo) {
+                        return array (  '_controller' => 'Nesrine\\JoueurBundle\\Controller\\JoueurController::affichageFrontAction',  '_route' => 'PageAffichageFront',);
+                    }
 
-            // PageAffichageEquipeFront
-            if ('/client/affichageEquipeFront' === $pathinfo) {
-                return array (  '_controller' => 'Nesrine\\JoueurBundle\\Controller\\EquipeController::affichageFrontAction',  '_route' => 'PageAffichageEquipeFront',);
+                    // PageAffichageEquipeFront
+                    if ('/client/affichageEquipeFront' === $pathinfo) {
+                        return array (  '_controller' => 'Nesrine\\JoueurBundle\\Controller\\EquipeController::affichageEquipeFrontAction',  '_route' => 'PageAffichageEquipeFront',);
+                    }
+
+                    // PageAffichageAppreciation
+                    if ('/client/affichagA' === $pathinfo) {
+                        return array (  '_controller' => 'Nesrine\\JoueurBundle\\Controller\\AppreciationController::affichageAction',  '_route' => 'PageAffichageAppreciation',);
+                    }
+
+                }
+
+                elseif (0 === strpos($pathinfo, '/client/affiche')) {
+                    // afficheJoueur
+                    if ('/client/afficheJoueur' === $pathinfo) {
+                        return array (  '_controller' => 'Nesrine\\JoueurBundle\\Controller\\webController::affichageFrontAction',  '_route' => 'afficheJoueur',);
+                    }
+
+                    // afficheEquipe
+                    if ('/client/afficheEquipe' === $pathinfo) {
+                        return array (  '_controller' => 'Nesrine\\JoueurBundle\\Controller\\webController::affichageEquipeFrontAction',  '_route' => 'afficheEquipe',);
+                    }
+
+                    // afficheAppreciation
+                    if ('/client/afficheAppreciation' === $pathinfo) {
+                        return array (  '_controller' => 'Nesrine\\JoueurBundle\\Controller\\webController::affichageAction',  '_route' => 'afficheAppreciation',);
+                    }
+
+                }
+
+                // ajoutAppreciation
+                if ('/client/ajoutAppreciation' === $pathinfo) {
+                    return array (  '_controller' => 'Nesrine\\JoueurBundle\\Controller\\AppreciationController::ajoutAction',  '_route' => 'ajoutAppreciation',);
+                }
+
+                // ajouterAppreciation
+                if ('/client/appreciations/new' === $pathinfo) {
+                    return array (  '_controller' => 'Nesrine\\JoueurBundle\\Controller\\AppreciationController::newAction',  '_route' => 'ajouterAppreciation',);
+                }
+
             }
 
             // Graphe
             if ('/client/graph' === $pathinfo) {
                 return array (  '_controller' => 'Nesrine\\JoueurBundle\\Controller\\JoueurController::IndexAction',  '_route' => 'Graphe',);
+            }
+
+            // deletA
+            if (0 === strpos($pathinfo, '/client/supprimerA') && preg_match('#^/client/supprimerA/(?P<ID>[^/]++)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'deletA')), array (  '_controller' => 'Nesrine\\JoueurBundle\\Controller\\AppreciationController::deleteAction',));
+            }
+
+            // modifierAppreciation
+            if (0 === strpos($pathinfo, '/client/updatA') && preg_match('#^/client/updatA/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'modifierAppreciation')), array (  '_controller' => 'Nesrine\\JoueurBundle\\Controller\\AppreciationController::updateAction',));
             }
 
             if (0 === strpos($pathinfo, '/client/hotel')) {
@@ -130,7 +179,30 @@ class appProdDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBun
 
             }
 
-            elseif (0 === strpos($pathinfo, '/client/commentaire')) {
+            // mobilehotel
+            if ('/client/webservice' === $pathinfo) {
+                return array (  '_controller' => 'Fedi\\FediBundle\\Controller\\webserviceController::affichehotelAction',  '_route' => 'mobilehotel',);
+            }
+
+            if (0 === strpos($pathinfo, '/client/mobilereservation')) {
+                // mobilereservation
+                if ('/client/mobilereservation' === $pathinfo) {
+                    return array (  '_controller' => 'Fedi\\FediBundle\\Controller\\webserviceController::AjoutRAction',  '_route' => 'mobilereservation',);
+                }
+
+                // mobilereservation2
+                if ('/client/mobilereservation2' === $pathinfo) {
+                    return array (  '_controller' => 'Fedi\\FediBundle\\Controller\\webserviceController::AjoutR2Action',  '_route' => 'mobilereservation2',);
+                }
+
+            }
+
+            // mobiletransport
+            if ('/client/mobiletransport' === $pathinfo) {
+                return array (  '_controller' => 'Fedi\\FediBundle\\Controller\\webserviceController::transportAction',  '_route' => 'mobiletransport',);
+            }
+
+            if (0 === strpos($pathinfo, '/client/commentaire')) {
                 // commentaire_index
                 if ('/client/commentaire' === $trimmedPathinfo) {
                     if ('GET' !== $canonicalMethod) {
@@ -323,6 +395,17 @@ class appProdDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBun
                     }
                     not_admin_manage_news_delete:
 
+                    // admin_manage_news_json
+                    if ('/admin/manage/news/json' === $pathinfo) {
+                        if ('GET' !== $canonicalMethod) {
+                            $allow[] = 'GET';
+                            goto not_admin_manage_news_json;
+                        }
+
+                        return array (  '_controller' => 'NejmeddineBundle\\Controller\\NewsController::indexJsonAction',  '_route' => 'admin_manage_news_json',);
+                    }
+                    not_admin_manage_news_json:
+
                 }
 
                 elseif (0 === strpos($pathinfo, '/admin/manage/reclamation')) {
@@ -395,6 +478,53 @@ class appProdDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBun
                         return $this->mergeDefaults(array_replace($matches, array('_route' => 'admin_manage_reclamation_changeetat')), array (  '_controller' => 'NejmeddineBundle\\Controller\\ReclamationController::deleteAction',));
                     }
                     not_admin_manage_reclamation_changeetat:
+
+                    // admin_manage_reclamation_json
+                    if ('/admin/manage/reclamation/addjson' === $pathinfo) {
+                        if ('GET' !== $canonicalMethod) {
+                            $allow[] = 'GET';
+                            goto not_admin_manage_reclamation_json;
+                        }
+
+                        return array (  '_controller' => 'NejmeddineBundle\\Controller\\ReclamationController::newjsonAction',  '_route' => 'admin_manage_reclamation_json',);
+                    }
+                    not_admin_manage_reclamation_json:
+
+                    if (0 === strpos($pathinfo, '/admin/manage/reclamation/json')) {
+                        // admin_manage_rec_json
+                        if ('/admin/manage/reclamation/json' === $pathinfo) {
+                            if ('GET' !== $canonicalMethod) {
+                                $allow[] = 'GET';
+                                goto not_admin_manage_rec_json;
+                            }
+
+                            return array (  '_controller' => 'NejmeddineBundle\\Controller\\ReclamationController::indexJsonAction',  '_route' => 'admin_manage_rec_json',);
+                        }
+                        not_admin_manage_rec_json:
+
+                        // admin_manage_login_json
+                        if ('/admin/manage/reclamation/jsonlogin' === $pathinfo) {
+                            if ('GET' !== $canonicalMethod) {
+                                $allow[] = 'GET';
+                                goto not_admin_manage_login_json;
+                            }
+
+                            return array (  '_controller' => 'AppBundle\\Controller\\DefaultController::indexJsonAction',  '_route' => 'admin_manage_login_json',);
+                        }
+                        not_admin_manage_login_json:
+
+                    }
+
+                    // admin_manage_edit
+                    if (0 === strpos($pathinfo, '/admin/manage/reclamation/editjson') && preg_match('#^/admin/manage/reclamation/editjson/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                        if ('GET' !== $canonicalMethod) {
+                            $allow[] = 'GET';
+                            goto not_admin_manage_edit;
+                        }
+
+                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'admin_manage_edit')), array (  '_controller' => 'NejmeddineBundle\\Controller\\ReclamationController::editetatAction',));
+                    }
+                    not_admin_manage_edit:
 
                 }
 
@@ -823,6 +953,11 @@ class appProdDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBun
 
         }
 
+        // all
+        if ('/all' === $pathinfo) {
+            return array (  '_controller' => 'EspritApiBundle\\Controller\\TicketMobileController::allAction',  '_route' => 'all',);
+        }
+
         // user_homepage
         if ('' === $trimmedPathinfo) {
             if (substr($pathinfo, -1) !== '/') {
@@ -1031,6 +1166,50 @@ class appProdDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBun
         // ajout_ticket
         if ('/Client/AjoutTicket' === $pathinfo) {
             return array (  '_controller' => 'TicketBundle\\Controller\\ClientTicketControllerController::AjoutTicketAction',  '_route' => 'ajout_ticket',);
+        }
+
+        // esprit_api_homepage
+        if ('/tasks/all' === $pathinfo) {
+            return array (  '_controller' => 'EspritApiBundle\\Controller\\DefaultController::indexAction',  '_route' => 'esprit_api_homepage',);
+        }
+
+        // find_ticket
+        if (0 === strpos($pathinfo, '/find') && preg_match('#^/find/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'find_ticket')), array (  '_controller' => 'EspritApiBundle\\Controller\\TicketMobileController::FindAction',));
+        }
+
+        if (0 === strpos($pathinfo, '/mobile')) {
+            if (0 === strpos($pathinfo, '/mobile/new')) {
+                // mobile_ticket
+                if ('/mobile/new' === $pathinfo) {
+                    return array (  '_controller' => 'EspritApiBundle\\Controller\\TicketMobileController::newAction',  '_route' => 'mobile_ticket',);
+                }
+
+                // mobile_match1
+                if ('/mobile/newmatch' === $pathinfo) {
+                    return array (  '_controller' => 'EspritApiBundle\\Controller\\TicketMobileController::newmatchAction',  '_route' => 'mobile_match1',);
+                }
+
+            }
+
+            // mobile_match
+            if ('/mobile/match' === $pathinfo) {
+                return array (  '_controller' => 'EspritApiBundle\\Controller\\TicketMobileController::MatchAction',  '_route' => 'mobile_match',);
+            }
+
+            if (0 === strpos($pathinfo, '/mobile/findmatch')) {
+                // mobile_match2
+                if ('/mobile/findmatch' === $pathinfo) {
+                    return array (  '_controller' => 'EspritApiBundle\\Controller\\TicketMobileController::FindduelAction',  '_route' => 'mobile_match2',);
+                }
+
+                // dmobile_match3
+                if (0 === strpos($pathinfo, '/mobile/findmatch2') && preg_match('#^/mobile/findmatch2/(?P<duel>[^/]++)$#s', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'dmobile_match3')), array (  '_controller' => 'EspritApiBundle\\Controller\\TicketMobileController::FindmatchAction',));
+                }
+
+            }
+
         }
 
         throw 0 < count($allow) ? new MethodNotAllowedException(array_unique($allow)) : new ResourceNotFoundException();

@@ -25,7 +25,7 @@ class EquipeController extends Controller
         return $this->render('NesrineJoueurBundle:Equipe:affichage.html.twig', array(
             'm'=>$equipes,'a'=>$a,'b'=>$b,'c'=>$c,'d'=>$d,'e'=>$e,'f'=>$f,'g'=>$g,'h'=>$h));
     }
-    public function affichageFrontAction(Request $request)
+    public function affichageEquipeFrontAction(Request $request)
     {
 
         $em=$this->getDoctrine()->getManager();
@@ -84,6 +84,8 @@ class EquipeController extends Controller
             ,array('form'=>$Form->createView()));
 
     }
+
+
 
 
 

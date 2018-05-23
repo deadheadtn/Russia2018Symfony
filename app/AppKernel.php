@@ -9,6 +9,7 @@ class AppKernel extends Kernel
     {
         $bundles = [
             new Ivory\CKEditorBundle\IvoryCKEditorBundle(),
+            new JMS\SerializerBundle\JMSSerializerBundle(),
             new Symfony\Bundle\FrameworkBundle\FrameworkBundle(),
             new Symfony\Bundle\SecurityBundle\SecurityBundle(),
             new Symfony\Bundle\TwigBundle\TwigBundle(),
@@ -29,6 +30,7 @@ class AppKernel extends Kernel
             new \TicketBundle\TicketBundle(),
             new ForumBundle\ForumBundle(),
             new Nomaya\SocialBundle\NomayaSocialBundle(),
+            new EspritApiBundle\EspritApiBundle(),
 
         ];
 

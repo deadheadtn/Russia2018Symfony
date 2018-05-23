@@ -60,6 +60,10 @@ class ComposerStaticInit18e1bb6cd69770a7c6900af1a8faf0c5
         array (
             'Knp\\Bundle\\PaginatorBundle\\' => 27,
         ),
+        'J' => 
+        array (
+            'JMS\\SerializerBundle\\' => 21,
+        ),
         'I' => 
         array (
             'Ivory\\JsonBuilder\\' => 18,
@@ -191,6 +195,10 @@ class ComposerStaticInit18e1bb6cd69770a7c6900af1a8faf0c5
         array (
             0 => __DIR__ . '/..' . '/knplabs/knp-paginator-bundle',
         ),
+        'JMS\\SerializerBundle\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/jms/serializer-bundle',
+        ),
         'Ivory\\JsonBuilder\\' => 
         array (
             0 => __DIR__ . '/..' . '/egeloen/json-builder/src',
@@ -260,6 +268,17 @@ class ComposerStaticInit18e1bb6cd69770a7c6900af1a8faf0c5
                 0 => __DIR__ . '/..' . '/sensiolabs/security-checker',
             ),
         ),
+        'P' => 
+        array (
+            'PhpOption\\' => 
+            array (
+                0 => __DIR__ . '/..' . '/phpoption/phpoption/src',
+            ),
+            'PhpCollection' => 
+            array (
+                0 => __DIR__ . '/..' . '/phpcollection/phpcollection/src',
+            ),
+        ),
         'N' => 
         array (
             'Nomaya\\SocialBundle\\' => 
@@ -267,11 +286,29 @@ class ComposerStaticInit18e1bb6cd69770a7c6900af1a8faf0c5
                 0 => __DIR__ . '/..' . '/nomaya/social-bundle',
             ),
         ),
+        'M' => 
+        array (
+            'Metadata\\' => 
+            array (
+                0 => __DIR__ . '/..' . '/jms/metadata/src',
+            ),
+        ),
         'K' => 
         array (
             'Knp\\Component' => 
             array (
                 0 => __DIR__ . '/..' . '/knplabs/knp-components/src',
+            ),
+        ),
+        'J' => 
+        array (
+            'JMS\\Serializer' => 
+            array (
+                0 => __DIR__ . '/..' . '/jms/serializer/src',
+            ),
+            'JMS\\' => 
+            array (
+                0 => __DIR__ . '/..' . '/jms/parser-lib/src',
             ),
         ),
         'D' => 

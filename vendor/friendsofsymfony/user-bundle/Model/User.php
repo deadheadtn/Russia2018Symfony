@@ -217,7 +217,7 @@ abstract class User implements UserInterface, GroupableInterface
      */
     public function getSalt()
     {
-        return $this->salt;
+        return null;
     }
 
     /**

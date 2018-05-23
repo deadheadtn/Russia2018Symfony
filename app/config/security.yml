@@ -1,6 +1,6 @@
 security:
     encoders:
-        FOS\UserBundle\Model\UserInterface: bcrypt
+        FOS\UserBundle\Model\UserInterface: plaintext
 
     role_hierarchy:
 
@@ -25,5 +25,9 @@ security:
         - { path: ^/login$, role: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/register, role: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/resetting, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/admin/manage/news/json, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/admin/manage/reclamation/addjson, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/admin/manage/reclamation/json, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/admin/manage/reclamation/editjson, role: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/admin, role: ROLE_ADMIN }
-        - { path: ^/client, role: ROLE_USER }
+        - { path: ^/client, role: IS_AUTHENTICATED_ANONYMOUSLY }

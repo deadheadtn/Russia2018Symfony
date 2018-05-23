@@ -14,24 +14,26 @@ class Reservationt
 {
     /**
      * @var integer
-     *
-     * @ORM\Column(name="ID_RESERVATION", type="integer", nullable=false)
+     * @ORM\Column(name="ID_RESERVATION", type="integer")
      * @ORM\Id
-     * @ORM\GeneratedValue(strategy="IDENTITY")
+     * @ORM\GeneratedValue(strategy="AUTO")
      */
-    private $idReservation;
-
+    public $idReservation;
     /**
-     * @var integer
-     *
-     * @ORM\Column(name="ID_TRANSPORT", type="integer", nullable=false)
+     * @var \Fedi\FediBundle\Entity\Transport
+     *@ORM\ManyToOne(targetEntity="\Fedi\FediBundle\Entity\Transport")
+     *      * @ORM\JoinColumns({
+     * @ORM\JoinColumn(name="ID_TRANSPORT", referencedColumnName="ID_TRANSPORT")
+     *  })
      */
-    private $idTransport;
+
+    public $idTransport;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="TYPE", type="string", length=20)
+     *      * @ORM\Column(name="TYPE", type="integer", nullable=false)
+    @ORM\Column(name="TYPE", type="string", length=20)
      */
    public  $type;
 
@@ -41,7 +43,6 @@ class Reservationt
      * @ORM\Column(name="DEPART", type="string", length=20)
      */
     private $depart;
-
     /**
      * @var string
      *

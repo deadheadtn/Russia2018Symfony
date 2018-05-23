@@ -105,7 +105,7 @@ class Equipe
 
         return $this;
     }
-
+/*
     public function getWebPath(){
         return null===$this->logo ? null : $this->getUploadDir.'/'.$this->logo;
     }
@@ -123,7 +123,7 @@ class Equipe
         $this->logo=$this->file->getClientOriginalName();
         $this->file=null;
     }
-
+*/
     /**
      * Get logo
      *

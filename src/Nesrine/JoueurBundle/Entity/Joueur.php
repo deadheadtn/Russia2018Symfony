@@ -182,25 +182,25 @@ class Joueur
 
         return $this;
     }
+    /*
 
-    public function getWebPath(){
-        return null===$this->photoJ ? null : $this->getUploadDir.'/'.$this->photoJ;
-    }
+        public function getWebPath(){
+            return null===$this->photoJ ? null : $this->getUploadDir.'/'.$this->photoJ;
+        }
+        protected function getUploadRootDir(){
+            return __DIR__.'/../../../../web/'.$this->getUploadDir();
+        }
 
-    protected function getUploadRootDir(){
-        return __DIR__.'/../../../../web/'.$this->getUploadDir();
-    }
+        protected function getUploadDir(){
+            return 'images';
+        }
 
-    protected function getUploadDir(){
-        return 'images';
-    }
-
-    public function uploadProfilePicture(){
-        $this->file->move($this->getUploadRootDir(), $this->file->getClientOriginalName());
-        $this->photoJ=$this->file->getClientOriginalName();
-        $this->file=null;
-    }
-
+        public function uploadProfilePicture(){
+            $this->file->move($this->getUploadRootDir(), $this->file->getClientOriginalName());
+            $this->photoJ=$this->file->getClientOriginalName();
+            $this->file=null;
+        }
+    */
     /**
      * Get photoJ
      *

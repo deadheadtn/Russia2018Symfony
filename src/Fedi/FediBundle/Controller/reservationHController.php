@@ -25,7 +25,7 @@ class reservationHController extends Controller
         if ($form->handleRequest($request)->isValid()) {
 
             $em = $this->getDoctrine()->getManager();
-            $hotel = $em->getRepository('FediFediBundle:Hotel')->find($s);
+            $hotel = $em->getReposito__ry('FediFediBundle:Hotel')->find($s);
             $reservation->setidHotel($hotel);
             $reservation->setetatReservation("non_confirmer");
             $em->persist($reservation);

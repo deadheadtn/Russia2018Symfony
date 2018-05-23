@@ -40,3 +40,5 @@ WafaA:
     resource: "@ForumBundle/Resources/config/routing.yml"
 WafaC:
     resource: "@ForumBundle/Resources/config/routingc.yml"
+esprit:
+    resource: "@EspritApiBundle/Resources/config/routing.yml"

@@ -53,6 +53,70 @@ class Reservation
     public $nbrNuit;
 
     /**
+     * @return int
+     */
+    public function getNbrNuit()
+    {
+        return $this->nbrNuit;
+    }
+
+    /**
+     * @param int $nbrNuit
+     */
+    public function setNbrNuit($nbrNuit)
+    {
+        $this->nbrNuit = $nbrNuit;
+    }
+
+    /**
+     * @return string
+     */
+    public function getType()
+    {
+        return $this->type;
+    }
+
+    /**
+     * @param string $type
+     */
+    public function setType($type)
+    {
+        $this->type = $type;
+    }
+
+    /**
+     * @return int
+     */
+    public function getNbrChambre()
+    {
+        return $this->nbrChambre;
+    }
+
+    /**
+     * @param int $nbrChambre
+     */
+    public function setNbrChambre($nbrChambre)
+    {
+        $this->nbrChambre = $nbrChambre;
+    }
+
+    /**
+     * @return int
+     */
+    public function getNbrPersonne()
+    {
+        return $this->nbrPersonne;
+    }
+
+    /**
+     * @param int $nbrPersonne
+     */
+    public function setNbrPersonne($nbrPersonne)
+    {
+        $this->nbrPersonne = $nbrPersonne;
+    }
+
+    /**
      * @var string
      *
      * @ORM\Column(name="TYPE", type="string", length=20, nullable=true)

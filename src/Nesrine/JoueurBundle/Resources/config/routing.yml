@@ -3,7 +3,31 @@ PageAffichageFront:
     defaults: { _controller: NesrineJoueurBundle:Joueur:affichageFront }
 PageAffichageEquipeFront:
     path:     /affichageEquipeFront
-    defaults: { _controller: NesrineJoueurBundle:Equipe:affichageFront }
+    defaults: { _controller: NesrineJoueurBundle:Equipe:affichageEquipeFront }
 Graphe:
     path:     /graph
     defaults: { _controller: NesrineJoueurBundle:Joueur:Index }
+afficheJoueur:
+    path:     /afficheJoueur
+    defaults: { _controller: NesrineJoueurBundle:web:affichageFront }
+afficheEquipe:
+    path:     /afficheEquipe
+    defaults: { _controller: NesrineJoueurBundle:web:affichageEquipeFront }
+PageAffichageAppreciation:
+    path:     /affichagA
+    defaults: { _controller: NesrineJoueurBundle:Appreciation:affichage }
+deletA:
+    path:     /supprimerA/{ID}
+    defaults: { _controller: NesrineJoueurBundle:Appreciation:delete }
+ajoutAppreciation:
+    path:     /ajoutAppreciation
+    defaults: { _controller: NesrineJoueurBundle:Appreciation:ajout }
+modifierAppreciation:
+    path:     /updatA/{id}
+    defaults: { _controller: NesrineJoueurBundle:Appreciation:update }
+afficheAppreciation:
+    path:     /afficheAppreciation
+    defaults: { _controller: NesrineJoueurBundle:web:affichage }
+ajouterAppreciation:
+    path:     /appreciations/new
+    defaults: { _controller: NesrineJoueurBundle:Appreciation:new }

@@ -3,9 +3,11 @@
 namespace NejmeddineBundle\Controller;
 
 use NejmeddineBundle\Entity\Reclamation;
+use UserBundle\Entity\User;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
-
+use \Symfony\Component\HttpFoundation\JsonResponse;
+use \Symfony\Component\HttpFoundation\Response;
 /**
  * Reclamation controller.
  *
@@ -56,23 +58,45 @@ class ReclamationController extends Controller
             'form' => $form->createView(),
         ));
     }
-    /**
-     * Finds and displays a reclamation entity.
-     *
-     */
-    public function showAction(Reclamation $reclamation)
+    public function newjsonAction(Request $request)
     {
-        $deleteForm = $this->createDeleteForm($reclamation);
-
-        return $this->render('NejmeddineBundle:Reclamationviews:show.html.twig', array(
-            'reclamation' => $reclamation,
-            'delete_form' => $deleteForm->createView(),
-        ));
+        $reclamation = new Reclamation();
+        $em = $this->getDoctrine()->getManager();
+        $user = $em->getRepository('UserBundle:User')->find($request->get('id_user'));
+        $reclamation->setSujetRec($request->get('sujet'));
+        $reclamation->setDescriptionRec($request->get('Description'));
+        $Date = new \DateTime('now');
+        $reclamation->setDateRec($Date->format('M-D-Y'));
+        $reclamation->setIdUtilisateur($user);
+        $reclamation->setEtatRec('0');
+        $em->persist($reclamation);
+        $em->flush();
+        $serializer = $this->get('jms_serializer');
+        $response = $serializer->serialize(array('ok'=>'success'),'json');
+        return new Response($response);
     }
-    public function changeetatAction(Request $request){
-
+    public function indexJsonAction(Request $request)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $repository = $this->getDoctrine()->getRepository(Reclamation::class);
+        $repository->findOneBy(
+            ['idUtilisateur' => $request->get('id')]);
+        $user=$repository->findAll();
+        $serializer = $this->get('jms_serializer');
+        $response = $serializer->serialize(array('Root'=>$user),'json');
+        return new JsonResponse(json_decode($response));
     }
 
+    public function editetatAction($id)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $reclamation = $em->getRepository('NejmeddineBundle:Reclamation')->find($id);
+        $reclamation->setEtatRec("2");
+        $em->persist($reclamation);
+        $serializer = $this->get('jms_serializer');
+        $response = $serializer->serialize(array('Root'=>'ok'),'json');
+        return new JsonResponse(json_decode($response));
+    }
 
     public function editAction(Request $request, Reclamation $reclamation)
     {
@@ -115,7 +139,15 @@ class ReclamationController extends Controller
 
         return $this->redirectToRoute('admin_manage_reclamation_index');
     }
+    public function showAction(reclamation $reclamation)
+    {
+        $deleteForm = $this->createDeleteForm($reclamation);
 
+        return $this->render('NejmeddineBundle:Reclamationviews:show.html.twig', array(
+            'reclamation' => $reclamation,
+            'delete_form' => $deleteForm->createView(),
+        ));
+    }
     /**
      * Creates a form to delete a reclamation entity.
      *

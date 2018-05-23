@@ -26,3 +26,19 @@ admin_manage_reclamation_changeetat:
     path:     /{idReclamation}/etat
     defaults: { _controller: "NejmeddineBundle:Reclamation:delete" }
     methods:  GET
+admin_manage_reclamation_json:
+    path:     /addjson
+    defaults: { _controller: "NejmeddineBundle:Reclamation:newjson" }
+    methods:  GET
+admin_manage_rec_json:
+    path:     /json
+    defaults: { _controller: "NejmeddineBundle:Reclamation:indexJson" }
+    methods:  GET
+admin_manage_login_json:
+    path:     /jsonlogin
+    defaults: { _controller: "AppBundle:Default:indexJson" }
+    methods:  GET
+admin_manage_edit:
+    path:     /editjson/{id}
+    defaults: { _controller: "NejmeddineBundle:Reclamation:editetat" }
+    methods:  GET

@@ -29,7 +29,7 @@ class reservationTController extends Controller
 
         $em->persist($reservationt);
             $em->flush();
-            return new Response('Ajout avec succées');
+            return new Response('Votre Reservation a ete effectue avec succee');
 
 
         return $this->render('FediFediBundle:reservation:ajouttransport.html.twig');

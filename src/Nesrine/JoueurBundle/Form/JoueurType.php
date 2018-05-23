@@ -11,7 +11,9 @@ class JoueurType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
+
         $builder
+
             ->add('nomJ')
             ->add('prenomJ')
             ->add('ageJ')

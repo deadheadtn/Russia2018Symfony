@@ -53,19 +53,17 @@
                                     <div class="header-login">
                                         <a href="#" class="">Login</a>
                                         <div>
-                                            <form action="/Russia2018Symfony/web/app_dev.php/login_check" method="post">
-                                                <input type="hidden" name="_csrf_token" value="Gkyp-tLzJeiEvK_jKaLFFVXf8tKzJSKQ9ByGOHqY74M" />
-
-                                                <label for="username">Username</label>
-                                                <input type="text" id="username" name="_username" value="" required="required" autocomplete="username" />
-
-                                                <label for="password">Password</label>
-                                                <input type="password" id="password" name="_password" required="required" autocomplete="current-password" />
-
-                                                <input type="checkbox" id="remember_me" name="_remember_me" value="on" />
-                                                <label for="remember_me">Remember me</label>
-
-                                                <input type="submit" id="_submit" name="_submit" value="Log in" />
+                                            <form action="#" class="default-form">
+                                                <p class="form-row">
+                                                    <input type="text" class="form-control" placeholder="Username">
+                                                </p>
+                                                <p class="form-row">
+                                                    <input type="password" class="form-control" placeholder="Password">
+                                                </p>
+                                                <p class="form-row">
+                                                    <input type="submit" class="btn full-width" value="Login">
+                                                </p>
+                                                <a href="#" class="btn btn-link">Forgot Password?</a>
                                             </form>
                                         </div>
                                     </div>
@@ -117,7 +115,7 @@
                             <li><a href="{{ path ('Graphe') }}">Stats</a></li>
                             <li><a href="{{ path ('hotelclient') }}">Reservation hotel</a></li>
                             <li><a href="{{ path ('transportclient') }}">Transport</a></li>
-                            <li><a href="#footer">Contact</a></li>
+                            <li><a href="/Russia2018Symfony/web/app_dev.php/client/reclamation/new">Contact</a></li>
 
                         </ul>
                     </nav>

@@ -38,7 +38,7 @@ class LoginController implements ContainerAwareInterface
             'error' => $error,
         )));
     }
-
+    
     public function afterLoginAction(UserInterface $user)
     {
         return new Response($this->container->get('twig')->render('@FormLogin/Login/after_login.html.twig', array('user' => $user)));

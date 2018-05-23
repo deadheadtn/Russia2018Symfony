@@ -54,6 +54,7 @@ class JoueurController extends Controller
 
     public function affichageAction(Request $request)
     {
+
         $em=$this->getDoctrine()->getManager();
         $nom=$request->get('nom');
         $joueurs=$em->getRepository("NesrineJoueurBundle:Joueur")->findbyJoueur($nom);
@@ -61,6 +62,7 @@ class JoueurController extends Controller
         $milieux=$em->getRepository('NesrineJoueurBundle:Joueur')->findBy(array('emplacementJ'=>'Milieu'));
         $attaquants=$em->getRepository('NesrineJoueurBundle:Joueur')->findBy(array('emplacementJ'=>'Attaquant'));
         $defenseurs=$em->getRepository('NesrineJoueurBundle:Joueur')->findBy(array('emplacementJ'=>'Défenseur'));
+
         $excellent=$em->getRepository('NesrineJoueurBundle:Joueur')->findBy(array('appreciationJ'=>'Excellent'));
         $bonne=$em->getRepository('NesrineJoueurBundle:Joueur')->findBy(array('appreciationJ'=>'Bonne'));
         $moyen=$em->getRepository('NesrineJoueurBundle:Joueur')->findBy(array('appreciationJ'=>'Moyen'));
