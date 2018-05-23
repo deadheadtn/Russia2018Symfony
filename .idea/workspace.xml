@@ -2,130 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list id="24b3d146-bf2d-46e2-8cf6-4a9a02d6a77e" name="New changelist" comment="New changelist" />
-    <list default="true" id="df1f016b-b203-480e-af43-c0f0cfef78fa" name="Default" comment="hgy">
-      <change beforePath="$PROJECT_DIR$/.idea/Russia2018Symfony.iml" afterPath="$PROJECT_DIR$/.idea/Russia2018Symfony.iml" />
-      <change beforePath="$PROJECT_DIR$/.idea/commandlinetools/Composer_4_6_18_11_22_AM_c.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/commandlinetools/Symfony_4_6_18_11_22_AM_s.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/deadhead.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/deadhead.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" afterPath="$PROJECT_DIR$/.idea/php.xml" />
+    <list default="true" id="df1f016b-b203-480e-af43-c0f0cfef78fa" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/app/AppKernel.php" afterPath="$PROJECT_DIR$/app/AppKernel.php" />
-      <change beforePath="$PROJECT_DIR$/app/config/routing.yml" afterPath="$PROJECT_DIR$/app/config/routing.yml" />
-      <change beforePath="$PROJECT_DIR$/app/config/security.yml" afterPath="$PROJECT_DIR$/app/config/security.yml" />
-      <change beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
-      <change beforePath="$PROJECT_DIR$/src/AppBundle/Controller/DefaultController.php" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/DefaultController.php" />
-      <change beforePath="$PROJECT_DIR$/src/Fedi/FediBundle/Controller/hotelController.php" afterPath="$PROJECT_DIR$/src/Fedi/FediBundle/Controller/hotelController.php" />
-      <change beforePath="$PROJECT_DIR$/src/Fedi/FediBundle/Controller/reservationHController.php" afterPath="$PROJECT_DIR$/src/Fedi/FediBundle/Controller/reservationHController.php" />
-      <change beforePath="$PROJECT_DIR$/src/Fedi/FediBundle/Controller/reservationTController.php" afterPath="$PROJECT_DIR$/src/Fedi/FediBundle/Controller/reservationTController.php" />
-      <change beforePath="$PROJECT_DIR$/src/Fedi/FediBundle/Controller/transportController.php" afterPath="$PROJECT_DIR$/src/Fedi/FediBundle/Controller/transportController.php" />
-      <change beforePath="$PROJECT_DIR$/src/Fedi/FediBundle/Entity/Reservation.php" afterPath="$PROJECT_DIR$/src/Fedi/FediBundle/Entity/Reservation.php" />
-      <change beforePath="$PROJECT_DIR$/src/Fedi/FediBundle/Entity/Reservationt.php" afterPath="$PROJECT_DIR$/src/Fedi/FediBundle/Entity/Reservationt.php" />
-      <change beforePath="$PROJECT_DIR$/src/Fedi/FediBundle/Entity/Transport.php" afterPath="$PROJECT_DIR$/src/Fedi/FediBundle/Entity/Transport.php" />
-      <change beforePath="$PROJECT_DIR$/src/Fedi/FediBundle/Resources/config/routing.yml" afterPath="$PROJECT_DIR$/src/Fedi/FediBundle/Resources/config/routing.yml" />
-      <change beforePath="$PROJECT_DIR$/src/NejmeddineBundle/Controller/NewsController.php" afterPath="$PROJECT_DIR$/src/NejmeddineBundle/Controller/NewsController.php" />
-      <change beforePath="$PROJECT_DIR$/src/NejmeddineBundle/Controller/ReclamationController.php" afterPath="$PROJECT_DIR$/src/NejmeddineBundle/Controller/ReclamationController.php" />
-      <change beforePath="$PROJECT_DIR$/src/NejmeddineBundle/Resources/config/routing/news.yml" afterPath="$PROJECT_DIR$/src/NejmeddineBundle/Resources/config/routing/news.yml" />
-      <change beforePath="$PROJECT_DIR$/src/NejmeddineBundle/Resources/config/routing/reclamation.yml" afterPath="$PROJECT_DIR$/src/NejmeddineBundle/Resources/config/routing/reclamation.yml" />
-      <change beforePath="$PROJECT_DIR$/src/Nesrine/JoueurBundle/Controller/EquipeController.php" afterPath="$PROJECT_DIR$/src/Nesrine/JoueurBundle/Controller/EquipeController.php" />
-      <change beforePath="$PROJECT_DIR$/src/Nesrine/JoueurBundle/Controller/JoueurController.php" afterPath="$PROJECT_DIR$/src/Nesrine/JoueurBundle/Controller/JoueurController.php" />
-      <change beforePath="$PROJECT_DIR$/src/Nesrine/JoueurBundle/Entity/Equipe.php" afterPath="$PROJECT_DIR$/src/Nesrine/JoueurBundle/Entity/Equipe.php" />
-      <change beforePath="$PROJECT_DIR$/src/Nesrine/JoueurBundle/Entity/Joueur.php" afterPath="$PROJECT_DIR$/src/Nesrine/JoueurBundle/Entity/Joueur.php" />
-      <change beforePath="$PROJECT_DIR$/src/Nesrine/JoueurBundle/Form/JoueurType.php" afterPath="$PROJECT_DIR$/src/Nesrine/JoueurBundle/Form/JoueurType.php" />
-      <change beforePath="$PROJECT_DIR$/src/Nesrine/JoueurBundle/Repository/JoueurRepository.php" afterPath="$PROJECT_DIR$/src/Nesrine/JoueurBundle/Repository/JoueurRepository.php" />
-      <change beforePath="$PROJECT_DIR$/src/Nesrine/JoueurBundle/Resources/config/routing.yml" afterPath="$PROJECT_DIR$/src/Nesrine/JoueurBundle/Resources/config/routing.yml" />
-      <change beforePath="$PROJECT_DIR$/src/Nesrine/JoueurBundle/Resources/views/Default/index.html.twig" afterPath="$PROJECT_DIR$/src/Nesrine/JoueurBundle/Resources/views/Default/index.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/Nesrine/JoueurBundle/Resources/views/Equipe/affichage.html.twig" afterPath="$PROJECT_DIR$/src/Nesrine/JoueurBundle/Resources/views/Equipe/affichage.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/Nesrine/JoueurBundle/Resources/views/Equipe/affichageFront.html.twig" afterPath="$PROJECT_DIR$/src/Nesrine/JoueurBundle/Resources/views/Equipe/affichageFront.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/Nesrine/JoueurBundle/Resources/views/Equipe/ajout.html.twig" afterPath="$PROJECT_DIR$/src/Nesrine/JoueurBundle/Resources/views/Equipe/ajout.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/Nesrine/JoueurBundle/Resources/views/Joueur/Index.html.twig" afterPath="$PROJECT_DIR$/src/Nesrine/JoueurBundle/Resources/views/Joueur/Index.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/Nesrine/JoueurBundle/Resources/views/Joueur/affichage.html.twig" afterPath="$PROJECT_DIR$/src/Nesrine/JoueurBundle/Resources/views/Joueur/affichage.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/Nesrine/JoueurBundle/Resources/views/Joueur/affichageFront.html.twig" afterPath="$PROJECT_DIR$/src/Nesrine/JoueurBundle/Resources/views/Joueur/affichageFront.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/Nesrine/JoueurBundle/Resources/views/Joueur/ajout.html.twig" afterPath="$PROJECT_DIR$/src/Nesrine/JoueurBundle/Resources/views/Joueur/ajout.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/Nesrine/JoueurBundle/Resources/views/Joueur/recherche.html.twig" afterPath="$PROJECT_DIR$/src/Nesrine/JoueurBundle/Resources/views/Joueur/recherche.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/Nesrine/JoueurBundle/Resources/views/Joueur/testtest.html.twig" afterPath="$PROJECT_DIR$/src/Nesrine/JoueurBundle/Resources/views/Joueur/testtest.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/Nesrine/JoueurBundle/Resources/views/Staff/affichage.html.twig" afterPath="$PROJECT_DIR$/src/Nesrine/JoueurBundle/Resources/views/Staff/affichage.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/Nesrine/JoueurBundle/Resources/views/Staff/ajout.html.twig" afterPath="$PROJECT_DIR$/src/Nesrine/JoueurBundle/Resources/views/Staff/ajout.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/UserBundle/Controller/DefaultController.php" afterPath="$PROJECT_DIR$/src/UserBundle/Controller/DefaultController.php" />
-      <change beforePath="$PROJECT_DIR$/src/UserBundle/Resources/config/routing.yml" afterPath="$PROJECT_DIR$/src/UserBundle/Resources/config/routing.yml" />
-      <change beforePath="$PROJECT_DIR$/var/bootstrap.php.cache" afterPath="$PROJECT_DIR$/var/bootstrap.php.cache" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.php" afterPath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.php" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.php.meta" afterPath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.php.meta" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.xml" afterPath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.xml" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.xml.meta" afterPath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.xml.meta" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainerCompiler.log" afterPath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainerCompiler.log" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainerUrlGenerator.php" afterPath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainerUrlGenerator.php" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainerUrlGenerator.php.meta" afterPath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainerUrlGenerator.php.meta" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainerUrlMatcher.php" afterPath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainerUrlMatcher.php" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainerUrlMatcher.php.meta" afterPath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainerUrlMatcher.php.meta" />
       <change beforePath="$PROJECT_DIR$/var/cache/dev/profiler/index.csv" afterPath="$PROJECT_DIR$/var/cache/dev/profiler/index.csv" />
       <change beforePath="$PROJECT_DIR$/var/cache/prod/appProdDebugProjectContainer.php" afterPath="$PROJECT_DIR$/var/cache/prod/appProdDebugProjectContainer.php" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/appProdDebugProjectContainer.php.meta" afterPath="$PROJECT_DIR$/var/cache/prod/appProdDebugProjectContainer.php.meta" />
       <change beforePath="$PROJECT_DIR$/var/cache/prod/appProdDebugProjectContainer.xml" afterPath="$PROJECT_DIR$/var/cache/prod/appProdDebugProjectContainer.xml" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/appProdDebugProjectContainer.xml.meta" afterPath="$PROJECT_DIR$/var/cache/prod/appProdDebugProjectContainer.xml.meta" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/appProdDebugProjectContainerCompiler.log" afterPath="$PROJECT_DIR$/var/cache/prod/appProdDebugProjectContainerCompiler.log" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/appProdDebugProjectContainerUrlMatcher.php" afterPath="$PROJECT_DIR$/var/cache/prod/appProdDebugProjectContainerUrlMatcher.php" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/appProdDebugProjectContainerUrlMatcher.php.meta" afterPath="$PROJECT_DIR$/var/cache/prod/appProdDebugProjectContainerUrlMatcher.php.meta" />
       <change beforePath="$PROJECT_DIR$/var/logs/dev.log" afterPath="$PROJECT_DIR$/var/logs/dev.log" />
       <change beforePath="$PROJECT_DIR$/var/logs/prod.log" afterPath="$PROJECT_DIR$/var/logs/prod.log" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_namespaces.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_namespaces.php" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/installed.json" afterPath="$PROJECT_DIR$/vendor/composer/installed.json" />
-      <change beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Changelog.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Command/CreateDatabaseDoctrineCommand.php" afterPath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Command/CreateDatabaseDoctrineCommand.php" />
-      <change beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Command/DoctrineCommand.php" afterPath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Command/DoctrineCommand.php" />
-      <change beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Command/DropDatabaseDoctrineCommand.php" afterPath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Command/DropDatabaseDoctrineCommand.php" />
-      <change beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Command/GenerateEntitiesDoctrineCommand.php" afterPath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Command/GenerateEntitiesDoctrineCommand.php" />
-      <change beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Command/ImportMappingDoctrineCommand.php" afterPath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Command/ImportMappingDoctrineCommand.php" />
-      <change beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Command/Proxy/ClearMetadataCacheDoctrineCommand.php" afterPath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Command/Proxy/ClearMetadataCacheDoctrineCommand.php" />
-      <change beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Command/Proxy/ClearQueryCacheDoctrineCommand.php" afterPath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Command/Proxy/ClearQueryCacheDoctrineCommand.php" />
-      <change beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Command/Proxy/ClearResultCacheDoctrineCommand.php" afterPath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Command/Proxy/ClearResultCacheDoctrineCommand.php" />
-      <change beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Command/Proxy/CollectionRegionDoctrineCommand.php" afterPath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Command/Proxy/CollectionRegionDoctrineCommand.php" />
-      <change beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Command/Proxy/ConvertMappingDoctrineCommand.php" afterPath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Command/Proxy/ConvertMappingDoctrineCommand.php" />
-      <change beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Command/Proxy/CreateSchemaDoctrineCommand.php" afterPath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Command/Proxy/CreateSchemaDoctrineCommand.php" />
-      <change beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Command/Proxy/DelegateCommand.php" afterPath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Command/Proxy/DelegateCommand.php" />
-      <change beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Command/Proxy/DoctrineCommandHelper.php" afterPath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Command/Proxy/DoctrineCommandHelper.php" />
-      <change beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Command/Proxy/DropSchemaDoctrineCommand.php" afterPath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Command/Proxy/DropSchemaDoctrineCommand.php" />
-      <change beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Command/Proxy/EnsureProductionSettingsDoctrineCommand.php" afterPath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Command/Proxy/EnsureProductionSettingsDoctrineCommand.php" />
-      <change beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Command/Proxy/EntityRegionCacheDoctrineCommand.php" afterPath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Command/Proxy/EntityRegionCacheDoctrineCommand.php" />
-      <change beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Command/Proxy/ImportDoctrineCommand.php" afterPath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Command/Proxy/ImportDoctrineCommand.php" />
-      <change beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Command/Proxy/InfoDoctrineCommand.php" afterPath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Command/Proxy/InfoDoctrineCommand.php" />
-      <change beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Command/Proxy/QueryRegionCacheDoctrineCommand.php" afterPath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Command/Proxy/QueryRegionCacheDoctrineCommand.php" />
-      <change beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Command/Proxy/RunDqlDoctrineCommand.php" afterPath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Command/Proxy/RunDqlDoctrineCommand.php" />
-      <change beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Command/Proxy/RunSqlDoctrineCommand.php" afterPath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Command/Proxy/RunSqlDoctrineCommand.php" />
-      <change beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Command/Proxy/UpdateSchemaDoctrineCommand.php" afterPath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Command/Proxy/UpdateSchemaDoctrineCommand.php" />
-      <change beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Command/Proxy/ValidateSchemaCommand.php" afterPath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Command/Proxy/ValidateSchemaCommand.php" />
-      <change beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/ConnectionFactory.php" afterPath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/ConnectionFactory.php" />
-      <change beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Controller/ProfilerController.php" afterPath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Controller/ProfilerController.php" />
-      <change beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/DataCollector/DoctrineDataCollector.php" afterPath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/DataCollector/DoctrineDataCollector.php" />
-      <change beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/DependencyInjection/Compiler/DoctrineOrmMappingsPass.php" afterPath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/DependencyInjection/Compiler/DoctrineOrmMappingsPass.php" />
-      <change beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/DependencyInjection/Compiler/EntityListenerPass.php" afterPath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/DependencyInjection/Compiler/EntityListenerPass.php" />
-      <change beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/DependencyInjection/Compiler/ServiceRepositoryCompilerPass.php" afterPath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/DependencyInjection/Compiler/ServiceRepositoryCompilerPass.php" />
-      <change beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/DependencyInjection/Configuration.php" afterPath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/DependencyInjection/Configuration.php" />
-      <change beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/DependencyInjection/DoctrineExtension.php" afterPath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/DependencyInjection/DoctrineExtension.php" />
-      <change beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/DoctrineBundle.php" afterPath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/DoctrineBundle.php" />
-      <change beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/LICENSE" afterPath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/LICENSE" />
-      <change beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/ManagerConfigurator.php" afterPath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/ManagerConfigurator.php" />
-      <change beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Mapping/ClassMetadataCollection.php" afterPath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Mapping/ClassMetadataCollection.php" />
-      <change beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Mapping/ContainerAwareEntityListenerResolver.php" afterPath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Mapping/ContainerAwareEntityListenerResolver.php" />
-      <change beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Mapping/DisconnectedMetadataFactory.php" afterPath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Mapping/DisconnectedMetadataFactory.php" />
-      <change beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Mapping/EntityListenerServiceResolver.php" afterPath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Mapping/EntityListenerServiceResolver.php" />
-      <change beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/README.md" afterPath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/README.md" />
-      <change beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Registry.php" afterPath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Registry.php" />
-      <change beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Repository/ContainerRepositoryFactory.php" afterPath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Repository/ContainerRepositoryFactory.php" />
-      <change beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Repository/ServiceEntityRepository.php" afterPath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Repository/ServiceEntityRepository.php" />
-      <change beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Repository/ServiceEntityRepositoryInterface.php" afterPath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Repository/ServiceEntityRepositoryInterface.php" />
-      <change beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Resources/config/dbal.xml" afterPath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Resources/config/dbal.xml" />
-      <change beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Resources/config/orm.xml" afterPath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Resources/config/orm.xml" />
-      <change beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Resources/config/schema/doctrine-1.0.xsd" afterPath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Resources/config/schema/doctrine-1.0.xsd" />
-      <change beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Resources/views/Collector/db.html.twig" afterPath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Resources/views/Collector/db.html.twig" />
-      <change beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Resources/views/Collector/explain.html.twig" afterPath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Resources/views/Collector/explain.html.twig" />
-      <change beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Resources/views/Collector/icon.svg" afterPath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Resources/views/Collector/icon.svg" />
-      <change beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Twig/DoctrineExtension.php" afterPath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Twig/DoctrineExtension.php" />
-      <change beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/composer.json" afterPath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/composer.json" />
-      <change beforePath="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Model/User.php" afterPath="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Model/User.php" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/SecurityBundle/Tests/Functional/Bundle/FormLoginBundle/Controller/LoginController.php" afterPath="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/SecurityBundle/Tests/Functional/Bundle/FormLoginBundle/Controller/LoginController.php" />
+      <change beforePath="$PROJECT_DIR$/web/images/russie.png" afterPath="" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -147,50 +31,38 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Matchs.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/TicketBundle/Entity/Matchs.php">
+      <file leaf-file-name="JoueurController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Nesrine/JoueurBundle/Controller/JoueurController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2924">
-              <caret line="8" column="2" lean-forward="false" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
-              <folding>
-                <marker date="1525676494763" expanded="true" signature="417:524" ph=" @var string ..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="reclamation.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/NejmeddineBundle/Resources/config/routing/reclamation.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="449">
-              <caret line="40" column="17" lean-forward="false" selection-start-line="40" selection-start-column="17" selection-end-line="40" selection-end-column="17" />
+            <state relative-caret-position="53">
+              <caret line="104" column="9" lean-forward="false" selection-start-line="104" selection-start-column="9" selection-end-line="104" selection-end-column="9" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Reclamation.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/NejmeddineBundle/Entity/Reclamation.php">
+      <file leaf-file-name="webController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Nesrine/JoueurBundle/Controller/webController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1091">
-              <caret line="147" column="5" lean-forward="false" selection-start-line="147" selection-start-column="5" selection-end-line="147" selection-end-column="5" />
+            <state relative-caret-position="183">
+              <caret line="50" column="58" lean-forward="false" selection-start-line="50" selection-start-column="58" selection-end-line="50" selection-end-column="58" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Match.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/TicketBundle/Entity/Match.php">
+      <file leaf-file-name="webserviceController.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Fedi/FediBundle/Controller/webserviceController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-51">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="220">
+              <caret line="43" column="12" lean-forward="false" selection-start-line="43" selection-start-column="12" selection-end-line="43" selection-end-column="12" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ajout.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Nesrine/JoueurBundle/Resources/views/Equipe/ajout.html.twig">
+      <file leaf-file-name="Reservationt.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Fedi/FediBundle/Entity/Reservationt.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -199,51 +71,63 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RegistrationFormType.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Form/Type/RegistrationFormType.php">
+      <file leaf-file-name="Reservation.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Fedi/FediBundle/Entity/Reservation.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="53" column="29" lean-forward="false" selection-start-line="53" selection-start-column="28" selection-end-line="53" selection-end-column="29" />
+            <state relative-caret-position="221">
+              <caret line="154" column="21" lean-forward="false" selection-start-line="154" selection-start-column="12" selection-end-line="154" selection-end-column="21" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RegistrationController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Controller/RegistrationController.php">
+      <file leaf-file-name="transportController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Fedi/FediBundle/Controller/transportController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2593">
-              <caret line="3" column="31" lean-forward="false" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="31" />
+            <state relative-caret-position="119">
+              <caret line="39" column="17" lean-forward="false" selection-start-line="39" selection-start-column="17" selection-end-line="39" selection-end-column="17" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SecurityController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Controller/SecurityController.php">
+      <file leaf-file-name="ReclamationController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/NejmeddineBundle/Controller/ReclamationController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="7" lean-forward="false" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="7" />
+            <state relative-caret-position="119">
+              <caret line="64" column="8" lean-forward="false" selection-start-line="64" selection-start-column="8" selection-end-line="64" selection-end-column="86" />
+              <folding>
+                <element signature="e#47#87#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="reservationTController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Fedi/FediBundle/Controller/reservationTController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="174">
+              <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="security.yml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/config/security.yml">
+      <file leaf-file-name="NewsController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/NejmeddineBundle/Controller/NewsController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="379">
-              <caret line="32" column="62" lean-forward="false" selection-start-line="32" selection-start-column="62" selection-end-line="32" selection-end-column="62" />
+            <state relative-caret-position="68">
+              <caret line="4" column="3" lean-forward="false" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="User.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Model/User.php">
+      <file leaf-file-name="DefaultController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Fedi/FediBundle/Controller/DefaultController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="262">
-              <caret line="243" column="31" lean-forward="false" selection-start-line="243" selection-start-column="31" selection-end-line="243" selection-end-column="31" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -260,14 +144,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>/affichage</find>
-      <find>affichage</find>
-      <find>hotel</find>
-      <find>fa fa-fw fa-table</find>
-      <find>form</find>
-      <find>logout</find>
-      <find>Logout</find>
-      <find>&lt;form</find>
       <find>latest n</find>
       <find>Example</find>
       <find>src=</find>
@@ -290,14 +166,18 @@
       <find>affichageequipefront</find>
       <find>affichageEquipeFrontAction</find>
       <find>salt</find>
+      <find>.php</find>
+      <find>mobu</find>
+      <find>mobile</find>
+      <find>mobil</find>
+      <find>user</find>
+      <find>id_utili</find>
+      <find>setidut</find>
+      <find>idutilisa</find>
     </findStrings>
   </component>
   <component name="FrameworkCommandLineHistory">
     <commandsHistory>
-      <command text="composer require knplabs/knp-paginator-bundle" />
-      <command text="composer require cmen/google-charts-bundle " />
-      <command text="composer require nomaya" />
-      <command text="composer require nomaya/social-bundle" />
       <command text="composer update" />
       <command text="s cache:clear" />
       <command text="composer update" />
@@ -319,6 +199,10 @@
       <command text="s doctrine:schema:update --force" />
       <command text="s doctrine:cache:clear-metadata" />
       <command text="s doctrine:schema:update --force " />
+      <command text="s doctrine:generate:entity Matchs" />
+      <command text="s doctrine:generate:entity TicketBundle:Matchs" />
+      <command text="s doctrine:schema:update" />
+      <command text="s doctrine:schema:update --force" />
     </commandsHistory>
   </component>
   <component name="Git.Settings">
@@ -335,9 +219,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/NejmeddineBundle/Form/ReclamationType.php" />
-        <option value="$PROJECT_DIR$/src/RUSSIA2/PIBundle/Resources/views/Default/index.html.twig" />
-        <option value="$PROJECT_DIR$/src/Fedi/FediBundle/Resources/config/routing1.yml" />
         <option value="$PROJECT_DIR$/src/RUSSIA2/PIBundle/Resources/views/Default/reclamation.html.twig" />
         <option value="$PROJECT_DIR$/src/RUSSIA2/PIBundle/Resources/views/Default/layoutArticle.html.twig" />
         <option value="$PROJECT_DIR$/src/Fedi/FediBundle/Resources/views/hotel/hotelclient.html.twig" />
@@ -377,15 +258,18 @@
         <option value="$PROJECT_DIR$/src/Nesrine/JoueurBundle/Entity/Equipe.php" />
         <option value="$PROJECT_DIR$/src/Nesrine/JoueurBundle/Entity/Joueur.php" />
         <option value="$PROJECT_DIR$/src/EspritApiBundle/Controller/DefaultController.php" />
-        <option value="$PROJECT_DIR$/src/EspritApiBundle/Controller/TicketMobileController.php" />
         <option value="$PROJECT_DIR$/mobile.php" />
         <option value="$PROJECT_DIR$/src/NejmeddineBundle/Controller/ReclamationController.php" />
         <option value="$PROJECT_DIR$/src/Nesrine/JoueurBundle/Resources/config/routing.yml" />
         <option value="$PROJECT_DIR$/src/Nesrine/JoueurBundle/Controller/EquipeController.php" />
         <option value="$PROJECT_DIR$/src/Nesrine/JoueurBundle/Resources/views/Equipe/affichageFront.html.twig" />
         <option value="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Model/User.php" />
-        <option value="$PROJECT_DIR$/src/TicketBundle/Entity/Matchs.php" />
         <option value="$PROJECT_DIR$/app/config/security.yml" />
+        <option value="$PROJECT_DIR$/src/TicketBundle/Entity/Matchs.php" />
+        <option value="$PROJECT_DIR$/src/EspritApiBundle/Controller/TicketMobileController.php" />
+        <option value="$PROJECT_DIR$/src/Nesrine/JoueurBundle/Controller/webController.php" />
+        <option value="$PROJECT_DIR$/src/Fedi/FediBundle/Controller/reservationTController.php" />
+        <option value="$PROJECT_DIR$/src/Fedi/FediBundle/Controller/webserviceController.php" />
       </list>
     </option>
   </component>
@@ -486,37 +370,36 @@
             <path>
               <item name="Russia2018Symfony" type="b2602c69:ProjectViewProjectNode" />
               <item name="Russia2018Symfony" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="Russia2018Symfony" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Russia2018Symfony" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="config" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="Russia2018Symfony" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Russia2018Symfony" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="Russia2018Symfony" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Russia2018Symfony" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="Russia2018Symfony" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Russia2018Symfony" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="Russia2018Symfony" type="b2602c69:ProjectViewProjectNode" />
               <item name="Russia2018Symfony" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="AppBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Fedi" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Russia2018Symfony" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Russia2018Symfony" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Fedi" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="FediBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Russia2018Symfony" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Russia2018Symfony" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Fedi" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="FediBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Controller" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Russia2018Symfony" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Russia2018Symfony" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Fedi" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="FediBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Entity" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="Russia2018Symfony" type="b2602c69:ProjectViewProjectNode" />
@@ -535,39 +418,21 @@
               <item name="Russia2018Symfony" type="b2602c69:ProjectViewProjectNode" />
               <item name="Russia2018Symfony" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="NejmeddineBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="UserBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Russia2018Symfony" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Russia2018Symfony" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="UserBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Entity" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="Russia2018Symfony" type="b2602c69:ProjectViewProjectNode" />
               <item name="Russia2018Symfony" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="NejmeddineBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="UserBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Form" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="Russia2018Symfony" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Russia2018Symfony" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="NejmeddineBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="Russia2018Symfony" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Russia2018Symfony" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="NejmeddineBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="config" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="Russia2018Symfony" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Russia2018Symfony" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="NejmeddineBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="config" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="routing" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -705,7 +570,7 @@
       <workItem from="1525659184742" duration="2561000" />
       <workItem from="1525670986396" duration="8081000" />
       <workItem from="1526859451651" duration="1245000" />
-      <workItem from="1527008686570" duration="8942000" />
+      <workItem from="1527008686570" duration="15085000" />
     </task>
     <task id="LOCAL-00001" summary="aaaaaaaaaaaaaaaa">
       <created>1522924904846</created>
@@ -784,11 +649,18 @@
       <option name="project" value="LOCAL" />
       <updated>1523480463681</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="hgy">
+      <created>1527035908273</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1527035908273</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="207315000" />
+    <option name="totallyTimeSpent" value="213458000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -802,12 +674,12 @@
   <component name="ToolWindowManager">
     <frame x="243" y="22" width="1372" height="691" extended-state="6" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2898975" sideWeight="0.7692308" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23206443" sideWeight="0.7692308" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.48940998" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.525" sideWeight="0.24670571" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.525" sideWeight="0.7532943" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21964286" sideWeight="0.7532943" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32405892" sideWeight="0.44553706" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -899,48 +771,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/SecurityBundle/Tests/Functional/Bundle/FormLoginBundle/Controller/LoginController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="479">
-          <caret line="49" column="5" lean-forward="false" selection-start-line="49" selection-start-column="5" selection-end-line="49" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/var/cache/prod/classes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="8912" column="1" lean-forward="false" selection-start-line="8912" selection-start-column="1" selection-end-line="8912" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/config/routing.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/config/validation.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-663">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/config/validator.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/EventListener/AuthenticationListener.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="68" column="36" lean-forward="false" selection-start-line="68" selection-start-column="36" selection-end-line="68" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/config/routing/all.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -990,24 +820,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Nesrine/JoueurBundle/Controller/JoueurController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1666">
-          <caret line="104" column="9" lean-forward="false" selection-start-line="104" selection-start-column="9" selection-end-line="104" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Nesrine/JoueurBundle/Controller/AppreciationController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-867">
           <caret line="20" column="5" lean-forward="false" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Nesrine/JoueurBundle/Controller/webController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-153">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1047,34 +863,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/AppKernel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="19" column="38" lean-forward="false" selection-start-line="19" selection-start-column="38" selection-end-line="19" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/EspritApiBundle/Controller/TicketMobileController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="39" column="5" lean-forward="false" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
-          <folding>
-            <element signature="e#46#103#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/EspritApiBundle/Controller/DefaultController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="14" column="55" lean-forward="false" selection-start-line="14" selection-start-column="55" selection-end-line="14" selection-end-column="55" />
-          <folding>
-            <element signature="e#46#103#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/NejmeddineBundle/Resources/config/routing.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -1096,26 +884,6 @@
         <state relative-caret-position="459">
           <caret line="27" column="2" lean-forward="false" selection-start-line="27" selection-start-column="2" selection-end-line="27" selection-end-column="2" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/NejmeddineBundle/Controller/NewsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1394">
-          <caret line="87" column="42" lean-forward="false" selection-start-line="87" selection-start-column="42" selection-end-line="87" selection-end-column="42" />
-          <folding>
-            <element signature="e#47#80#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/NejmeddineBundle/Controller/ReclamationController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="141" column="42" lean-forward="false" selection-start-line="141" selection-start-column="42" selection-end-line="141" selection-end-column="42" />
-          <folding>
-            <element signature="e#47#87#0#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1255,24 +1023,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/TicketBundle/Entity/Match.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-51">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/TicketBundle/Entity/Matchs.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2924">
-          <caret line="8" column="2" lean-forward="false" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
-          <folding>
-            <marker date="1525676494763" expanded="true" signature="417:524" ph=" @var string ..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/NejmeddineBundle/Resources/config/routing/reclamation.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="449">
@@ -1293,6 +1043,128 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="379">
           <caret line="32" column="62" lean-forward="false" selection-start-line="32" selection-start-column="62" selection-end-line="32" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TicketBundle/Entity/Match.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="9" column="26" lean-forward="false" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TicketBundle/Entity/Matchs.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="26" lean-forward="false" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/EspritApiBundle/Controller/DefaultController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="11" column="85" lean-forward="false" selection-start-line="11" selection-start-column="78" selection-end-line="11" selection-end-column="85" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/EspritApiBundle/Controller/TicketMobileController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="35" column="55" lean-forward="false" selection-start-line="35" selection-start-column="55" selection-end-line="35" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/AppKernel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="121">
+          <caret line="29" column="29" lean-forward="false" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Nesrine/JoueurBundle/Controller/JoueurController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="53">
+          <caret line="104" column="9" lean-forward="false" selection-start-line="104" selection-start-column="9" selection-end-line="104" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Nesrine/JoueurBundle/Controller/webController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="50" column="58" lean-forward="false" selection-start-line="50" selection-start-column="58" selection-end-line="50" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Fedi/FediBundle/Controller/transportController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="39" column="17" lean-forward="false" selection-start-line="39" selection-start-column="17" selection-end-line="39" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Fedi/FediBundle/Controller/DefaultController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Fedi/FediBundle/Controller/reservationTController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/NejmeddineBundle/Controller/NewsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="3" lean-forward="false" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/NejmeddineBundle/Controller/ReclamationController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="64" column="8" lean-forward="false" selection-start-line="64" selection-start-column="8" selection-end-line="64" selection-end-column="86" />
+          <folding>
+            <element signature="e#47#87#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Fedi/FediBundle/Entity/Reservationt.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Fedi/FediBundle/Entity/Reservation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="154" column="21" lean-forward="false" selection-start-line="154" selection-start-column="12" selection-end-line="154" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Fedi/FediBundle/Controller/webserviceController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="43" column="12" lean-forward="false" selection-start-line="43" selection-start-column="12" selection-end-line="43" selection-end-column="12" />
           <folding />
         </state>
       </provider>
